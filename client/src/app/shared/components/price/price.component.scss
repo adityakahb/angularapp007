@@ -1,0 +1,13 @@
+@import './../../../../imports';
+.c-price {
+  // display: inline-block;
+  letter-spacing: 0.05em;
+  .sym, .min {
+    font-size: 0.785em;
+    position: relative;
+    top: -0.182em;
+  }
+  .sym {
+    font-weight: 700;
+  }
+}

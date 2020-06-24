@@ -1,0 +1,80 @@
+@import './sass/rem';
+@import './sass/colors';
+
+$primary-dark: darken($primary, 10%);
+$secondary-dark: darken($secondary, 10%);
+
+$primary-light: lighten($primary, 10%);
+$secondary-light: lighten($secondary, 10%);
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge((
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+),
+$theme-colors);
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: rem(576px),
+  md: rem(768px),
+  lg: rem(992px),
+  xl: rem(1200px),
+  xxl: rem(1696px)
+);
+
+$container-max-widths: (
+  sm: rem(540px),
+  md: rem(720px),
+  lg: rem(960px),
+  xl: rem(1140px),
+  xxl: rem(1600px)
+);
+
+$grid-columns:                60;
+$grid-gutter-width:           rem(16px);
+$grid-row-columns:            6;
+
+// $btn-border-radius: rem(19px);
+// $btn-border-radius-lg: rem(24px);
+// $btn-border-radius-sm: rem(16px);
+
+
+$border-radius: rem(4px);
+$border-radius-lg: rem(4px);
+$border-radius-sm: rem(4px);
+
+
+$font-family-sans-serif: 'Fira Sans Condensed', sans-serif;
+
+$enable-responsive-font-sizes: true;
+
+$xs: map-get($grid-breakpoints, 'xs');
+// Small devices (landscape phones, 576px and up)
+$sm: map-get($grid-breakpoints, 'sm');
+// Medium devices (tablets, 768px and up)
+$md: map-get($grid-breakpoints, 'md');
+// Large devices (desktops, 992px and up)
+$lg: map-get($grid-breakpoints, 'lg');
+// Extra large devices (large desktops, 1200px and up)
+$xl: map-get($grid-breakpoints, 'xl');
+
+// Another
+$xxl: map-get($grid-breakpoints, 'xxl');
+
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/buttons";
+
+@import './sass/rem';
+@import './sass/mixins';

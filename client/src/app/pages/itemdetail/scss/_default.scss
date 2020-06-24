@@ -1,0 +1,96 @@
+.main-content {
+  background-color: $white;
+  .itemdetail-comp {
+    h1 {
+      font-weight: 400;
+    }
+    .breadcrumb {
+      background: transparent;
+    }
+    .desc {
+      color: $gray-600;
+      font-size: rem(14px);
+      ul, ol {
+        padding: 0;
+        margin-left: rem(16px);
+      }
+    }
+  }
+  .current-price {
+    font-size: rem(32px);
+    font-weight: 700;
+    color: $secondary;
+    line-height: 1;
+  }
+  .old-price {
+    font-size: rem(20px);
+    font-weight: 700;
+    color: $gray-500;
+    line-height: 1;
+  }
+  .detail-gallery {
+    display: grid;
+    row-gap: rem(1px);
+    column-gap: rem(1px);
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    a {
+      display: block;
+      // padding: rem(0 1px 1px 0);
+      &.primary {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
+    }
+    .d-img {
+      position: relative;
+      height: 0;
+      width: 100%;
+      padding-bottom: 100%;
+      img {
+        @include center-center();
+        width: 100%;
+      }
+    }
+  }
+  .d-desc-cta {
+    background-color: $gray-200;
+    border: rem(1px) solid $gray-200;
+    position: relative;
+    .ikn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: rem(40px);
+      justify-content: center;
+      align-items: center;
+      &.plus {
+        display: flex;
+      }
+      &.minus {
+        display: none;
+      }
+    }
+  }
+  .prod-desc {
+    .desc {
+      display: none;
+    }
+    &.active {
+      .d-desc-cta {
+        .ikn {
+          &.plus {
+            display: none;
+          }
+          &.minus {
+            display: flex;
+          }
+        }
+      }
+      .desc {
+        display: block;
+      }
+    }
+  }
+}

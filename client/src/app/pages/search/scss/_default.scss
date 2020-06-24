@@ -1,0 +1,26 @@
+.main-content {
+  background-color: $white;
+  .js-is-sticky {
+    z-index: 830;
+    background-color: rgba($white, 0.9);
+    backdrop-filter: blur(0.5rem);
+    // top: rem(64px) !important;
+  }
+  .search-comp-header {
+    .sort-group {
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 0;
+      label {
+        margin-bottom: 0;
+      }
+      .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+      }
+    }
+  }
+}
