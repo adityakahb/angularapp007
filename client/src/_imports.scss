@@ -1,4 +1,5 @@
 @import './sass/rem';
+@import './sass/em';
 @import './sass/colors';
 
 $primary-dark: darken($primary, 10%);
@@ -24,11 +25,11 @@ $theme-colors);
 
 $grid-breakpoints: (
   xs: 0,
-  sm: rem(576px),
-  md: rem(768px),
-  lg: rem(992px),
-  xl: rem(1200px),
-  xxl: rem(1696px)
+  sm: em(576px),
+  md: em(768px),
+  lg: em(992px),
+  xl: em(1200px),
+  xxl: em(1696px)
 );
 
 $container-max-widths: (
@@ -74,7 +75,5 @@ $xxl: map-get($grid-breakpoints, 'xxl');
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/buttons";
 
-@import './sass/rem';
 @import './sass/mixins';

@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { DirectiveModule } from './../../shared/directives/directive.module';
-import { IndexComponent } from './index.component';
 import { IndexbannerComponent } from './../../components/indexbanner/indexbanner.component';
+import { IndexComponent } from './index.component';
 import { IndexRoutingModule } from './index-routing.module';
+import { ItemBannerModule } from './../../shared/components/item-banner/item-banner.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RatingsModule } from './../../shared/components/ratings/ratings.module';
 import { ResponsiveImageModule } from './../../shared/components/responsive-image/responsive-image.module';
@@ -14,10 +15,11 @@ import { StandardTeaserModule } from './../../shared/components/standard-teaser/
     CommonModule,
     DirectiveModule,
     IndexRoutingModule,
+    ItemBannerModule,
     RatingsModule,
     ResponsiveImageModule,
     SectionHeaderModule,
-    StandardTeaserModule
+    StandardTeaserModule,
   ],
   declarations: [
     IndexComponent,

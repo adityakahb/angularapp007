@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/framework.scss",
+              "src/grid.scss",
               "src/styles.scss"
             ],
             "scripts": []
