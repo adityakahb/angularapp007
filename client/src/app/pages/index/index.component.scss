@@ -26,3 +26,15 @@
 @media (min-width: rem(#{$xl})) {
   @import './scss/xl';
 }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: rem(#{$xxl})) {
+  @import './scss/xxl';
+}
+
+// 0
+// 16.66
+// 33
+// 50
+// 66.66
+// 83.33

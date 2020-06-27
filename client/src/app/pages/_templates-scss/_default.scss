@@ -15,10 +15,6 @@ $rem30px: rem(30px);
     // background-image: url('./../../../assets/page-bg@2x.jpg');
   }
 
-  .bg-wrap {
-    padding: rem(24px) 0;
-  }
-
   // .section-header {
   //     h2 {
   //         &:before, &:after {
@@ -45,8 +41,4 @@ $rem30px: rem(30px);
       }
     }
   }
-}
-
-.section-footer {
-  padding: rem(32px) 0 0 0;
 }

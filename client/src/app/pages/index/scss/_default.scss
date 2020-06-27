@@ -1,0 +1,82 @@
+.banner-comp {
+  .banner-row {
+    position: relative;
+    height: 0;
+    padding-bottom: 150%;
+    & > div {
+      z-index: 2;
+      position: absolute;
+      &:hover {
+        opacity: 0.5;
+      }
+      &:nth-child(1) {
+        background-color: red;
+      }
+      &:nth-child(2) {
+        background-color: green;
+      }
+      &:nth-child(3) {
+        background-color: blue;
+      }
+      &:nth-child(4) {
+        background-color: yellow;
+      }
+    }
+  }
+  .banner-row:nth-of-type(odd) {
+    & > div {
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 50%;
+        padding-bottom: 100%;
+      }
+      &:nth-child(2) {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        padding-bottom: 50%;
+      }
+      &:nth-child(3) {
+        top: 33.34%;
+        left: 50%;
+        width: 50%;
+        padding-bottom: 50%;
+      }
+      &:nth-child(4) {
+        top: 66.66%;
+        left: 0;
+        width: 100%;
+        padding-bottom: 50%;
+      }
+    }
+  }
+  .banner-row:nth-of-type(even) {
+    & > div {
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 50%;
+        padding-bottom: 50%;
+      }
+      &:nth-child(2) {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        padding-bottom: 100%;
+      }
+      &:nth-child(3) {
+        top: 33.34%;
+        left: 0;
+        width: 50%;
+        padding-bottom: 50%;
+      }
+      &:nth-child(4) {
+        top: 66.66%;
+        left: 0;
+        width: 100%;
+        padding-bottom: 50%;
+      }
+    }
+  }
+}

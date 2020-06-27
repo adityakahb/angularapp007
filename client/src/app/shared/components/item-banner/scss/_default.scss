@@ -1,0 +1,17 @@
+.ib-comp {
+  position: relative;
+  height: 0;
+  width: 100%;
+  border: rem(1px) solid red;
+  color: #fff;
+  display: flex;
+  &.square-type {
+    padding-bottom: 100%;
+  }
+  &.tall-type {
+    height: 100%;
+  }
+  &.wide-type {
+    padding-bottom: 50%;
+  }
+}

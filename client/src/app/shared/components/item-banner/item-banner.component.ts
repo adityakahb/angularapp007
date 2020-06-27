@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-item-banner',
@@ -6,34 +6,16 @@ import { Component, OnInit, AfterViewInit, Input, ViewEncapsulation } from '@ang
   styleUrls: ['./item-banner.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ItemBannerComponent implements OnInit, AfterViewInit {
+export class ItemBannerComponent implements OnInit {
   @Input() cProps;
   @Input() theme;
+  @Input() type;
 
-  xsval = '';
-  xlval = '';
-  xxlval = '';
+  btype = 'square'; 
 
   constructor() { }
 
-  ngOnInit() {}
-  ngAfterViewInit() {
-    let xstext = (this.cProps || {}).title || '';
-    let xltext = (this.cProps || {}).title || ''
-    let xxltext = (this.cProps || {}).title || '';
-    if (xstext.length > 64) {
-      xstext = xstext.substr(0, 64).replace(/^\s+|\s+$/g, '') + '...';
-    }
-    if (xltext.length > 64) {
-      xltext = xltext.substr(0, 64).replace(/^\s+|\s+$/g, '') + '...';
-    }
-    if (xxltext.length > 108) {
-      xxltext = xxltext.substr(0, 108).replace(/^\s+|\s+$/g, '') + '...';
-    }
-    setTimeout(() => {
-      this.xsval = xstext;
-      this.xlval = xltext;
-      this.xxlval = xxltext;
-    }, 0);
+  ngOnInit() {
+    this.btype = (this.type ? this.type : 'square') + '-type';
   }
 }
