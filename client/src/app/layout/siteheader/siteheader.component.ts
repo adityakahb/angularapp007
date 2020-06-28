@@ -197,7 +197,9 @@ export class SiteheaderComponent implements OnInit, AfterViewInit {
   // }
 
   @HostListener('document:keyup', ['$event']) onEscapeEvent($event) {
-    if (isPlatformBrowser(this.platformId) && ($event || {}).keyCode === 27 && (this.isNavOpen || this.isUserNavOpen || this.isLangNavOpen || this.isSearchNavOpen)) {
+    if (isPlatformBrowser(this.platformId)
+      && ($event || {}).keyCode === 27
+      && (this.isNavOpen || this.isUserNavOpen || this.isLangNavOpen || this.isSearchNavOpen)) {
       this.closeAllNav();
     }
     // if (window && document) {

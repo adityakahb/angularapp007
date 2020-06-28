@@ -1,7 +1,8 @@
+import { CommonFunctionsService } from './../../shared/services/common-functions.service';
 import { Component, OnInit, ViewChild, NgZone, ElementRef, AfterViewInit } from '@angular/core';
-import { SearchService } from 'src/app/shared/services/search.service';
-import { PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Inject } from '@angular/core';
+import { SearchService } from 'src/app/shared/services/search.service';
 
 declare const require: any;
 declare const stickybits: any;
@@ -27,6 +28,7 @@ export class PageSearchComponent implements OnInit, AfterViewInit {
   }
   constructor(private searchService: SearchService,
               private ngZone: NgZone,
+              private cService: CommonFunctionsService,
               @Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit() {
@@ -45,21 +47,25 @@ export class PageSearchComponent implements OnInit, AfterViewInit {
       } else {
       }
       this.searchDone = true;
+      this.initiatePageSticky();
     });
     // this.searchResultsData = searchResultsJson;
     // this.featuredResultsData = featuredResultsJson;
     // this.filtersData = filtersJson;
   }
 
-  ngAfterViewInit() {
-    this.ngZone.runOutsideAngular(() => {
-      if (isPlatformBrowser(this.platformId) && stickybits && this.searchsticky.nativeElement) {
-        stickybits('#' + this.searchsticky.nativeElement.getAttribute('id'), {useStickyClasses: true, stickyBitStickyOffset: 64});
-      }
-    });
-  }
+  ngAfterViewInit() {}
 
   openFiltersModal() {
     this.isFiltersModalOpen = true;
+  }
+
+  initiatePageSticky() {
+    this.ngZone.runOutsideAngular(() => {
+      if (isPlatformBrowser(this.platformId) && stickybits && this.searchsticky.nativeElement) {
+        this.cService.addStickyBits(this.searchsticky.nativeElement.getAttribute('id'),
+          {useStickyClasses: true, stickyBitStickyOffset: 64});
+      }
+    });
   }
 }
