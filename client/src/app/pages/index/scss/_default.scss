@@ -6,45 +6,37 @@
     & > div {
       z-index: 2;
       position: absolute;
-      &:hover {
-        opacity: 0.5;
-      }
-      &:nth-child(1) {
-        background-color: red;
-      }
-      &:nth-child(2) {
-        background-color: green;
-      }
-      &:nth-child(3) {
-        background-color: blue;
-      }
-      &:nth-child(4) {
-        background-color: yellow;
+      .banner-tile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
   .banner-row:nth-of-type(odd) {
     & > div {
       &:nth-child(1) {
-        top: 0;
+        top: 33.34%;
         left: 0;
         width: 50%;
         padding-bottom: 100%;
       }
       &:nth-child(2) {
-        top: 0;
-        left: 50%;
-        width: 50%;
-        padding-bottom: 50%;
-      }
-      &:nth-child(3) {
         top: 33.34%;
         left: 50%;
         width: 50%;
         padding-bottom: 50%;
       }
-      &:nth-child(4) {
+      &:nth-child(3) {
         top: 66.66%;
+        left: 50%;
+        width: 50%;
+        padding-bottom: 50%;
+      }
+      &:nth-child(4) {
+        top: 0;
         left: 0;
         width: 100%;
         padding-bottom: 50%;
@@ -55,15 +47,15 @@
     & > div {
       &:nth-child(1) {
         top: 0;
-        left: 0;
-        width: 50%;
-        padding-bottom: 50%;
-      }
-      &:nth-child(2) {
-        top: 0;
         left: 50%;
         width: 50%;
         padding-bottom: 100%;
+      }
+      &:nth-child(2) {
+        top: 0;
+        left: 0%;
+        width: 50%;
+        padding-bottom: 50%;
       }
       &:nth-child(3) {
         top: 33.34%;
