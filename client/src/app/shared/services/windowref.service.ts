@@ -5,7 +5,7 @@
 import { Injectable } from '@angular/core';
 
 function getWindow (): any {
-    return window;
+    return window ? window : null;
 }
 
 @Injectable({

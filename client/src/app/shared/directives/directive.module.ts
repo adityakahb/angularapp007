@@ -1,15 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ResponsiveBreakpointDirective } from './ResponsiveBreakpoint/responsive-breakpoint.directive';
-import { ItemTextTrimmerDirective } from './ItemTextTrimmer/item-text-trimmer.directive';
 
 @NgModule({
+  imports: [
+    CommonModule
+  ],
   declarations: [
-    ResponsiveBreakpointDirective,
-    ItemTextTrimmerDirective
+    ResponsiveBreakpointDirective
   ],
   exports: [
-    ResponsiveBreakpointDirective,
-    ItemTextTrimmerDirective
+    ResponsiveBreakpointDirective
   ],
   providers: []
 })
