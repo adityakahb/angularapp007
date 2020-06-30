@@ -11,10 +11,12 @@ import { SitefooterColumnComponent } from './../../components/sitefooter-column/
 import { SitefooterComponent } from './../sitefooter/sitefooter.component';
 import { SiteheaderComponent } from './../siteheader/siteheader.component';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { UserAvatarModule } from './../../shared/components/user-avatar/user-avatar.module';
 
 @NgModule({
   imports: [
     AlertMsgModule,
+    BrowserAnimationsModule,
     CommonModule,
     CtaBtnModule,
     DirectiveModule,
@@ -22,8 +24,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
-    BrowserAnimationsModule,
     TypeaheadModule.forRoot(),
+    UserAvatarModule,
   ],
   exports: [
     SiteheaderComponent,

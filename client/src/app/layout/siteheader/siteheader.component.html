@@ -54,7 +54,13 @@
                 </button> -->
                 <button type="button" [ngClass]="{'active': isUserNavOpen}"
                   (click)="openUserNav()">
-                  <ion-icon name="person-circle"></ion-icon>
+                  <!-- <ion-icon name="person-circle"></ion-icon> -->
+                  <div class="w-75 d-inline-block">
+                    <app-user-avatar [cProps]="{
+                      firstname: 'Firstname',
+                      lastname: 'Lastname'
+                    }"></app-user-avatar>
+                  </div>
                 </button>
                 <button type="button" [ngClass]="{'active': isNavOpen}" class="d-xl-none" (click)="openNav()">
                   <ion-icon name="menu"></ion-icon>

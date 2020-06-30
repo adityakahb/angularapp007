@@ -1,613 +1,278 @@
 [
   {
+    "title": "Condimentum Enim Aliquam Velit Iaculis Est Elit Elit Sed Egestas Suscipit Eget Sed Quam Eget Consectetur Congue Rutrum Faucibus Amet",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/6efc41/397155",
+      "xs2": "https://via.placeholder.com/640x640/6efc41/397155",
+      "md": "https://via.placeholder.com/360x360/6efc41/397155",
+      "md2": "https://via.placeholder.com/720x720/6efc41/397155",
+      "xl": "https://via.placeholder.com/400x400/6efc41/397155",
+      "xl2": "https://via.placeholder.com/800x800/6efc41/397155"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "2.0",
+    "price": {
+      "currency": "inr",
+      "major": "4445",
+      "minor": "70"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "7967",
+      "minor": "13"
     }
   },
   {
+    "title": "Luctus Proin Euismod Sem Interdum Ullamcorper Suscipit",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/b4215a/513098",
+      "xs2": "https://via.placeholder.com/640x640/b4215a/513098",
+      "md": "https://via.placeholder.com/360x360/b4215a/513098",
+      "md2": "https://via.placeholder.com/720x720/b4215a/513098",
+      "xl": "https://via.placeholder.com/400x400/b4215a/513098",
+      "xl2": "https://via.placeholder.com/800x800/b4215a/513098"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "4.9",
+    "price": {
+      "currency": "inr",
+      "major": "4098",
+      "minor": "36"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "4924",
+      "minor": "0"
     }
   },
   {
+    "title": "Tellus Odio Nam Felis Pellentesque Egestas",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/bb3705/fbefcd",
+      "xs2": "https://via.placeholder.com/640x640/bb3705/fbefcd",
+      "md": "https://via.placeholder.com/360x360/bb3705/fbefcd",
+      "md2": "https://via.placeholder.com/720x720/bb3705/fbefcd",
+      "xl": "https://via.placeholder.com/400x400/bb3705/fbefcd",
+      "xl2": "https://via.placeholder.com/800x800/bb3705/fbefcd"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "3.7",
+    "price": {
+      "currency": "inr",
+      "major": "4129",
+      "minor": "95"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "7839",
+      "minor": "95"
     }
   },
   {
+    "title": "Eleifend Mi Quis Sit Sit Blandit Blandit Velit Risus Blandit Quis Amet",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/92bdc1/bd3dc4",
+      "xs2": "https://via.placeholder.com/640x640/92bdc1/bd3dc4",
+      "md": "https://via.placeholder.com/360x360/92bdc1/bd3dc4",
+      "md2": "https://via.placeholder.com/720x720/92bdc1/bd3dc4",
+      "xl": "https://via.placeholder.com/400x400/92bdc1/bd3dc4",
+      "xl2": "https://via.placeholder.com/800x800/92bdc1/bd3dc4"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratings": "2.8",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "3.2",
+    "price": {
+      "currency": "inr",
+      "major": "8485",
+      "minor": "8"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "8188",
+      "minor": "8"
     }
   },
   {
+    "title": "Ipsum Ante Donec",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/32001b/bf45de",
+      "xs2": "https://via.placeholder.com/640x640/32001b/bf45de",
+      "md": "https://via.placeholder.com/360x360/32001b/bf45de",
+      "md2": "https://via.placeholder.com/720x720/32001b/bf45de",
+      "xl": "https://via.placeholder.com/400x400/32001b/bf45de",
+      "xl2": "https://via.placeholder.com/800x800/32001b/bf45de"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
-    }
-  }, {
-    "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+    "link": "/detail",
+    "ratings": "1.6",
+    "price": {
+      "currency": "inr",
+      "major": "6619",
+      "minor": "52"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "oldprice": {
+      "currency": "inr",
+      "major": "9032",
+      "minor": "96"
     }
   },
   {
+    "title": "Non Rhoncus Blandit Pretium Convallis Bibendum Et Nisi",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/ae7ce9/f376ff",
+      "xs2": "https://via.placeholder.com/640x640/ae7ce9/f376ff",
+      "md": "https://via.placeholder.com/360x360/ae7ce9/f376ff",
+      "md2": "https://via.placeholder.com/720x720/ae7ce9/f376ff",
+      "xl": "https://via.placeholder.com/400x400/ae7ce9/f376ff",
+      "xl2": "https://via.placeholder.com/800x800/ae7ce9/f376ff"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "3.6",
+    "price": {
+      "currency": "inr",
+      "major": "2697",
+      "minor": "47"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "5687",
+      "minor": "98"
     }
   },
   {
+    "title": "Justo Sit Amet Tincidunt Convallis Consectetur Quam Suspendisse Tincidunt",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/57fdb9/f4d626",
+      "xs2": "https://via.placeholder.com/640x640/57fdb9/f4d626",
+      "md": "https://via.placeholder.com/360x360/57fdb9/f4d626",
+      "md2": "https://via.placeholder.com/720x720/57fdb9/f4d626",
+      "xl": "https://via.placeholder.com/400x400/57fdb9/f4d626",
+      "xl2": "https://via.placeholder.com/800x800/57fdb9/f4d626"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "4.2",
+    "price": {
+      "currency": "inr",
+      "major": "3736",
+      "minor": "96"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "4640",
+      "minor": "80"
     }
   },
   {
+    "title": "Lorem Sed Eget Felis Ipsum Massa Rhoncus Pulvinar Blandit Metus Rutrum Eget A Metus",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/b5c79f/f53f0e",
+      "xs2": "https://via.placeholder.com/640x640/b5c79f/f53f0e",
+      "md": "https://via.placeholder.com/360x360/b5c79f/f53f0e",
+      "md2": "https://via.placeholder.com/720x720/b5c79f/f53f0e",
+      "xl": "https://via.placeholder.com/400x400/b5c79f/f53f0e",
+      "xl2": "https://via.placeholder.com/800x800/b5c79f/f53f0e"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratings": "2.8",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "3.9",
+    "price": {
+      "currency": "inr",
+      "major": "1660",
+      "minor": "90"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "5515",
+      "minor": "80"
     }
   },
   {
+    "title": "Eleifend Ultrices Efficitur Et Proin Odio Arcu",
     "img": {
-      "xs": "https://picsum.photos/450/450",
-      "xs2": "https://picsum.photos/900/900",
-      "sm": "",
-      "sm2": "",
-      "md": "https://picsum.photos/585/585",
-      "md2": "https://picsum.photos/1170/1170",
-      "lg": "",
-      "lg2": "",
-      "xl": "https://picsum.photos/720/720",
-      "xl2": "https://picsum.photos/1440/1440"
+      "xs": "https://via.placeholder.com/320x320/8f055b/841afc",
+      "xs2": "https://via.placeholder.com/640x640/8f055b/841afc",
+      "md": "https://via.placeholder.com/360x360/8f055b/841afc",
+      "md2": "https://via.placeholder.com/720x720/8f055b/841afc",
+      "xl": "https://via.placeholder.com/400x400/8f055b/841afc",
+      "xl2": "https://via.placeholder.com/800x800/8f055b/841afc"
     },
-    "data": {
-      "title": "Lorem Ipsum Dolor Sit Amet",
-      "tag": "h2",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius quis orci nec hendrerit. Etiam eget elementum elit.",
-      "ratingsData": {
-        "ratings": "4.5",
-        "noofratings": "282",
-        "noofreviews": "320"
-      },
-      "cta": [
-        {
-          "title": "View Recipe",
-          "link": "[/pages/recipe]",
-          "ctastyle": "primary",
-          "tag": "a",
-          "icon": "fas fa-chevron-right"
-        },
-        {
-          "title": "Share",
-          "share": [
-            {
-              "icon": "logo-facebook",
-              "text": "Facebook",
-              "link": "#"
-            },
-            {
-              "icon": "logo-instagram",
-              "text": "Instagram",
-              "link": "#"
-            },
-            {
-              "icon": "logo-twitter",
-              "text": "Twitter",
-              "link": "#"
-            },
-            {
-              "icon": "logo-pinterest",
-              "text": "Pinterest",
-              "link": "#"
-            }
-          ],
-          "ctastyle": "secondary",
-          "tag": "button",
-          "icon": "fas fa-share-alt",
-          "isoutline": "true"
-        }
-      ]
+    "link": "/detail",
+    "ratings": "1.8",
+    "price": {
+      "currency": "inr",
+      "major": "9078",
+      "minor": "25"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "6415",
+      "minor": "67"
+    }
+  },
+  {
+    "title": "Ante Fringilla Vitae Ut Consectetur Sed Sed Tincidunt Tincidunt Sed Odio Nullam Venenatis Efficitur Sit Non Felis Sed Risus Pretium",
+    "img": {
+      "xs": "https://via.placeholder.com/320x320/cc6710/1e56a4",
+      "xs2": "https://via.placeholder.com/640x640/cc6710/1e56a4",
+      "md": "https://via.placeholder.com/360x360/cc6710/1e56a4",
+      "md2": "https://via.placeholder.com/720x720/cc6710/1e56a4",
+      "xl": "https://via.placeholder.com/400x400/cc6710/1e56a4",
+      "xl2": "https://via.placeholder.com/800x800/cc6710/1e56a4"
+    },
+    "link": "/detail",
+    "ratings": "1.4",
+    "price": {
+      "currency": "inr",
+      "major": "5798",
+      "minor": "61"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "9079",
+      "minor": "45"
+    }
+  },
+  {
+    "title": "Consectetur Nulla Ipsum In Ultrices Mattis Sit Tincidunt Sed Maecenas Integer Tellus Velit Eget Odio Quis Faucibus Sit Ac Iaculis",
+    "img": {
+      "xs": "https://via.placeholder.com/320x320/74a677/81e7a3",
+      "xs2": "https://via.placeholder.com/640x640/74a677/81e7a3",
+      "md": "https://via.placeholder.com/360x360/74a677/81e7a3",
+      "md2": "https://via.placeholder.com/720x720/74a677/81e7a3",
+      "xl": "https://via.placeholder.com/400x400/74a677/81e7a3",
+      "xl2": "https://via.placeholder.com/800x800/74a677/81e7a3"
+    },
+    "link": "/detail",
+    "ratings": "2.8",
+    "price": {
+      "currency": "inr",
+      "major": "5394",
+      "minor": "37"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "3085",
+      "minor": "17"
+    }
+  },
+  {
+    "title": "Quis Augue Augue Aliquam Lorem Blandit Maecenas",
+    "img": {
+      "xs": "https://via.placeholder.com/320x320/de86dc/861021",
+      "xs2": "https://via.placeholder.com/640x640/de86dc/861021",
+      "md": "https://via.placeholder.com/360x360/de86dc/861021",
+      "md2": "https://via.placeholder.com/720x720/de86dc/861021",
+      "xl": "https://via.placeholder.com/400x400/de86dc/861021",
+      "xl2": "https://via.placeholder.com/800x800/de86dc/861021"
+    },
+    "link": "/detail",
+    "ratings": "3.5",
+    "price": {
+      "currency": "inr",
+      "major": "9626",
+      "minor": "25"
+    },
+    "oldprice": {
+      "currency": "inr",
+      "major": "6333",
+      "minor": "28"
     }
   }
 ]
