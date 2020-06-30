@@ -1,5 +1,18 @@
 <div class="main-content">
-  <app-indexbanner></app-indexbanner>
+  <app-index-banner></app-index-banner>
+  <section class="generic-content py-2">
+    <div class="bg-wrap">
+      <div class="max-wrap">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-60">
+              <app-promo-grid></app-promo-grid>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section *ngFor="let section of indexData" class="generic-content py-2" [ngClass]="section.theme">
     <div class="bg-wrap" [ngClass]="section.bg">
       <div class="max-wrap">
@@ -18,52 +31,7 @@
           </div>
           <div class="row">
             <div class="col-60">
-              <div class="banner-comp">
-                <div class="banner-row">
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: red;">hi</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: blue;">hi</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: green;">hi</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: yellow;">hi</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="banner-row">
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: red;">hi</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: blue;">hi</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: green;">hi</div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="banner-tile p-2">
-                      <div class="d-flex h-100" style="background-color: yellow;">hi</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

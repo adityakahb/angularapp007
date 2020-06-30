@@ -8,13 +8,13 @@ declare const require: any;
 const bannerJson = require('./../../shared/data/indexbanner.json');
 
 @Component({
-  selector: 'app-indexbanner',
-  templateUrl: './indexbanner.component.html',
-  styleUrls: ['./indexbanner.component.scss'],
+  selector: 'app-index-banner',
+  templateUrl: './index-banner.component.html',
+  styleUrls: ['./index-banner.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 
-export class IndexbannerComponent implements OnInit, AfterViewInit {
+export class IndexBannerComponent implements OnInit, AfterViewInit {
   @ViewChild('heroslider') heroslider: ElementRef;
 
   bannerData = {};
@@ -29,13 +29,23 @@ export class IndexbannerComponent implements OnInit, AfterViewInit {
     this.ngZone.runOutsideAngular(() => {
       if (isPlatformBrowser(this.platformId)) {
         $(this.heroslider.nativeElement).slick({
-          arrows: false,
+          arrows: true,
           autoplay: false,
-          dots: true,
+          dots: false,
           infinite: true,
           slidesToShow: 4,
           slidesToScroll: 4,
           speed: 300,
+          prevArrow: `<button
+              class="btn btn-light btn-lg slick-prev"
+              type="button" title="Previous">
+              <ion-icon name="chevron-back"></ion-icon>
+            </button>`,
+              nextArrow: `<button
+              class="btn btn-light btn-lg slick-next"
+              type="button" title="Next">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>`,
           responsive: [
             {
               breakpoint: 1600,

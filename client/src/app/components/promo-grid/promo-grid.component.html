@@ -1,0 +1,85 @@
+<div class="pgrid-comp">
+  <div class="pgrid-row">
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100 flex-column">
+          <div class="user-tile position-relative d-flex align-items-center pl-8 pl-xl-10">
+            <div class="avtr-wrap position-absolute">
+              <app-user-avatar [cProps]="{
+                firstname: 'Firstname',
+                lastname: 'Lastname'
+              }"></app-user-avatar>
+            </div>
+            <div class="name-wrap">
+              <strong>Firstname Lastname</strong>
+            </div>
+          </div>
+          <div class="btn-holder">
+            <hr/>
+            <app-cta-btn class="mr-2" [cProps]="{
+              tag: 'a',
+              href: '#',
+              type: '',
+              text: 'My Profile',
+              title: 'My Profile',
+              primaryicon: 'person-circle',
+              ctaicon: '',
+              ctastyle: 'primary',
+              isoutline: 'false',
+              size: 'sm'
+            }"></app-cta-btn>
+            <app-cta-btn [cProps]="{
+              tag: 'a',
+              href: '#',
+              type: '',
+              text: 'My Orders',
+              title: 'My Orders',
+              primaryicon: 'cube',
+              ctaicon: '',
+              ctastyle: 'secondary',
+              isoutline: 'false',
+              size: 'sm'
+            }"></app-cta-btn>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: blue;">2</div>
+      </div>
+    </div>
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: green;">3</div>
+      </div>
+    </div>
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: yellow;">4</div>
+      </div>
+    </div>
+  </div>
+  <div class="pgrid-row">
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: red;">5</div>
+      </div>
+    </div>
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: blue;">6</div>
+      </div>
+    </div>
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: green;">7</div>
+      </div>
+    </div>
+    <div>
+      <div class="pgrid-tile p-2">
+        <div class="d-flex h-100" style="background-color: yellow;">8</div>
+      </div>
+    </div>
+  </div>
+</div>

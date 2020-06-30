@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { CtaBtnModule } from './../../shared/components/cta-btn/cta-btn.module';
 import { DirectiveModule } from './../../shared/directives/directive.module';
-import { ItemCarouselModule } from './../../shared/components/item-carousel/item-carousel.module';
+import { ItemCarouselModule } from './../../components/item-carousel/item-carousel.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PageItemdetailComponent } from './page-itemdetail.component';
 import { PageItemdetailRoutingModule } from './page-itemdetail-routing.module';

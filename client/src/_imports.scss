@@ -71,6 +71,25 @@ $xl: map-get($grid-breakpoints, 'xl');
 // Another
 $xxl: map-get($grid-breakpoints, 'xxl');
 
+$spacer: rem(16px);
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 3.25),
+    7: ($spacer * 3.5),
+    8: ($spacer * 4),
+    9: ($spacer * 4.5),
+    10: ($spacer * 5)
+  ),
+  $spacers
+);
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";

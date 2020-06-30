@@ -39,4 +39,10 @@ export class ResponsiveImageComponent implements OnInit {
     }
     return str;
   }
+
+  hide($event) {
+    if (($event || {}).target) {
+      $event.target.style.display = 'none';
+    }
+  }
 }

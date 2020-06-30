@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IndexbannerComponent } from './indexbanner.component';
+import { IndexBannerComponent } from './index-banner.component';
 
-describe('IndexbannerComponent', () => {
-  let component: IndexbannerComponent;
-  let fixture: ComponentFixture<IndexbannerComponent>;
+describe('IndexBannerComponent', () => {
+  let component: IndexBannerComponent;
+  let fixture: ComponentFixture<IndexBannerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [IndexbannerComponent]
+      declarations: [IndexBannerComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IndexbannerComponent);
+    fixture = TestBed.createComponent(IndexBannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

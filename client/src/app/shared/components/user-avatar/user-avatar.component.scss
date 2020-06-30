@@ -1,35 +1,27 @@
-@import './../../../imports';
-@import './../templates';
+@import './../../../../imports';
 @import './scss/default';
 
-// DON'T ADD ANY SCSS IN{ XS
-@media (min-width: rem(#{$xs})) {
+// DON'T ADD ANY SCSS IN XS
+@media (min-width: $xs) {
   @import './scss/xs';
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: rem(#{$sm})) {
+@media (min-width: $sm) {
   @import './scss/sm';
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: rem(#{$md})) {
+@media (min-width: $md) {
   @import './scss/md';
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: rem(#{$lg})) {
+@media (min-width: $lg) {
   @import './scss/lg';
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: rem(#{$xl})) {
+@media (min-width: $xl) {
   @import './scss/xl';
 }
-
-// 0
-// 16.66
-// 33
-// 50
-// 66.66
-// 83.33
