@@ -3,7 +3,7 @@
     <div>
       <div class="pgrid-tile p-2">
         <div class="d-flex h-100 flex-column">
-          <div class="user-tile position-relative d-flex align-items-center pl-8 pl-xl-10">
+          <div class="user-tile position-relative d-flex justify-content-center flex-column pl-8 pl-xl-10">
             <div class="avtr-wrap position-absolute">
               <app-user-avatar [cProps]="{
                 firstname: 'Firstname',
@@ -16,15 +16,15 @@
           </div>
           <div class="btn-holder">
             <hr/>
-            <app-cta-btn class="mr-2" [cProps]="{
+            <app-cta-btn [cProps]="{
               tag: 'a',
               href: '#',
               type: '',
               text: 'My Profile',
               title: 'My Profile',
-              primaryicon: 'person-circle',
+              primaryicon: '',
               ctaicon: '',
-              ctastyle: 'primary',
+              ctastyle: 'info',
               isoutline: 'false',
               size: 'sm'
             }"></app-cta-btn>
@@ -34,7 +34,26 @@
     </div>
     <div>
       <div class="pgrid-tile p-2">
-        <div class="d-flex h-100" style="background-color: blue;">2</div>
+        <div class="d-flex h-100">
+          <div class="addr-holder">
+            <h4 class="h6"><strong>Shipping Address</strong></h4>
+            <address class="mt-2">
+              Flat #123, Mahaveer Marvel Apartment, Kodichikkanahalli Main Rd, Lake City, Bommanahalli, Bangalore, Karnataka, 560076
+            </address>
+            <app-cta-btn class="mt-2" [cProps]="{
+              tag: 'a',
+              href: '#',
+              type: '',
+              text: 'My Addresses',
+              title: 'My Addresses',
+              primaryicon: 'location',
+              ctaicon: '',
+              ctastyle: 'info',
+              isoutline: 'true',
+              size: 'sm'
+            }"></app-cta-btn>
+          </div>
+        </div>
       </div>
     </div>
     <div>
@@ -45,12 +64,18 @@
     <div>
       <div class="pgrid-tile p-2">
         <div class="d-flex h-100 flex-column">
-          <div class="orders-tile d-flex h-100 pb-4 position-relative flex-column">
-            <h4>My Orders</h4>
-            <div class="d-flex h-50 pb-3">
+          <div class="d-flex h-100 pb-4 position-relative flex-column">
+            <h4 class="h6"><strong>My Orders</strong></h4>
+            <div class="orders-tile d-flex pb-3">
               order-1
             </div>
-            <div class="d-flex h-50 pb-3">
+            <div class="orders-tile d-flex pb-3">
+              order-2
+            </div>
+            <div class="orders-tile d-none d-xl-flex pb-3">
+              order-1
+            </div>
+            <div class="orders-tile d-none d-xl-flex pb-3">
               order-2
             </div>
             <div class="btn-holder text-center position-absolute w-100 bottom-0">
@@ -61,7 +86,7 @@
                 text: 'All Orders',
                 title: 'All Orders',
                 primaryicon: '',
-                ctaicon: '',
+                ctaicon: 'chevron-forward',
                 ctastyle: 'secondary',
                 isoutline: 'false',
                 size: 'sm'

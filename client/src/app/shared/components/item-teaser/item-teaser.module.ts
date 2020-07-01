@@ -1,18 +1,20 @@
-import { ResponsiveImageModule } from './../responsive-image/responsive-image.module';
 import { CommonModule } from '@angular/common';
 import { CtaBtnModule } from './../cta-btn/cta-btn.module';
 import { DirectiveModule } from './../../directives/directive.module';
-import { NgModule } from '@angular/core';
-import { RatingsModule } from './../ratings/ratings.module';
 import { ItemTeaserComponent } from './item-teaser.component';
+import { NgModule } from '@angular/core';
+import { ProductImgModule } from './../product-img/product-img.module';
+import { RatingsModule } from './../ratings/ratings.module';
+import { ResponsiveImageModule } from './../responsive-image/responsive-image.module';
 
 @NgModule({
   imports: [
     CommonModule,
     CtaBtnModule,
     DirectiveModule,
+    ProductImgModule,
     RatingsModule,
-    ResponsiveImageModule
+    ResponsiveImageModule,
   ],
   declarations: [
     ItemTeaserComponent

@@ -1,0 +1,12 @@
+<a [href]="link" class="item-img" *ngIf="link; else elseBlock">
+  <div>
+    <app-responsive-image [imgData]="cProps || {}"></app-responsive-image>
+  </div>
+</a>
+<ng-template #elseBlock>
+  <div class="item-img">
+    <div>
+      <app-responsive-image [imgData]="cProps || {}"></app-responsive-image>
+    </div>
+  </div>
+</ng-template>

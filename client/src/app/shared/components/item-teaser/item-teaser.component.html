@@ -1,9 +1,10 @@
 <article class="item-teaser">
-  <a [href]="cProps.link" class="item-img mb-2">
+  <app-product-img [link]="cProps.link" [cProps]="cProps.img" class="mb-2"></app-product-img>
+  <!-- <a [href]="cProps.link" class="item-img mb-2">
     <div>
       <app-responsive-image [imgData]="cProps.img || {}"></app-responsive-image>
     </div>
-  </a>
+  </a> -->
   <div class="item-name mb-2">
     <!-- [titletext]="cProps.title"-->
     <span class="d-none">{{cProps.title}}</span>

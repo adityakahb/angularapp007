@@ -80,3 +80,12 @@
     left: 0;
   }
 }
+.addr-holder {
+  line-height: 1;
+  address {
+    font-size: rem(14px);
+  }
+}
+.orders-tile {
+  height: 50%;
+}
