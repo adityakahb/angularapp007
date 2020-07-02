@@ -81,11 +81,18 @@
   }
 }
 .addr-holder {
-  line-height: 1;
+  line-height: 1.2;
   address {
-    font-size: rem(14px);
+    font-size: rem(13px);
   }
 }
 .orders-tile {
   height: 50%;
+  .img-wrap {
+    width: rem(32px);
+    height: rem(32px);
+  }
+  .order-title {
+    font-size: rem(13px);
+  }
 }

@@ -1,5 +1,12 @@
 .addr-holder {
   address {
     font-size: rem(16px);
+    line-height: 1.5;
+  }
+}
+.orders-tile {
+  height: 25%;
+  .order-title {
+    font-size: rem(16px);
   }
 }

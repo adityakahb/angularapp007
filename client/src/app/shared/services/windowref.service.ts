@@ -3,8 +3,9 @@
  * https://juristr.com/blog/2016/09/ng2-get-window-ref/
  */
 import { Injectable } from '@angular/core';
+declare const window: any;
 
-function getWindow (): any {
+function getWindow(): any {
     return window ? window : null;
 }
 

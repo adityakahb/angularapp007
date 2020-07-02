@@ -23,7 +23,9 @@ body {
 .left-0 {
   left: 0 !important;
 }
-
+.word-wrap {
+  @include word-wrap();
+}
 body {
   &.nav-open {
     overflow: hidden;

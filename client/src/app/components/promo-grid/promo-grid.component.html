@@ -35,23 +35,25 @@
     <div>
       <div class="pgrid-tile p-2">
         <div class="d-flex h-100">
-          <div class="addr-holder">
+          <div class="addr-holder position-relative pb-5">
             <h4 class="h6"><strong>Shipping Address</strong></h4>
-            <address class="mt-2">
+            <address class="mt-2 word-wrap">
               Flat #123, Mahaveer Marvel Apartment, Kodichikkanahalli Main Rd, Lake City, Bommanahalli, Bangalore, Karnataka, 560076
             </address>
-            <app-cta-btn class="mt-2" [cProps]="{
-              tag: 'a',
-              href: '#',
-              type: '',
-              text: 'My Addresses',
-              title: 'My Addresses',
-              primaryicon: 'location',
-              ctaicon: '',
-              ctastyle: 'info',
-              isoutline: 'true',
-              size: 'sm'
-            }"></app-cta-btn>
+            <div class="btn-holder text-left position-absolute w-100 bottom-0">
+              <app-cta-btn class="mt-2" [cProps]="{
+                tag: 'a',
+                href: '#',
+                type: '',
+                text: 'My Addresses',
+                title: 'My Addresses',
+                primaryicon: 'location',
+                ctaicon: '',
+                ctastyle: 'info',
+                isoutline: 'true',
+                size: 'sm'
+              }"></app-cta-btn>
+            </div>
           </div>
         </div>
       </div>
@@ -66,17 +68,41 @@
         <div class="d-flex h-100 flex-column">
           <div class="d-flex h-100 pb-4 position-relative flex-column">
             <h4 class="h6"><strong>My Orders</strong></h4>
-            <div class="orders-tile d-flex pb-3">
-              order-1
+            <div class="orders-tile position-relative d-flex pl-5 pb-3 flex-column">
+              <div class="img-wrap position-absolute top-0 left-0">
+                <app-product-img [cProps]="{
+                  xs: 'https://via.placeholder.com/320x320/74a677/81e7a3',
+                  xs2: 'https://via.placeholder.com/640x640/74a677/81e7a3'
+                }"></app-product-img>
+              </div>
+              <a href="#" class="order-title word-wrap" [innerHTML]="'Lenovo Ideapad Slim 3i 10th Gen Intel Core i3 14 inch FHD Thin and Light Laptop (4GB/256GB/Windows 10/MS Office/Grey/1.6Kg), 81WD0044IN' | textTrimmer:70"></a>
             </div>
-            <div class="orders-tile d-flex pb-3">
-              order-2
+            <div class="orders-tile position-relative d-flex pl-5 pb-3 flex-column">
+              <div class="img-wrap position-absolute top-0 left-0">
+                <app-product-img [cProps]="{
+                  xs: 'https://via.placeholder.com/320x320/de86dc/861021',
+                  xs2: 'https://via.placeholder.com/640x640/de86dc/861021'
+                }"></app-product-img>
+              </div>
+              <a href="#" class="order-title word-wrap" [innerHTML]="'Dell XPS 9570 15.6-inch FHD Laptop (8th Gen Core i7-8750H/16GB/512 GB SSD/Windows 10 + MS Office/ Nvidia GTX 1050Ti 4GB Graphics/Silver)' | textTrimmer:70"></a>
             </div>
-            <div class="orders-tile d-none d-xl-flex pb-3">
-              order-1
+            <div class="orders-tile position-relative d-none d-lg-flex pl-5 pb-3 flex-column">
+              <div class="img-wrap position-absolute top-0 left-0">
+                <app-product-img [cProps]="{
+                  xs: 'https://via.placeholder.com/320x320/cc6710/1e56a4',
+                  xs2: 'https://via.placeholder.com/640x640/cc6710/1e56a4'
+                }"></app-product-img>
+              </div>
+              <a href="#" class="order-title word-wrap" [innerHTML]="'HP 14-inch Laptop (9th Gen A4-9125/4GB/1TB HDD/Win 10/MS Office 2019/AMD Radeon R3 Graphics), 14-cm0123au' | textTrimmer:70"></a>
             </div>
-            <div class="orders-tile d-none d-xl-flex pb-3">
-              order-2
+            <div class="orders-tile position-relative d-none d-lg-flex pl-5 pb-3 flex-column">
+              <div class="img-wrap position-absolute top-0 left-0">
+                <app-product-img [cProps]="{
+                  xs: 'https://via.placeholder.com/320x320/b5c79f/f53f0e',
+                  xs2: 'https://via.placeholder.com/640x640/b5c79f/f53f0e'
+                }"></app-product-img>
+              </div>
+              <a href="#" class="order-title word-wrap" [innerHTML]="'HP 14 Pentium Gold 14-inch Thin and Light Laptop (4GB/256GB SSD/Windows 10 Home/MS Office/Jet Black/1.47 kg), 14q-cs0025TU' | textTrimmer:70"></a>
             </div>
             <div class="btn-holder text-center position-absolute w-100 bottom-0">
               <app-cta-btn [cProps]="{

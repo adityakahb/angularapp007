@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-product-img',
   templateUrl: './product-img.component.html',
-  styleUrls: ['./product-img.component.scss']
+  styleUrls: ['./product-img.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ProductImgComponent implements OnInit {
 
@@ -13,6 +14,5 @@ export class ProductImgComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }
