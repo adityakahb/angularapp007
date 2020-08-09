@@ -64,7 +64,7 @@ export class PageSearchComponent implements OnInit, AfterViewInit {
     this.ngZone.runOutsideAngular(() => {
       if (isPlatformBrowser(this.platformId) && stickybits && this.searchsticky.nativeElement) {
         this.cService.addStickyBits(this.searchsticky.nativeElement.getAttribute('id'),
-          {useStickyClasses: true, stickyBitStickyOffset: 64});
+          {useStickyClasses: true, stickyBitStickyOffset: 48});
       }
     });
   }

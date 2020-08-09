@@ -8,6 +8,7 @@ import { IndexModule } from './pages/index/index.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PageItemdetailModule } from './pages/itemdetail/page-itemdetail.module';
 import { PageSearchModule } from './pages/search/page-search.module';
+import { PageRegisterModule } from './pages/register/page-register.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PageSearchModule } from './pages/search/page-search.module';
     PageSearchModule,
     HttpClientModule,
     PageItemdetailModule,
+    PageRegisterModule,
   ],
   providers: [
     {

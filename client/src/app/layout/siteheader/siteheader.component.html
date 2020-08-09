@@ -42,27 +42,29 @@
                   (click)="openSearchNav()">
                   <ion-icon name="search"></ion-icon>
                 </button>
-                <button type="button">
+                <button type="button" class="ml-1 ml-xl-2">
                   <ion-icon name="heart"></ion-icon>
                 </button>
-                <button type="button">
-                  <div class="cart-count w-100 position-absolute text-center">999+</div>
+                <button type="button" class="ml-1 ml-xl-2">
+                  <div class="cart-count w-100 position-absolute text-center"><small><strong>999+</strong></small></div>
                   <ion-icon name="cart"></ion-icon>
                 </button>
                 <!-- <button type="button" [ngClass]="{'active': isLangNavOpen}" (click)="openLangNav()">
                   <span class="txt">EN</span>
                 </button> -->
-                <button type="button" [ngClass]="{'active': isUserNavOpen}"
-                  (click)="openUserNav()">
-                  <!-- <ion-icon name="person-circle"></ion-icon> -->
+                <a href="#" class="ml-1 ml-xl-2">
+                  <ion-icon name="person-circle"></ion-icon>
+                </a>
+                <!-- <button type="button" [ngClass]="{'active': isUserNavOpen}"
+                  (click)="openUserNav()" class="ml-1 ml-xl-2">
                   <div class="w-75 d-inline-block">
                     <app-user-avatar [cProps]="{
                       firstname: 'Firstname',
                       lastname: 'Lastname'
                     }"></app-user-avatar>
                   </div>
-                </button>
-                <button type="button" [ngClass]="{'active': isNavOpen}" class="d-xl-none" (click)="openNav()">
+                </button> -->
+                <button type="button" [ngClass]="{'active': isNavOpen}" class="d-xl-none ml-1 ml-xl-2" (click)="openNav()">
                   <ion-icon name="menu"></ion-icon>
                 </button>
               </div>

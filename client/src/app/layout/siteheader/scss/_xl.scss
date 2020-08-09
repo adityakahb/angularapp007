@@ -1,5 +1,5 @@
 .siteheader-buffer, .siteheader-comp {
-  height: rem(64px);
+  // height: rem(64px);
 }
 .site-nav-buffer {
   background-color: $secondary-dark;
@@ -8,13 +8,11 @@
 }
 .nav-search-wrap {
   // max-width: rem(960px);
-  padding: rem(16px 192px 17px 192px);
+  padding: 9px rem(192px) 9px rem(192px);
 }
 .siteheader-comp {
   .nav-wrap {
-    button {
-      margin: 0 0 0 rem(16px);
-
+    button, a {
       &:hover {
         color: $light;
         background-color: $dark;
