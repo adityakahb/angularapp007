@@ -9,21 +9,95 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-60 col-md-40 col-xl-30">
-            <form>
+            <form [formGroup]="regForm" (ngSubmit)="onSignupSubmit()">
+
               <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="regfirstname"><strong>First Name</strong></label>
+                <input type="text" class="form-control" id="regfirstname"
+                  [ngClass]="{'is-invalid': regFormSubmitted && regControls.__FIRSTNAME.errors}"
+                  placeholder="First Name" formControlName="__FIRSTNAME">
+                <div *ngIf="regFormSubmitted && regControls.__FIRSTNAME.errors" class="invalid-feedback">
+                  <div *ngIf="regControls.__FIRSTNAME.errors.required">First Name is required</div>
+                </div>
               </div>
+
               <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="regmiddlename"><strong>Middle Name</strong></label>
+                <input type="text" class="form-control" id="regmiddlename"
+                  [ngClass]="{'is-invalid': regFormSubmitted && regControls.__MIDDLENAME.errors}"
+                  placeholder="Middle Name" formControlName="__MIDDLENAME">
+                <div *ngIf="regFormSubmitted && regControls.__MIDDLENAME.errors" class="invalid-feedback">
+                  <div *ngIf="regControls.__FIRSTNAME.errors.required">Middle Name error</div>
+                </div>
               </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+              <div class="form-group">
+                <label for="reglastname"><strong>Last Name</strong></label>
+                <input type="text" class="form-control" id="reglastname"
+                  [ngClass]="{'is-invalid': regFormSubmitted && regControls.__LASTNAME.errors}"
+                  placeholder="Last Name" formControlName="__LASTNAME">
+                <div *ngIf="regFormSubmitted && regControls.__LASTNAME.errors" class="invalid-feedback">
+                  <div *ngIf="regControls.__LASTNAME.errors.required">Last Name is required</div>
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+
+              <div class="form-group">
+                <label for="regemail"><strong>Email address</strong></label>
+                <input type="email" class="form-control" id="regemail"
+                  [ngClass]="{'is-invalid': regFormSubmitted && regControls.__EMAIL.errors}"
+                  placeholder="Email Address" formControlName="__EMAIL">
+                <div *ngIf="regFormSubmitted && regControls.__EMAIL.errors" class="invalid-feedback">
+                  <div *ngIf="regControls.__EMAIL.errors.required">Email is required</div>
+                  <div *ngIf="regControls.__EMAIL.errors.email">Email must be a valid email address</div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="regpassword"><strong>Password</strong></label>
+                <input type="password" class="form-control"
+                  [ngClass]="{'is-invalid': regFormSubmitted && regControls.__PASSWORD.errors}" id="regpassword"
+                  placeholder="Password" formControlName="__PASSWORD">
+                <div *ngIf="regFormSubmitted && regControls.__PASSWORD.errors" class="invalid-feedback">
+                  <div *ngIf="regControls.__PASSWORD.errors.required">Password is required</div>
+                  <div *ngIf="regControls.__PASSWORD.errors.pattern">Password must follow pattern</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="hdr_remember">
+                  <label class="custom-control-label" for="hdr_remember">Remember Me</label>
+                </div>
+              </div>
+              
+              <app-cta-btn class="mr-3" [cProps]="{
+                tag: 'button',
+                type: 'submit',
+                text: 'Login',
+                title: 'Login',
+                primaryicon: '',
+                ctaicon: 'chevron-forward',
+                ctastyle: 'primary',
+                isoutline: 'false'
+              }"></app-cta-btn>
+              Don't have an account? <a href="#">Register Now</a>.
+              <!-- <div class="mb-3"></div>
+              <app-alert-msg *ngIf="isLoginLoading" [cProps]="{
+                type: 'info',
+                title: '',
+                content: 'Please wait',
+                icon: 'loading-spinner',
+                actions: [],
+                isClosable: false
+              }"></app-alert-msg>
+              <app-alert-msg *ngIf="isLoginFailed" [cProps]="{
+                type: 'danger',
+                title: '',
+                content: loginFailMsg,
+                icon: 'alert-circle',
+                actions: [],
+                isClosable: false
+              }"></app-alert-msg> -->
             </form>
           </div>
         </div>

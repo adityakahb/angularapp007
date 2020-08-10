@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
+import { CtaBtnModule } from './../../shared/components/cta-btn/cta-btn.module';
 import { DirectiveModule } from './../../shared/directives/directive.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PageRegisterComponent } from './page-register.component';
 import { PageRegisterRoutingModule } from './page-register-routing.module';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SectionHeaderModule } from './../../shared/components/section-header/section-header.module';
 
 @NgModule({
@@ -11,6 +13,9 @@ import { SectionHeaderModule } from './../../shared/components/section-header/se
     DirectiveModule,
     PageRegisterRoutingModule,
     SectionHeaderModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CtaBtnModule,
   ],
   declarations: [
     PageRegisterComponent
