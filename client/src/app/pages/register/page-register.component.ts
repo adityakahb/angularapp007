@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AdminService } from 'src/app/shared/services/admin.service';
 
 @Component({
   selector: 'app-page-register',
@@ -16,7 +17,7 @@ export class PageRegisterComponent implements OnInit {
   regForm;
   regFormSubmitted = false;
 
-  constructor() { }
+  constructor(private adminService: AdminService) { }
 
   ngOnInit() {
     this.createFormControls();
@@ -50,24 +51,25 @@ export class PageRegisterComponent implements OnInit {
     if (this.regForm.invalid) {
       return;
     }
+    console.log('============this.regForm.value', this.regForm.value);
     // this.loginFailMsg = '';
     // this.loginForm.get('__EMAIL').disable();
     // this.loginForm.get('__PASSWORD').disable();
     // this.isLoginLoading = true;
-    // this.authService.signIn(this.loginForm.value).subscribe((res: any) => {
-    //   this.loginForm.get('__EMAIL').enable();
-    //   this.loginForm.get('__PASSWORD').enable();
-    //   this.isLoginLoading = false;
-    //   if (res.token) {
-    //     this.authService.setToken(res.token);
-    //     this.loginFailMsg = '';
-    //     this.isLoginFailed = false;
-    //     this.isLoginSuccess = true;
-    //   } else {
-    //     this.loginFailMsg = res.message || 'Some Error Occurred';
-    //     this.isLoginFailed = true;
-    //     this.isLoginSuccess = false;
-    //   }
-    // });
+    this.adminService.signUp(this.regForm.value).subscribe((res: any) => {
+      // this.loginForm.get('__EMAIL').enable();
+      // this.loginForm.get('__PASSWORD').enable();
+      // this.isLoginLoading = false;
+      // if (res.token) {
+      //   this.authService.setToken(res.token);
+      //   this.loginFailMsg = '';
+      //   this.isLoginFailed = false;
+      //   this.isLoginSuccess = true;
+      // } else {
+      //   this.loginFailMsg = res.message || 'Some Error Occurred';
+      //   this.isLoginFailed = true;
+      //   this.isLoginSuccess = false;
+      // }
+    });
   }
 }

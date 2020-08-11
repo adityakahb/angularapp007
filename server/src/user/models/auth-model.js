@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const uniqueValidator = require('mongoose-unique-validator');
 
-let authSchema = new Schema({
+let userAuthSchema = new Schema({
   __EMAIL: {
     type: String,
     unique: true
@@ -13,10 +13,10 @@ let authSchema = new Schema({
     type: String
   }
 }, {
-  collection: 'auth'
+  collection: 'user_auth'
 });
 
-authSchema.plugin(uniqueValidator, {
+userAuthSchema.plugin(uniqueValidator, {
   message: 'Email already in use.'
 });
-module.exports = mongoose.model('Auth', authSchema);
+module.exports = mongoose.model('userauth', userAuthSchema);

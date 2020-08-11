@@ -11,8 +11,8 @@ import { DOCUMENT, isPlatformBrowser, isPlatformServer } from '@angular/common';
   providedIn: 'root'
 })
 
-export class AuthService {
-  endpoint = 'http://localhost:4000/auth-a';
+export class AdminService {
+  endpoint = 'http://localhost:4000/adminapi';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser = {};
 

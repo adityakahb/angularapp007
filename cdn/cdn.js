@@ -12,9 +12,8 @@ app.use('/vendor', express.static('vendor'));
 let jsURLs = [
     'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
     'http://localhost:4100/vendor/js/jquery-accessibleMegaMenu.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.0/umd/popper.min.js',
-    // 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
 	'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js',
 	'https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.21/jquery.zoom.min.js',

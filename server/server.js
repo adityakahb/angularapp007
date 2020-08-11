@@ -1,12 +1,13 @@
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const dbConfig = require('./database/db');
+const dbConfig = require('./src/database/db');
 const express = require('express');
 const mongoose = require('mongoose');
 
 // Express APIs
-const authapi = require('./auth/routes/auth.routes');
-const searchapi = require('./search/routes/search.routes');
+const adminapi = require('./src/admin/route/admin.route');
+const authapi = require('./src/user/route/user.route');
+const searchapi = require('./src/search/route/search.route');
 
 // MongoDB conection
 mongoose.Promise = global.Promise;
@@ -36,6 +37,7 @@ app.use(cors());
 // Serve static resources
 app.use('/public', express.static('public'));
 
+app.use('/adminapi', adminapi);
 app.use('/authapi', authapi);
 app.use('/searchapi', searchapi);
 

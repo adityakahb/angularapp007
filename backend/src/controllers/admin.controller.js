@@ -6,42 +6,43 @@ var ProductModel = require('../models/product.model');
 exports.register = (req, res) => {
   var adminDetails = req.body;
   var newAdmin = new AdminModel(adminDetails);
-  newAdmin.save((err, doc) => {
+  console.log('============adminDetails', adminDetails);
+  // newAdmin.save((err, doc) => {
 
-    if (err) {
-      console.log(err);
-      res.send(err);
-    } else {
+  //   if (err) {
+  //     console.log(err);
+  //     res.send(err);
+  //   } else {
 
-      var payload = {
-        subject: doc._id
-      };
+  //     var payload = {
+  //       subject: doc._id
+  //     };
 
-      var token = jwt.sign(payload, 'seckey');
+  //     var token = jwt.sign(payload, 'seckey');
 
-      var mailOptions = {
-        from: 'noreply@ecommerce.com',
-        to: adminDetails.emailId,
-        subject: "Thanks for Registration and Verify Email",
-        html: `
+  //     var mailOptions = {
+  //       from: 'noreply@ecommerce.com',
+  //       to: adminDetails.emailId,
+  //       subject: "Thanks for Registration and Verify Email",
+  //       html: `
               
-                    <html>
+  //                   <html>
 
-                      <h1>You have successfully registered as Admin</h1>
+  //                     <h1>You have successfully registered as Admin</h1>
 
-                    </html>
+  //                   </html>
               
-              `
-      };
+  //             `
+  //     };
 
-      // EmailService.sendEmail(mailOptions);
+  //     // EmailService.sendEmail(mailOptions);
 
 
-      res.status(200).send({
-        token: token
-      });
-    }
-  })
+  //     res.status(200).send({
+  //       token: token
+  //     });
+  //   }
+  // })
 }
 
 exports.addProduct = (req, res) => {

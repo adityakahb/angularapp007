@@ -62,25 +62,18 @@
                   <div *ngIf="regControls.__PASSWORD.errors.pattern">Password must follow pattern</div>
                 </div>
               </div>
-
-              <div class="form-group">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="hdr_remember">
-                  <label class="custom-control-label" for="hdr_remember">Remember Me</label>
-                </div>
-              </div>
               
               <app-cta-btn class="mr-3" [cProps]="{
                 tag: 'button',
                 type: 'submit',
-                text: 'Login',
-                title: 'Login',
+                text: 'Sign Up',
+                title: 'Sign Up',
                 primaryicon: '',
                 ctaicon: 'chevron-forward',
                 ctastyle: 'primary',
                 isoutline: 'false'
               }"></app-cta-btn>
-              Don't have an account? <a href="#">Register Now</a>.
+              Already have an account? <a href="#">Login Now</a>.
               <!-- <div class="mb-3"></div>
               <app-alert-msg *ngIf="isLoginLoading" [cProps]="{
                 type: 'info',

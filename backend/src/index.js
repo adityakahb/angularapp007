@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-
+var cors = require('cors');
 
 var app = express();
 
@@ -19,6 +19,8 @@ mongoose.connect(Config.AppConfig.MONGO_URI, {
     console.log('db connected');
   }
 })
+
+app.use(cors());
 
 app.use(express.json());
 
