@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { AdminService } from './../../shared/services/admin.service';
 
 @Component({
-  selector: 'app-page-register',
-  templateUrl: './page-register.component.html',
-  styleUrls: ['./page-register.component.scss']
+  selector: 'app-page-login',
+  templateUrl: './page-login.component.html',
+  styleUrls: ['./page-login.component.scss']
 })
-export class PageRegisterComponent implements OnInit {
+export class PageLoginComponent implements OnInit {
   __FIRSTNAME: FormControl;
   __MIDDLENAME: FormControl;
   __LASTNAME: FormControl;
@@ -17,7 +17,7 @@ export class PageRegisterComponent implements OnInit {
   regForm;
   regFormSubmitted = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private adminService: AdminService) { }
 
   ngOnInit() {
     this.createFormControls();
@@ -56,7 +56,7 @@ export class PageRegisterComponent implements OnInit {
     // this.loginForm.get('__EMAIL').disable();
     // this.loginForm.get('__PASSWORD').disable();
     // this.isLoginLoading = true;
-    this.authService.signUp(this.regForm.value).subscribe((res: any) => {
+    this.adminService.signUp(this.regForm.value).subscribe((res: any) => {
       // this.loginForm.get('__EMAIL').enable();
       // this.loginForm.get('__PASSWORD').enable();
       // this.isLoginLoading = false;

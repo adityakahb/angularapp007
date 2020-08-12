@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './../interfaces/user.interface';
+import { IAdmin } from './../interfaces/admin.interface';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
@@ -24,7 +24,7 @@ export class AdminService {
   ) { }
 
   // Sign-up
-  signUp(user: User): Observable<any> {
+  signUp(user: IAdmin): Observable<any> {
     return this.http.post(`${this.endpoint}/register`, user)
       .pipe(
         catchError(this.handleError)
@@ -32,7 +32,7 @@ export class AdminService {
   }
 
   // Sign-in
-  signIn(user: User) {
+  signIn(user: IAdmin) {
     return this.http.post<any>(`${this.endpoint}/signin`, user)
       .pipe(
         catchError(this.handleError)
