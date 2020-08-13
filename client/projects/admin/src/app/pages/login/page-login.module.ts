@@ -6,6 +6,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PageLoginComponent } from './page-login.component';
 import { PageLoginRoutingModule } from './page-login-routing.module';
 import { SectionHeaderModule } from './../../../../../../src/app/shared/components/section-header/section-header.module';
+import { AlertMsgModule } from './../../../../../../src/app/shared/components/alert-msg/alert-msg.module';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { SectionHeaderModule } from './../../../../../../src/app/shared/componen
     FormsModule,
     ReactiveFormsModule,
     CtaBtnModule,
+    AlertMsgModule,
   ],
   declarations: [
     PageLoginComponent

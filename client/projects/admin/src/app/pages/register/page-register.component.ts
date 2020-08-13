@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AdminService } from './../../shared/services/admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-register',
@@ -17,7 +18,12 @@ export class PageRegisterComponent implements OnInit {
   regForm;
   regFormSubmitted = false;
 
-  constructor(private adminService: AdminService) { }
+  regFailMsg = '';
+  isRegLoading = false;
+  isRegFailed = false;
+  isRegSuccess = false;
+
+  constructor(private adminService: AdminService, private router: Router) { }
 
   ngOnInit() {
     this.createFormControls();
@@ -46,30 +52,35 @@ export class PageRegisterComponent implements OnInit {
 
   get regControls() { return this.regForm.controls; }
   
-  onSignupSubmit() {
+  onSignup() {
     this.regFormSubmitted = true;
     if (this.regForm.invalid) {
       return;
     }
-    console.log('============this.regForm.value', this.regForm.value);
-    // this.loginFailMsg = '';
-    // this.loginForm.get('__EMAIL').disable();
-    // this.loginForm.get('__PASSWORD').disable();
-    // this.isLoginLoading = true;
+    this.regFailMsg = '';
+    this.regForm.get('__FIRSTNAME').disable();
+    this.regForm.get('__MIDDLENAME').disable();
+    this.regForm.get('__LASTNAME').disable();
+    this.regForm.get('__EMAIL').disable();
+    this.regForm.get('__PASSWORD').disable();
+    this.isRegLoading = true;
     this.adminService.signUp(this.regForm.value).subscribe((res: any) => {
-      // this.loginForm.get('__EMAIL').enable();
-      // this.loginForm.get('__PASSWORD').enable();
-      // this.isLoginLoading = false;
-      // if (res.token) {
-      //   this.authService.setToken(res.token);
-      //   this.loginFailMsg = '';
-      //   this.isLoginFailed = false;
-      //   this.isLoginSuccess = true;
-      // } else {
-      //   this.loginFailMsg = res.message || 'Some Error Occurred';
-      //   this.isLoginFailed = true;
-      //   this.isLoginSuccess = false;
-      // }
+      this.regForm.get('__FIRSTNAME').enable();
+      this.regForm.get('__MIDDLENAME').enable();
+      this.regForm.get('__LASTNAME').enable();
+      this.regForm.get('__EMAIL').enable();
+      this.regForm.get('__PASSWORD').enable();
+      this.isRegLoading = false;
+      if (res.token) {
+        this.adminService.setToken(res.token);
+        this.regFailMsg = '';
+        this.isRegFailed = false;
+        this.isRegSuccess = true;
+      } else {
+        this.regFailMsg = res.message || 'Some Error Occurred';
+        this.isRegFailed = true;
+        this.isRegSuccess = false;
+      }
     });
   }
 }
