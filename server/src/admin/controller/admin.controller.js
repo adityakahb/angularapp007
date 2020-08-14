@@ -4,7 +4,9 @@ const jwt = require('jsonwebtoken');
 // const router = express.Router();
 const adminSchema = require('./../models/admin-model');
 const authSchema = require('./../models/auth-model');
+const productSchema = require('./../models/product-model');
 const { check, validationResult } = require('express-validator');
+const { response } = require('express');
 
 // Register
 exports.register = (req, res, next) => {
@@ -88,6 +90,21 @@ exports.signin = (req, res, next) => {
   });
 };
 
+
+exports.addbulkproducts = (req, res) => {
+  if ((req.body || []).length > 0) {
+    productSchema.insertMany(req.body).then((response) => {
+      console.log('============response', response);
+    });
+  } else {
+
+  }
+  // productSchema.insertMany()
+  res.status(201).json({
+    message: 'Sample 201',
+    result: res
+  });
+};
 
 // Get Users
 exports.getallusers = (req, res) => {

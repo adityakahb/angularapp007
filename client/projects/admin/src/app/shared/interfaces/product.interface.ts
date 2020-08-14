@@ -1,39 +1,39 @@
 export interface IImage {
-  url: string;
-  zoomurl?: string;
+  __URL: string;
+  __ZOOMURL?: string;
 };
 interface IVideo {
-  type: string;
-  url: string;
+  __TYPE: string;
+  __URL: string;
 };
 interface ISeller {
-  name: string;
-  url: string;
+  __NAME: string;
+  __URL: string;
 };
 interface IColor {
-  colorhex: string;
-  name: string;
-  url: string;
+  __COLORHEX: string;
+  __NAME: string;
+  __URL: string;
 };
 interface ICategory {
-  type: string;
-  url: string;
+  __TYPE: string;
+  __URL: string;
 };
 interface IPrice {
-  major: string;
-  minor: string;
-  currency: string;
-  type: string;
+  __MAJOR: string;
+  __MINOR: string;
+  __CURRENCY: string;
+  __TYPE: string;
 }
 export interface IProduct {
-  _id: string;
-  __NAME: string;
-  __PRICE: IPrice[];
-  __IMAGES: IImage[];
-  __VIDEO?: IVideo[];
   __CATEGORY: ICategory;
   __COLOR?: IColor;
+  __IMAGES: IImage[];
+  __NAME: string;
+  __PRICE: IPrice[];
   __SELLER: ISeller;
-  __SPECS: string[];
+  __SPECS: string;
   __URL: string;
+  __VIDEO?: IVideo[];
+  _id: string;
 };

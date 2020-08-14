@@ -82,15 +82,13 @@ export class AdminService {
       );
   }
 
-  addBulkProducts() {
+  addBulkProducts(): Observable<any> {
     let products: IProduct[] = generateBulkProductsData();
 
-console.log('========in admin service', products);
-
-    // return this.http.post(`${this.endpoint}/addbulkproducts`, products)
-    //   .pipe(
-    //     catchError(this.handleError)
-    //   );
+    return this.http.post(`${this.endpoint}/addbulkproducts`, products)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
   // Error 

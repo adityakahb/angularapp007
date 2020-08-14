@@ -34,214 +34,214 @@ const categories = [
 
 const palette = [
   {
-    colorhex: "36454f",
-    name: "Black",
-    url: "#"
+    __COLORHEX: "36454f",
+    __NAME: "Black",
+    __URL: "#"
   },
   {
-    colorhex: "ffffff",
-    name: "White",
-    url: "#"
+    __COLORHEX: "ffffff",
+    __NAME: "White",
+    __URL: "#"
   },
   {
-    colorhex: "0074d9",
-    name: "Blue",
-    url: "#"
+    __COLORHEX: "0074d9",
+    __NAME: "Blue",
+    __URL: "#"
   },
   {
-    colorhex: "3c4477",
-    name: "Navy Blue",
-    url: "#"
+    __COLORHEX: "3c4477",
+    __NAME: "Navy Blue",
+    __URL: "#"
   },
   {
-    colorhex: "9fa8ab",
-    name: "Grey",
-    url: "#"
+    __COLORHEX: "9fa8ab",
+    __NAME: "Grey",
+    __URL: "#"
   },
   {
-    colorhex: "d34b56",
-    name: "Red",
-    url: "#"
+    __COLORHEX: "d34b56",
+    __NAME: "Red",
+    __URL: "#"
   },
   {
-    colorhex: "5eb160",
-    name: "Green",
-    url: "#"
+    __COLORHEX: "5eb160",
+    __NAME: "Green",
+    __URL: "#"
   },
   {
-    colorhex: "9fa8ab",
-    name: "Grey Melange",
-    url: "#"
+    __COLORHEX: "9fa8ab",
+    __NAME: "Grey Melange",
+    __URL: "#"
   },
   {
-    colorhex: "36454f",
-    name: "Charcoal",
-    url: "#"
+    __COLORHEX: "36454f",
+    __NAME: "Charcoal",
+    __URL: "#"
   },
   {
-    colorhex: "3d9970",
-    name: "Olive",
-    url: "#"
+    __COLORHEX: "3d9970",
+    __NAME: "Olive",
+    __URL: "#"
   },
   {
-    colorhex: "b03060",
-    name: "Maroon",
-    url: "#"
+    __COLORHEX: "b03060",
+    __NAME: "Maroon",
+    __URL: "#"
   },
   {
-    colorhex: "eadc32",
-    name: "Yellow",
-    url: "#"
+    __COLORHEX: "eadc32",
+    __NAME: "Yellow",
+    __URL: "#"
   },
   {
-    colorhex: "f2f2f2",
-    name: "Off White",
-    url: "#"
+    __COLORHEX: "f2f2f2",
+    __NAME: "Off White",
+    __URL: "#"
   },
   {
-    colorhex: "f1a9c4",
-    name: "Pink",
-    url: "#"
+    __COLORHEX: "f1a9c4",
+    __NAME: "Pink",
+    __URL: "#"
   },
   {
-    colorhex: "f28d20",
-    name: "Orange",
-    url: "#"
+    __COLORHEX: "f28d20",
+    __NAME: "Orange",
+    __URL: "#"
   },
   {
-    colorhex: "008080",
-    name: "Teal",
-    url: "#"
+    __COLORHEX: "008080",
+    __NAME: "Teal",
+    __URL: "#"
   },
   {
-    colorhex: "cc9c33",
-    name: "Mustard",
-    url: "#"
+    __COLORHEX: "cc9c33",
+    __NAME: "Mustard",
+    __URL: "#"
   },
   {
-    colorhex: "a03245",
-    name: "Burgundy",
-    url: "#"
+    __COLORHEX: "a03245",
+    __NAME: "Burgundy",
+    __URL: "#"
   },
   {
-    colorhex: "e8e6cf",
-    name: "Beige",
-    url: "#"
+    __COLORHEX: "e8e6cf",
+    __NAME: "Beige",
+    __URL: "#"
   },
   {
-    colorhex: "915039",
-    name: "Brown",
-    url: "#"
+    __COLORHEX: "915039",
+    __NAME: "Brown",
+    __URL: "#"
   },
   {
-    colorhex: "ff7f50",
-    name: "Coral",
-    url: "#"
+    __COLORHEX: "ff7f50",
+    __NAME: "Coral",
+    __URL: "#"
   },
   {
-    colorhex: "b7410e",
-    name: "Rust",
-    url: "#"
+    __COLORHEX: "b7410e",
+    __NAME: "Rust",
+    __URL: "#"
   },
   {
-    colorhex: "800080",
-    name: "Purple",
-    url: "#"
+    __COLORHEX: "800080",
+    __NAME: "Purple",
+    __URL: "#"
   },
   {
-    colorhex: "ffe5b4",
-    name: "Peach",
-    url: "#"
+    __COLORHEX: "ffe5b4",
+    __NAME: "Peach",
+    __URL: "#"
   },
   {
-    colorhex: "ede6b9",
-    name: "Cream",
-    url: "#"
+    __COLORHEX: "ede6b9",
+    __NAME: "Cream",
+    __URL: "#"
   },
   {
-    colorhex: "2e8b57",
-    name: "Sea Green",
-    url: "#"
+    __COLORHEX: "2e8b57",
+    __NAME: "Sea Green",
+    __URL: "#"
   },
   {
-    colorhex: "40e0d0",
-    name: "Turquoise Blue",
-    url: "#"
+    __COLORHEX: "40e0d0",
+    __NAME: "Turquoise Blue",
+    __URL: "#"
   },
   {
-    colorhex: "000000",
-    name: "Multi",
-    url: "#"
+    __COLORHEX: "000000",
+    __NAME: "Multi",
+    __URL: "#"
   },
   {
-    colorhex: "c3b091",
-    name: "Khaki",
-    url: "#"
+    __COLORHEX: "c3b091",
+    __NAME: "Khaki",
+    __URL: "#"
   },
   {
-    colorhex: "5db653",
-    name: "Lime Green",
-    url: "#"
+    __COLORHEX: "5db653",
+    __NAME: "Lime Green",
+    __URL: "#"
   },
   {
-    colorhex: "8dc04a",
-    name: "Fluorescent Green",
-    url: "#"
+    __COLORHEX: "8dc04a",
+    __NAME: "Fluorescent Green",
+    __URL: "#"
   },
   {
-    colorhex: "483c32",
-    name: "Taupe",
-    url: "#"
+    __COLORHEX: "483c32",
+    __NAME: "Taupe",
+    __URL: "#"
   },
   {
-    colorhex: "e0b0ff",
-    name: "Mauve",
-    url: "#"
+    __COLORHEX: "e0b0ff",
+    __NAME: "Mauve",
+    __URL: "#"
   },
   {
-    colorhex: "d6d6e5",
-    name: "Lavender",
-    url: "#"
+    __COLORHEX: "d6d6e5",
+    __NAME: "Lavender",
+    __URL: "#"
   },
   {
-    colorhex: "4b302f",
-    name: "Coffee Brown",
-    url: "#"
+    __COLORHEX: "4b302f",
+    __NAME: "Coffee Brown",
+    __URL: "#"
   },
   {
-    colorhex: "b9529f",
-    name: "Magenta",
-    url: "#"
+    __COLORHEX: "b9529f",
+    __NAME: "Magenta",
+    __URL: "#"
   },
   {
-    colorhex: "d2b48c",
-    name: "Tan",
-    url: "#"
+    __COLORHEX: "d2b48c",
+    __NAME: "Tan",
+    __URL: "#"
   },
   {
-    colorhex: "e5c74a",
-    name: "Gold",
-    url: "#"
+    __COLORHEX: "e5c74a",
+    __NAME: "Gold",
+    __URL: "#"
   },
   {
-    colorhex: "dd2f86",
-    name: "Rose",
-    url: "#"
+    __COLORHEX: "dd2f86",
+    __NAME: "Rose",
+    __URL: "#"
   },
   {
-    colorhex: "dbaf97",
-    name: "Nude",
-    url: "#"
+    __COLORHEX: "dbaf97",
+    __NAME: "Nude",
+    __URL: "#"
   },
   {
-    colorhex: "cc8240",
-    name: "Bronze",
-    url: "#"
+    __COLORHEX: "cc8240",
+    __NAME: "Bronze",
+    __URL: "#"
   },
   {
-    colorhex: "b3b3b3",
-    name: "Steel",
-    url: "#"
+    __COLORHEX: "b3b3b3",
+    __NAME: "Steel",
+    __URL: "#"
   }
 ];
 
@@ -282,7 +282,7 @@ mainArr = mainStr.replace(/^\s+|\s+$/g, '').toLowerCase().split('. ').join(' ').
 
 const generateBulkProductsData = () => {
   let arr = [];
-  const prodLen = randomNum(16, 32);
+  const prodLen = 1;
   for (let i=0; i<prodLen; i++) {
     let obj = {} as IProduct;
     let nameLength = randomNum(4, 24);
@@ -294,22 +294,22 @@ const generateBulkProductsData = () => {
     let pricenum = randomNum(1, 2);
     if (pricenum === 1) {
       obj.__PRICE = [{
-        major: '' + randomNum(4999, 99999),
-        minor: '' + randomNum(0, 99),
-        currency: 'inr',
-        type: 'primary'
+        __MAJOR: '' + randomNum(4999, 99999),
+        __MINOR: '' + randomNum(0, 99),
+        __CURRENCY: 'INR',
+        __TYPE: 'primary'
       }];
     } else {
       obj.__PRICE = [{
-        major: '' + randomNum(50000, 99999),
-        minor: '' + randomNum(0, 99),
-        currency: 'inr',
-        type: 'secondary'
+        __MAJOR: '' + randomNum(50000, 99999),
+        __MINOR: '' + randomNum(0, 99),
+        __CURRENCY: 'INR',
+        __TYPE: 'secondary'
       }, {
-        major: '' + randomNum(4999, 49999),
-        minor: '' + randomNum(0, 99),
-        currency: 'inr',
-        type: 'primary'
+        __MAJOR: '' + randomNum(4999, 49999),
+        __MINOR: '' + randomNum(0, 99),
+        __CURRENCY: 'INR',
+        __TYPE: 'primary'
       }];
     }
 
@@ -320,12 +320,12 @@ const generateBulkProductsData = () => {
     }
     
     obj.__SELLER = {
-      name: genCap(sellerStr.join(' ')),
-      url: '#'
+      __NAME: genCap(sellerStr.join(' ')),
+      __URL: '#'
     };
     obj.__CATEGORY = {
-      type: categories[Math.floor(Math.random() * categories.length)],
-      url: '#'
+      __TYPE: categories[Math.floor(Math.random() * categories.length)],
+      __URL: '#'
     };
     obj.__COLOR = palette[Math.floor(Math.random() * palette.length)];
     obj.__URL = '#';
@@ -334,19 +334,53 @@ const generateBulkProductsData = () => {
     let imglen = randomNum(1, 8);
     for (let k = 0; k < imglen; k++) {
       let imgObj = {} as IImage;
-      let width = randomNum(250, 960);
-      let height = randomNum(250, 960);
+      let width = randomNum(240, 560);
+      let height = randomNum(240, 560);
 
-      let zoomw = width * 5;
-      let zoomh = height * 5;
+      let zoomw = width * 3;
+      let zoomh = height * 3;
 
       let color1 = randomColor();
       let color2 = randomColor();
+
+      let thisnum = randomNum(0, 4);
     
-      imgObj.url = `https://via.placeholder.com/${width}x${height}/${color1}/${color2}`;
-      imgObj.zoomurl = `https://via.placeholder.com/${zoomw}x${zoomh}/${color1}/${color2}`;
+      imgObj.__URL = `https://via.placeholder.com/${width}x${height}/${color1}/${color2}`;
+      if (thisnum > 1) {
+        imgObj.__ZOOMURL = `https://via.placeholder.com/${zoomw}x${zoomh}/${color1}/${color2}`;
+      }
       obj.__IMAGES.push(imgObj);
     }
+
+    let paralen = randomNum(1, 5);
+    let bulletlen = randomNum(0, 16);
+    let bulletArr = [];
+    let parastr = '';
+    
+    const createStatement = (sl, type) => {
+      let strArr = [];
+      for (let j = 0; j < sl; j++) {
+        strArr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      return type === 'li' ? '<li>' + genCap(strArr.join(' ') + '.') + '</li>' : genCap(strArr.join(' ') + '.');
+    };
+
+    for (let j = 0; j < paralen; j++) {
+      let totalstatements = randomNum(1, 5);
+      let statementsArr = [];
+      for (let k = 0; k < totalstatements; k++) {
+        statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+      }
+      parastr += '<p>' + statementsArr.join(' ') + '</p>';
+    }
+
+    for (let j = 0; j < bulletlen; j++) {
+      bulletArr.push(createStatement(randomNum(16, 48), 'li'));
+    }
+
+    parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
+
+    obj.__SPECS = parastr;
 
     arr.push(obj);
   }

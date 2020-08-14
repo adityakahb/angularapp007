@@ -36,6 +36,8 @@ router.post('/signin', [
     })
 ], AdminController.signin);
 
+router.post('/addbulkproducts', AdminController.addbulkproducts);
+
 // Get Users
 router.get('/', AdminController.getallusers);
 

@@ -18,7 +18,7 @@
                 }"></app-cta-btn>
                 <br/>
                 <div class="mb-2"></div>
-                <app-alert-msg *ngIf="isRegLoading" [cProps]="{
+                <app-alert-msg *ngIf="isBulkLoading" [cProps]="{
                   type: 'info',
                   title: '',
                   content: 'Please wait',
@@ -26,7 +26,7 @@
                   actions: [],
                   isClosable: false
                 }"></app-alert-msg>
-                <app-alert-msg *ngIf="isRegFailed" [cProps]="{
+                <app-alert-msg *ngIf="isBulkFailed" [cProps]="{
                   type: 'danger',
                   title: '',
                   content: regFailMsg,

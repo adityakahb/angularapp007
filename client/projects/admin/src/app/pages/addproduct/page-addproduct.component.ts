@@ -37,7 +37,9 @@ export class PageAddproductComponent implements OnInit {
     this.bulkFormSubmitted = true;
     this.bulkFailMsg = '';
     this.isBulkLoading = true;
-    this.adminService.addBulkProducts();
+    this.adminService.addBulkProducts().subscribe((res: any) => {
+      console.log('---------------res', res);
+    });
     // this.adminService.addBulkProducts().subscribe((res: any) => {
     //   this.isBulkLoading = false;
     //   if (res.token) {
