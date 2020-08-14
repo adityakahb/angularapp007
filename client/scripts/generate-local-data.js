@@ -34,10 +34,7 @@ const majorGenerator = () => {
 
 const generateFiles = () => {
 
-  wordsArr = str.toLowerCase().split(', ').join(' ').split('. ').join(' ').split('.').join(' ').split(' ');
-
-
-
+  wordsArr = str.toLowerCase().replace(/^\s+|\s+$/g, '').split(', ').join(' ').split('. ').join(' ').split('.').join(' ').split(' ');
 
   let searchResultsArr = [];
   let featuredResultsArr = [];

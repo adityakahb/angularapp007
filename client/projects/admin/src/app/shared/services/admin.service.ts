@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { IAdmin } from './../interfaces/admin.interface';
 import { IAuth } from './../interfaces/auth.interface';
+import { IProduct } from './../interfaces/product.interface';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser, isPlatformServer } from '@angular/common';
+
+import { generateBulkProductsData } from './data-generator'; 
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +36,7 @@ export class AdminService {
   }
 
   // Sign-in
-  signIn(user: IAuth) {
+  signIn(user: IAuth): Observable<any> {
     // console.log('============user', user);
     return this.http.post<any>(`${this.endpoint}/signin`, user)
       .pipe(
@@ -77,6 +80,17 @@ export class AdminService {
       .pipe(
         catchError(this.handleError)
       );
+  }
+
+  addBulkProducts() {
+    let products: IProduct[] = generateBulkProductsData();
+
+console.log('========in admin service', products);
+
+    // return this.http.post(`${this.endpoint}/addbulkproducts`, products)
+    //   .pipe(
+    //     catchError(this.handleError)
+    //   );
   }
 
   // Error 

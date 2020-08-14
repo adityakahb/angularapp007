@@ -8,6 +8,7 @@ import { AdminInterceptor } from './shared/interceptors/admin.interceptor';
 
 import { PageLoginModule } from './pages/login/page-login.module';
 import { PageRegisterModule } from './pages/register/page-register.module';
+import { PageAddproductModule } from './pages/addproduct/page-addproduct.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageRegisterModule } from './pages/register/page-register.module';
     AppRoutingModule,
     HttpClientModule,
     PageLoginModule,
-    PageRegisterModule
+    PageRegisterModule,
+    PageAddproductModule
   ],
   providers: [
     {

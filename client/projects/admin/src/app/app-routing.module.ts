@@ -6,10 +6,13 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'prefix'
-  },
-  {
+  }, {
     path: 'register',
     redirectTo: 'register',
+    pathMatch: 'prefix'
+  }, {
+    path: 'addproduct',
+    redirectTo: 'addproduct',
     pathMatch: 'prefix'
   },
 ];
