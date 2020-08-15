@@ -253,6 +253,13 @@ const randomColor = () => {
   return (Math.floor(Math.random() * 16777215).toString(16) + '000000').substr(0, 6);
 };
 
+const randomID = (length) => {
+  var chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+  var result = '';
+  for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+  return result;
+}
+
 const genCap = (str) => {
   let arr = (str || '').split(' ');
   let returnArr = [];
@@ -282,7 +289,14 @@ mainArr = mainStr.replace(/^\s+|\s+$/g, '').toLowerCase().split('. ').join(' ').
 
 const generateBulkProductsData = () => {
   let arr = [];
-  const prodLen = 1;
+  const prodLen = 5;
+  const createStatement = (sl, type) => {
+    let strArr = [];
+    for (let j = 0; j < sl; j++) {
+      strArr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+    }
+    return type === 'li' ? '<li>' + genCap(strArr.join(' ') + '.') + '</li>' : genCap(strArr.join(' ') + '.');
+  };
   for (let i=0; i<prodLen; i++) {
     let obj = {} as IProduct;
     let nameLength = randomNum(4, 24);
@@ -356,14 +370,6 @@ const generateBulkProductsData = () => {
     let bulletlen = randomNum(0, 16);
     let bulletArr = [];
     let parastr = '';
-    
-    const createStatement = (sl, type) => {
-      let strArr = [];
-      for (let j = 0; j < sl; j++) {
-        strArr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
-      }
-      return type === 'li' ? '<li>' + genCap(strArr.join(' ') + '.') + '</li>' : genCap(strArr.join(' ') + '.');
-    };
 
     for (let j = 0; j < paralen; j++) {
       let totalstatements = randomNum(1, 5);
@@ -381,6 +387,14 @@ const generateBulkProductsData = () => {
     parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
 
     obj.__SPECS = parastr;
+    obj.__QUANTITY = randomNum(100, 999);
+
+    let reviewsLen = randomNum(0, 15);
+    let reviewsArr = [];
+    for (let j = 0; j < reviewsLen; j++) {
+      reviewsArr.push(randomID(24));
+    };
+    obj.__REVIEWS = reviewsArr;
 
     arr.push(obj);
   }

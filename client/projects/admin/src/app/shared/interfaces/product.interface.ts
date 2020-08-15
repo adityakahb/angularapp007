@@ -2,24 +2,24 @@ export interface IImage {
   __URL: string;
   __ZOOMURL?: string;
 };
-interface IVideo {
+export interface IVideo {
   __TYPE: string;
   __URL: string;
 };
-interface ISeller {
+export interface ISeller {
   __NAME: string;
   __URL: string;
 };
-interface IColor {
+export interface IColor {
   __COLORHEX: string;
   __NAME: string;
   __URL: string;
 };
-interface ICategory {
+export interface ICategory {
   __TYPE: string;
   __URL: string;
 };
-interface IPrice {
+export interface IPrice {
   __MAJOR: string;
   __MINOR: string;
   __CURRENCY: string;
@@ -35,5 +35,7 @@ export interface IProduct {
   __SPECS: string;
   __URL: string;
   __VIDEO?: IVideo[];
+  __QUANTITY: Number;
+  __REVIEWS: String[];
   _id: string;
 };

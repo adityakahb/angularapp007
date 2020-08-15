@@ -1,6 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+let StatusSchema = new Schema({
+  __STATUS: {
+    type: String
+  },
+  __DATE: {
+    type: Date
+  }
+});
+
 let ImageSchema = new Schema({
   __URL: {
     type: String
@@ -91,6 +100,15 @@ let productSchema = new Schema({
   },
   __VIDEO: {
     type: VideoSchema
+  },
+  __QUANTITY: {
+    type: Number
+  },
+  __STATUS: {
+    type: [StatusSchema]
+  },
+  __REVIEWS: {
+    type: [String]
   }
 }, {
   collection: 'product_master'
