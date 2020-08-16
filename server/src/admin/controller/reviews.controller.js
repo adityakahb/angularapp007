@@ -1,0 +1,3 @@
+exports.viewreviews = (req, res) => {
+  
+};

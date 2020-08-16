@@ -5,10 +5,10 @@ import { AdminService } from '../services/admin.service';
 @Injectable()
 
 export class AdminInterceptor implements HttpInterceptor {
-  constructor(private authService: AdminService) { }
+  constructor(private adminService: AdminService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
-    const authToken = this.authService.getToken();
+    const authToken = this.adminService.getToken();
     req = req.clone({
       setHeaders: {
         Authorization: 'Bearer ' + authToken

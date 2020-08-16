@@ -1,0 +1,3 @@
+exports.viewproducts = (req, res) => {
+  
+};

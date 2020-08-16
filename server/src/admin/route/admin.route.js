@@ -2,7 +2,13 @@ const express = require('express');
 const router = express.Router();
 const authorize = require('./../../middleware/auth');
 
-const AdminController = require('./../controller/admin.controller');
+const AdminController = require('../controller/admin.controller');
+const CampaignsController = require('../controller/campaigns.controller');
+const CategoriesController = require('../controller/categories.controller');
+const ProductsController = require('../controller/products.controller');
+const ReviewsController = require('../controller/reviews.controller');
+const UsersController = require('../controller/users.controller');
+
 const { check, validationResult } = require('express-validator');
 
 router.post('/register', [
@@ -36,18 +42,18 @@ router.post('/signin', [
     })
 ], AdminController.signin);
 
-router.post('/addbulkproducts', AdminController.addbulkproducts);
+// router.post('/addbulkproducts', AdminController.addbulkproducts);
 
-// Get Users
-router.get('/', AdminController.getallusers);
+// // Get Users
+// router.get('/', AdminController.getallusers);
 
-// Get Single User
-router.get('/userprofile/:id', AdminController.getuser);
+// // Get Single User
+// router.get('/userprofile/:id', AdminController.getuser);
 
-// Update User
-router.put('/updateuser/:id', AdminController.updateuser);
+// // Update User
+// router.put('/updateuser/:id', AdminController.updateuser);
 
-// Delete User
-router.delete('/delete-user/:id', AdminController.deleteuser);
+// // Delete User
+// router.delete('/delete-user/:id', AdminController.deleteuser);
 
 module.exports = router;

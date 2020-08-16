@@ -1,0 +1,3 @@
+exports.viewcampaings = (req, res) => {
+  
+};

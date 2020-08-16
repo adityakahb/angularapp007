@@ -1,0 +1,15 @@
+.nav-search-wrap {
+  padding: 10px rem(184px) 9px rem(104px);
+  select {
+    // border-top-right-radius: 0;
+    // border-bottom-right-radius: 0;
+    border-radius: 0;
+  }
+}
+
+.hdr-nav-wrap, .site-nav-wrap {
+  width: rem(480px);
+}
+.site-nav-loc {
+  margin: 0;
+}

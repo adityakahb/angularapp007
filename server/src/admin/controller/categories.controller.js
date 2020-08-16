@@ -1,0 +1,3 @@
+exports.viewcategories = (req, res) => {
+  
+};

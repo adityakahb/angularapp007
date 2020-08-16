@@ -1,26 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
 import { AdminInterceptor } from './shared/interceptors/admin.interceptor';
-
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { PageDashboardModule } from './pages/dashboard/page-dashboard.module';
 import { PageLoginModule } from './pages/login/page-login.module';
+import { PageManageUsersModule } from './pages/manage-users/page-manage-users.module';
 import { PageRegisterModule } from './pages/register/page-register.module';
-import { PageAddproductModule } from './pages/addproduct/page-addproduct.module';
+import { DefaultLayoutModule } from './layout/defaultlayout/defaultlayout.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    DefaultLayoutModule,
     HttpClientModule,
+    PageDashboardModule,
     PageLoginModule,
+    PageManageUsersModule,
     PageRegisterModule,
-    PageAddproductModule
   ],
   providers: [
     {

@@ -1,0 +1,265 @@
+<div class="siteheader-buffer" [ngClass]="{'active': isScrolledDown}"></div>
+<section class="siteheader-comp" id="siteheader-comp" [ngClass]="{'active': isScrolledDown}">
+  <div class="header-wrap">
+    <header>
+      <div class="max-wrap">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="logo-wrap">
+                <a href="#" class="site-logo">
+                  <img src="./../../../assets/logo-white.svg">
+                </a>
+              </div>
+              <div class="nav-search-wrap d-none d-md-block">
+                <form>
+                  <div class="input-group">
+                    <input name="inlineTypeahead" type="search" class="form-control form-control-sm"
+                      aria-label="" [(ngModel)]="headerTypeahead"
+                      [typeahead]="states">
+                    <div class="input-group-append">
+                      <select class="form-control form-control-sm">
+                        <option>All Categories</option>
+                      </select>
+                      <app-cta-btn class="appended" [cProps]="{
+                        tag: 'button',
+                        type: 'submit',
+                        href: '',
+                        text: '',
+                        title: '',
+                        primaryicon: 'search',
+                        ctaicon: '',
+                        ctastyle: 'light',
+                        isoutline: 'false',
+                        size: 'sm'
+                      }"></app-cta-btn>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="nav-wrap">
+                <button type="button" [ngClass]="{'active': isSearchNavOpen}" class="d-md-none"
+                  (click)="openSearchNav()">
+                  <ion-icon name="search"></ion-icon>
+                </button>
+                <button type="button" class="ml-1 ml-xl-2">
+                  <ion-icon name="heart"></ion-icon>
+                </button>
+                <button type="button" class="ml-1 ml-xl-2">
+                  <div class="cart-count w-100 position-absolute text-center"><small><strong>999+</strong></small></div>
+                  <ion-icon name="cart"></ion-icon>
+                </button>
+                <!-- <button type="button" [ngClass]="{'active': isLangNavOpen}" (click)="openLangNav()">
+                  <span class="txt">EN</span>
+                </button> -->
+                <a href="#" class="ml-1 ml-xl-2">
+                  <ion-icon name="person-circle"></ion-icon>
+                </a>
+                <!-- <button type="button" [ngClass]="{'active': isUserNavOpen}"
+                  (click)="openUserNav()" class="ml-1 ml-xl-2">
+                  <div class="w-75 d-inline-block">
+                    <app-user-avatar [cProps]="{
+                      firstname: 'Firstname',
+                      lastname: 'Lastname'
+                    }"></app-user-avatar>
+                  </div>
+                </button> -->
+                <button type="button" [ngClass]="{'active': isNavOpen}" class="d-xl-none ml-1 ml-xl-2" (click)="openNav()">
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</section>
+
+<div class="site-nav-loc d-xl-none">
+  <div class="loc-icon mr-1">
+    <ion-icon name="location"></ion-icon>
+  </div>
+  <div class="mr-3">
+    <strong>Hyderabad - 500075</strong>
+  </div>
+  <a href="#">Change</a>
+</div>
+
+<div class="hdr-nav-mask d-none d-md-block" (click)="closeAllNav()" [ngClass]="{'active': isUserNavOpen || isSearchNavOpen || isNavOpen}"></div>
+<div class="site-nav-buffer"></div>
+<div class="site-nav-wrap" [ngClass]="{'active': isNavOpen}">
+    <div class="text-right d-xl-none">
+        <button class="close-site-nav" (click)="closeAllNav()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </button>
+      </div>
+  <div class="max-wrap">
+    <nav #siteheadernav>
+      <div class="site-nav-loc d-none d-xl-flex">
+        <div class="loc-icon mr-1">
+          <ion-icon name="location"></ion-icon>
+        </div>
+        <div class="mr-3">
+          <strong>Hyderabad - 500075</strong>
+        </div>
+        <a href="#">Change</a>
+      </div>
+      <ul class="nav-menu">
+        <li *ngFor="let item of navData" class="nav-item">
+          <a [href]="item.href" class="d-block d-xl-flex py-3 pr-5 pl-3 p-xl-2 px-xxl-2">
+            <span class="txt" [innerHTML]="item.title"></span>
+            <span class="ikn plus" *ngIf="(item.subnav || []).length > 0">
+              <ion-icon name="add"></ion-icon>
+            </span>
+            <span class="ikn minus" *ngIf="(item.subnav || []).length > 0">
+              <ion-icon name="remove"></ion-icon>
+            </span>
+          </a>
+          <div class="sub-nav p-xl-2" *ngIf="(item.subnav || []).length > 0">
+            <div class="max-wrap">
+              <div class="container-fluid">
+                <div class="row p-xl-3 d-block d-xl-flex">
+                  <div *ngFor="let subnavgroup of item.subnav" class="col p-0">
+                    <ul class="sub-nav-group">
+                      <li *ngFor="let subnav of subnavgroup.links">
+                        <a [href]="subnav.href" class="d-block d-xl-inline-block p-3 py-xl-2 px-xl-1" [class]="subnav.ismain === 'true' ? 'ismain' : ''" [innerHTML]="subnav.title"></a>
+                        <!-- <p [innerHTML]="subnav.desc" *ngIf="(subnav.desc || '').length > 0"></p> -->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="hdr-nav-wrap type-user" [ngClass]="{'active': isUserNavOpen}">
+  <div class="text-right">
+    <button class="close-site-nav" (click)="closeAllNav()">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </button>
+  </div>
+  <div class="hdr-nav-content px-3" *ngIf="!isLoginSuccess">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+      <div class="form-group">
+        <label for="hdr_email"><strong>Email address</strong></label>
+        <input type="email" class="form-control" id="hdr_email"
+          [ngClass]="{'is-invalid': loginFormSubmitted && loginControls.__EMAIL.errors}"
+          placeholder="Registered Email" formControlName="__EMAIL">
+        <div *ngIf="loginFormSubmitted && loginControls.__EMAIL.errors" class="invalid-feedback">
+          <div *ngIf="loginControls.__EMAIL.errors.required">Email is required</div>
+          <div *ngIf="loginControls.__EMAIL.errors.email">Email must be a valid email address</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hdr_pwd"><strong>Password</strong></label>
+        <input type="password" class="form-control"
+          [ngClass]="{'is-invalid': loginFormSubmitted && loginControls.__PASSWORD.errors}" id="hdr_pwd"
+          placeholder="Password" formControlName="__PASSWORD">
+        <div *ngIf="loginFormSubmitted && loginControls.__PASSWORD.errors" class="invalid-feedback">
+          <div *ngIf="loginControls.__PASSWORD.errors.required">Password is required</div>
+          <div *ngIf="loginControls.__PASSWORD.errors.pattern">Password must follow pattern</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="hdr_remember">
+          <label class="custom-control-label" for="hdr_remember">Remember Me</label>
+        </div>
+      </div>
+      <app-cta-btn class="mr-3" [cProps]="{
+        tag: 'button',
+        type: 'submit',
+        text: 'Login',
+        title: 'Login',
+        primaryicon: '',
+        ctaicon: 'chevron-forward',
+        ctastyle: 'primary',
+        isoutline: 'false'
+      }"></app-cta-btn>
+      Don't have an account? <a href="#">Register Now</a>.
+      <div class="mb-3"></div>
+      <app-alert-msg *ngIf="isLoginLoading" [cProps]="{
+        type: 'info',
+        title: '',
+        content: 'Please wait',
+        icon: 'loading-spinner',
+        actions: [],
+        isClosable: false
+      }"></app-alert-msg>
+      <app-alert-msg *ngIf="isLoginFailed" [cProps]="{
+        type: 'danger',
+        title: '',
+        content: loginFailMsg,
+        icon: 'alert-circle',
+        actions: [],
+        isClosable: false
+      }"></app-alert-msg>
+    </form>
+  </div>
+  <div class="hdr-nav-content" *ngIf="isLoginSuccess">
+    <nav class="nav-list w-100">
+      <ul>
+        <li>
+          <a href="#" class="p-3">Your Orders</a>
+        </li>
+        <li>
+          <a href="#" class="p-3">Your Account</a>
+        </li>
+        <li>
+          <a href="#" class="p-3">Help &amp; Support</a>
+        </li>
+        <li>
+          <button type="button" class="p-3 w-100 text-danger" (click)="onLogout()">Logout</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="hdr-nav-wrap type-search" [ngClass]="{'active': isSearchNavOpen}">
+  <div class="text-right">
+    <button class="close-site-nav" (click)="closeAllNav()">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </button>
+  </div>
+  <div class="hdr-nav-content">
+    <form class="d-block px-3">
+      <div class="form-group">
+        <label>Category</label>
+        <select class="form-control">
+          <option selected>Select one</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="sr-only">Search Keywords</label>
+        <div class="input-group">
+          <input name="modalTypeahead" type="search" class="form-control" aria-label="">
+          <div class="input-group-append">
+            <app-cta-btn class="appended" [cProps]="{
+              tag: 'button',
+              type: 'submit',
+              href: '',
+              text: '',
+              title: '',
+              primaryicon: 'search',
+              ctaicon: '',
+              ctastyle: 'primary',
+              isoutline: 'false',
+              size: ''
+            }"></app-cta-btn>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

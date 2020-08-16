@@ -57,11 +57,12 @@ export class PageLoginComponent implements OnInit {
       this.regForm.get('__PASSWORD').enable();
       this.isRegLoading = false;
       if (res.token) {
-        this.adminService.setToken(res.token);
         this.regFailMsg = '';
         this.isLoginFailed = false;
         this.isLoginSuccess = true;
-        // this.router.navigateByUrl()
+        this.adminService.setToken(res.token);
+        this.adminService.setLoggedIn(true);
+        this.router.navigateByUrl('/dashboard');
       } else {
         this.regFailMsg = res.message || 'Some Error Occurred';
         this.isLoginFailed = true;

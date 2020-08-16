@@ -8,6 +8,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Router } from '@angular/router';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
 
 import { generateBulkProductsData } from './data-generator'; 
 
@@ -16,9 +17,10 @@ import { generateBulkProductsData } from './data-generator';
 })
 
 export class AdminService {
+  currentUser = {};
   endpoint = 'http://localhost:4000/adminapi';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  currentUser = {};
+  loggedIn = new BehaviorSubject<boolean>(false); // {1}
 
   constructor(
     private http: HttpClient,
@@ -57,21 +59,19 @@ export class AdminService {
     return '';
   }
 
-  get isLoggedIn(): boolean {
-    if (isPlatformBrowser(this.platformId) && localStorage) {
-      const authToken = localStorage.getItem('access_token');
-      return (authToken !== null) ? true : false;
-    }
-    return false;
+  setLoggedIn(val) {
+    this.loggedIn.next(val);
+  }
+
+  get isLoggedIn() {
+    return this.loggedIn.asObservable(); // {2}
   }
 
   doLogout() {
     if (isPlatformBrowser(this.platformId) && localStorage) {
       const removeToken = localStorage.removeItem('access_token');
+      this.setLoggedIn(false);
     }
-    // if (removeToken == null) {
-    //   this.router.navigate(['log-in']);
-    // }
   }
 
   // User profile

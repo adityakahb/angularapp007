@@ -1,11 +1,12 @@
 const bcrypt = require('bcrypt');
-const express = require('express');
 const jwt = require('jsonwebtoken');
-const adminSchema = require('./../models/admin-model');
-const authSchema = require('./../models/auth-model');
-const productSchema = require('./../models/product-model');
+const adminSchema = require('../models/admin-model');
+const authSchema = require('../models/auth-model');
+const productSchema = require('../models/product-model');
 const { validationResult } = require('express-validator');
-const { generateProductModel, generateBulkProductModel } = require('./../../middleware/product-model-maker');
+const { generateProductModel, generateBulkProductModel } = require('../../middleware/product-model-maker');
+
+let adminController = {};
 
 // Register
 exports.register = (req, res, next) => {
@@ -90,87 +91,88 @@ exports.signin = (req, res, next) => {
 };
 
 
-exports.addbulkproducts = (req, res) => {
-  if ((req.body || []).length > 0) {
-    // generateBulkProductModel(req.body);
+// exports.addbulkproducts = (req, res) => {
+//   if ((req.body || []).length > 0) {
+//     // generateBulkProductModel(req.body);
 
-    let prodArr = [];
+//     let prodArr = [];
     
-    (req.body).forEach(item => {
-      let status = {
-        __STATUS: 'active',
-        __DATE: new Date()
-      }
-      if ((item.__STATUS || []).length > 0) {
-        item.__STATUSCHANGE.push(status);
-      } else {
-        item.__STATUS = [];
-        item.__STATUS.push(status);
-      }
-      prodArr.push(item);
-    });
-    // console.log('=======prodArr', JSON.stringify(prodArr[0].__REVIEWS));
-    productSchema.insertMany(prodArr).then((response) => {
-      console.log('============response', response);
-    });
-  } else {
+//     (req.body).forEach(item => {
+//       let status = {
+//         __STATUS: 'active',
+//         __DATE: new Date()
+//       }
+//       if ((item.__STATUS || []).length > 0) {
+//         item.__STATUSCHANGE.push(status);
+//       } else {
+//         item.__STATUS = [];
+//         item.__STATUS.push(status);
+//       }
+//       prodArr.push(item);
+//     });
+//     // console.log('=======prodArr', JSON.stringify(prodArr[0].__REVIEWS));
+//     productSchema.insertMany(prodArr).then((response) => {
+//       console.log('============response', response);
+//     });
+//   } else {
 
-  }
-  // productSchema.insertMany()
-  res.status(201).json({
-    message: 'Sample 201',
-    result: res
-  });
-};
-
-// Get Users
-exports.getallusers = (req, res) => {
-  userSchema.find((error, response) => {
-    if (error) {
-      return next(error)
-    } else {
-      res.status(200).json(response)
-    }
-  })
-};
-
-// Get Single User
-exports.getuser = (req, res, next) => {
-  userSchema.findById(req.params.id, (error, data) => {
-    if (error) {
-      return next(error);
-    } else {
-      res.status(200).json({
-        msg: data
-      })
-    }
-  })
-};
-
-// Update User
-exports.updateuser = (req, res, next) => {
-  userSchema.findByIdAndUpdate(req.params.id, {
-    $set: req.body
-  }, (error, data) => {
-    if (error) {
-      return next(error);
-    } else {
-      res.json(data)
-      console.log('User successfully updated!')
-    }
-  })
-};
+//   }
+//   // productSchema.insertMany()
+//   res.status(201).json({
+//     message: 'Sample 201',
+//     result: res
+//   });
+// };
 
 
-// Delete User
-exports.deleteuser = (req, res, next) => {
-  userSchema.findByIdAndRemove(req.params.id, (error, data) => {
-    if (error) {
-      return next(error);
-    } else {
-      res.status(200).json({
-        msg: data
-      })
-    }
-  })
-};
+// // Get Users
+// exports.getallusers = (req, res) => {
+//   userSchema.find((error, response) => {
+//     if (error) {
+//       return next(error)
+//     } else {
+//       res.status(200).json(response)
+//     }
+//   })
+// };
+
+// // Get Single User
+// exports.getuser = (req, res, next) => {
+//   userSchema.findById(req.params.id, (error, data) => {
+//     if (error) {
+//       return next(error);
+//     } else {
+//       res.status(200).json({
+//         msg: data
+//       })
+//     }
+//   })
+// };
+
+// // Update User
+// exports.updateuser = (req, res, next) => {
+//   userSchema.findByIdAndUpdate(req.params.id, {
+//     $set: req.body
+//   }, (error, data) => {
+//     if (error) {
+//       return next(error);
+//     } else {
+//       res.json(data)
+//       console.log('User successfully updated!')
+//     }
+//   })
+// };
+
+
+// // Delete User
+// exports.deleteuser = (req, res, next) => {
+//   userSchema.findByIdAndRemove(req.params.id, (error, data) => {
+//     if (error) {
+//       return next(error);
+//     } else {
+//       res.status(200).json({
+//         msg: data
+//       })
+//     }
+//   })
+// };
