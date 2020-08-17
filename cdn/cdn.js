@@ -26,7 +26,6 @@ let cssURLs = [
 ];
 let fontsURLs = [
     // 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'
-    // 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'
     'https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'
 ];
 
@@ -54,19 +53,19 @@ app.listen(4100, () => {
 });
 
 app.get('/jsbundle', (req, res) => {
-    console.log('====Request for JS Bundle at ', new Date());
+    // console.log('====Request for JS Bundle at ', new Date());
     res.type('.js')
     res.send(jsText);
 });
 
 app.get('/cssbundle', (req, res) => {
-    console.log('====Request for CSS Bundle at ', new Date());
+    // console.log('====Request for CSS Bundle at ', new Date());
     res.type('.css')
     res.send(cssText);
 });
 
 app.get('/fontsbundle', (req, res) => {
-    console.log('====Request for Fonts Bundle at ', new Date());
+    // console.log('====Request for Fonts Bundle at ', new Date());
     res.type('.css')
     res.send(fontsText);
 });

@@ -20,7 +20,7 @@ export class AdminService {
   currentUser = {};
   endpoint = 'http://localhost:4000/adminapi';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  loggedIn = new BehaviorSubject<boolean>(false); // {1}
+  loggedIn = new BehaviorSubject<boolean>(true); // {1}
 
   constructor(
     private http: HttpClient,
@@ -70,7 +70,7 @@ export class AdminService {
   doLogout() {
     if (isPlatformBrowser(this.platformId) && localStorage) {
       const removeToken = localStorage.removeItem('access_token');
-      this.setLoggedIn(false);
+      this.setLoggedIn(true);
     }
   }
 

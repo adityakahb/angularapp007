@@ -1,0 +1,3 @@
+exports.viewsellers = (req, res) => {
+  
+};

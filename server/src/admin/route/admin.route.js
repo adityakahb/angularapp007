@@ -7,6 +7,7 @@ const CampaignsController = require('../controller/campaigns.controller');
 const CategoriesController = require('../controller/categories.controller');
 const ProductsController = require('../controller/products.controller');
 const ReviewsController = require('../controller/reviews.controller');
+const SellersController = require('../controller/sellers.controller');
 const UsersController = require('../controller/users.controller');
 
 const { check, validationResult } = require('express-validator');
