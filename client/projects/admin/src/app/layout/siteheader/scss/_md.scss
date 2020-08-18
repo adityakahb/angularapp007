@@ -1,7 +1,37 @@
 .sitenav-comp {
   width: 48px;
+  transform: translateX(0);
+  transition: width 250ms ease;
   .sn-logo-holder{
     overflow: hidden;
     width: 40px;
+    transition: width 250ms ease;
+  }
+  .sn-content {
+    a {
+      width: 0;
+      transition: width 250ms ease;
+    }
+  }
+  .sn-close-wrap {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease;
+    transition-delay: 125ms;
+  }
+  &.active {
+    width: 360px;
+    .sn-close-wrap {
+      opacity: 1;
+      visibility: visible;
+    }
+    .sn-logo-holder{
+      width: 80px;
+    }
+    .sn-content {
+      a {
+        width: 100%;
+      }
+    }
   }
 }

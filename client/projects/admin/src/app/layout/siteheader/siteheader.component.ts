@@ -11,7 +11,32 @@ import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 })
 export class SiteheaderComponent implements OnInit {
   @Input() loggedInUser;
-  isNavOpen = false;
+  isnavopen = false;
+
+  navlinks = [
+    {
+      icon: 'dashboard',
+      text: 'Dashboard'
+    },{
+      icon: 'store_mall_directory',
+      text: 'Manage Sellers'
+    },{
+      icon: 'category',
+      text: 'Manage Categories'
+    },{
+      icon: 'groups',
+      text: 'Manage Users'
+    },{
+      icon: 'widgets',
+      text: 'Manage Products'
+    },{
+      icon: 'forum',
+      text: 'Manage Reviews'
+    },{
+      icon: 'local_activity',
+      text: 'Manage Campaigns'
+    }
+  ];
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -22,5 +47,8 @@ export class SiteheaderComponent implements OnInit {
 
   ngOnInit(): void {
     
+  }
+  toggleNav(val) {
+    this.isnavopen = val;
   }
 }
