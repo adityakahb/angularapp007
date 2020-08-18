@@ -20,14 +20,16 @@ export class AdminService {
   currentUser = {};
   endpoint = 'http://localhost:4000/adminapi';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  loggedIn = new BehaviorSubject<boolean>(true); // {1}
+  loggedIn; // {1}
 
   constructor(
     private http: HttpClient,
     public router: Router,
     @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: any,
-  ) { }
+  ) {
+    this.loggedIn = new BehaviorSubject<boolean>(this.getToken() ? true : false);
+  }
 
   // Sign-up
   signUp(user: IAdmin): Observable<any> {
@@ -59,8 +61,9 @@ export class AdminService {
     return '';
   }
 
-  setLoggedIn(val) {
+  setLoggedIn(val, token) {
     this.loggedIn.next(val);
+    this.setToken(token);
   }
 
   get isLoggedIn() {
@@ -70,7 +73,7 @@ export class AdminService {
   doLogout() {
     if (isPlatformBrowser(this.platformId) && localStorage) {
       const removeToken = localStorage.removeItem('access_token');
-      this.setLoggedIn(true);
+      this.setLoggedIn(false, null);
     }
   }
 

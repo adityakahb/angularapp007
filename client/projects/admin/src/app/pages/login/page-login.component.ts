@@ -60,8 +60,7 @@ export class PageLoginComponent implements OnInit {
         this.regFailMsg = '';
         this.isLoginFailed = false;
         this.isLoginSuccess = true;
-        this.adminService.setToken(res.token);
-        this.adminService.setLoggedIn(true);
+        this.adminService.setLoggedIn(true, res.token);
         this.router.navigateByUrl('/dashboard');
       } else {
         this.regFailMsg = res.message || 'Some Error Occurred';
