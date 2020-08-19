@@ -1,9 +1,10 @@
-.logo-holder {
-  width: rem(160px);
+@import './../../../../../../../node_modules/ag-grid-community/src/styles/ag-grid.scss';
+@import './../../../../../../../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss';
 
-  svg {
-    fill: $secondary;
-    height: 100%;
-    width: 100%;
-  }
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
+.main-content {
+  padding-left: 48px;
+  background-color: $white;
 }

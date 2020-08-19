@@ -16,25 +16,32 @@ export class SiteheaderComponent implements OnInit {
   navlinks = [
     {
       icon: 'dashboard',
-      text: 'Dashboard'
+      text: 'Dashboard',
+      url: '/dashboard'
     },{
       icon: 'store_mall_directory',
-      text: 'Manage Sellers'
+      text: 'Manage Sellers',
+      url: '/manage-sellers'
     },{
       icon: 'category',
-      text: 'Manage Categories'
+      text: 'Manage Categories',
+      url: '/manage-categories'
     },{
       icon: 'groups',
-      text: 'Manage Users'
+      text: 'Manage Users',
+      url: '/manage-users'
     },{
       icon: 'widgets',
-      text: 'Manage Products'
+      text: 'Manage Products',
+      url: '/manage-products'
     },{
       icon: 'forum',
-      text: 'Manage Reviews'
+      text: 'Manage Reviews',
+      url: '/manage-reviews'
     },{
       icon: 'local_activity',
-      text: 'Manage Campaigns'
+      text: 'Manage Campaigns',
+      url: '/manage-campaigns'
     }
   ];
 

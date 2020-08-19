@@ -2,7 +2,29 @@
   <div class="max-wrap">
     <div class="container-fluid pt-2 pb-5 pt-md-3 pt-xl-5">
       <div class="row justify-content-center">
-        Users
+        <div class="col-12">
+          <h1>Manage Users</h1>
+        <!-- <table>
+          <thead>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Joined On</th>
+            <th>Status</th>
+            <th>More Details</th>
+          </thead>
+          <tbody></tbody>
+        </table> -->
+        
+          <ag-grid-angular
+            style="width: 500px; height: 500px;"
+            class="ag-theme-alpine"
+            [rowData]="rowData"
+            [columnDefs]="columnDefs"
+            >
+        </ag-grid-angular>
+        </div>
       </div>
     </div>
   </div>

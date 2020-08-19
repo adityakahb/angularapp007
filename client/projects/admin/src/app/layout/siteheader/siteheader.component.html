@@ -110,7 +110,7 @@
     <nav>
       <ul class="list-unstyled d-block m-0 p-0">
         <li class="d-block m-0 p-0" *ngFor="let nav of navlinks">
-          <a href="#" [title]="nav.text">
+          <a [href]="nav.url" [title]="nav.text">
             <div class="icn"><i class="material-icons-round">{{nav.icon}}</i></div>
             {{nav.text}}
           </a>

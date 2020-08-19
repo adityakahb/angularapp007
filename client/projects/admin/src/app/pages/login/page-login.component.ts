@@ -61,7 +61,7 @@ export class PageLoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoginSuccess = true;
         this.adminService.setLoggedIn(true, res.token);
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigate(['dashboard']);
       } else {
         this.regFailMsg = res.message || 'Some Error Occurred';
         this.isLoginFailed = true;
