@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageManageCategoriesComponent } from './page-manage-categories.component';
 
 const routes: Routes = [
-  { path: 'manage-categories', component: PageManageCategoriesComponent }
+  { path: '', component: PageManageCategoriesComponent }
 ];
 
 @NgModule({

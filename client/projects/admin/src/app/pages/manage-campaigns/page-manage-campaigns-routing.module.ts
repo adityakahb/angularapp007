@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageManageCampaignsComponent } from './page-manage-campaigns.component';
 
 const routes: Routes = [
-  { path: 'manage-campaigns', component: PageManageCampaignsComponent }
+  { path: '', component: PageManageCampaignsComponent }
 ];
 
 @NgModule({

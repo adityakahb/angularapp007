@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageManageProductsComponent } from './page-manage-products.component';
 
 const routes: Routes = [
-  { path: 'manage-products', component: PageManageProductsComponent }
+  { path: '', component: PageManageProductsComponent }
 ];
 
 @NgModule({

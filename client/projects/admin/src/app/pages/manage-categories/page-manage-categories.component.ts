@@ -4,9 +4,9 @@ import { AdminService } from './../../shared/services/admin.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-page-ManageCategories',
-  templateUrl: './page-ManageCategories.component.html',
-  styleUrls: ['./page-ManageCategories.component.scss']
+  selector: 'app-page-manage-categories',
+  templateUrl: './page-manage-categories.component.html',
+  styleUrls: ['./page-manage-categories.component.scss']
 })
 export class PageManageCategoriesComponent implements OnInit {
   __EMAIL: FormControl;

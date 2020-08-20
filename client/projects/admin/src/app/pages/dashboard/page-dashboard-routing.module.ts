@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageDashboardComponent } from './page-dashboard.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: PageDashboardComponent }
+  { path: '', component: PageDashboardComponent }
 ];
 
 @NgModule({
