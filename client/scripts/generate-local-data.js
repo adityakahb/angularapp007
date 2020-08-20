@@ -1,115 +1,158 @@
 const fs = require('fs');
 
-const str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec lectus fringilla, rutrum justo ut, sagittis mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer tincidunt, neque sit amet ullamcorper efficitur, tellus odio bibendum felis, tincidunt tincidunt felis mi eget massa. Maecenas consectetur augue a laoreet tristique. Nulla sit amet blandit elit, in rutrum sem. Donec euismod suscipit tempus. Nam ut arcu non enim rhoncus luctus. Donec id nisi pellentesque justo suscipit pretium sodales sed ipsum. Sed venenatis iaculis velit ac fermentum. Suspendisse mattis ante vitae commodo porta. Nullam eleifend eleifend lectus, eget vestibulum quam pulvinar ac. Proin aliquet, neque ut congue aliquam, velit sem convallis est, vitae ultrices lectus risus et odio. In non arcu at felis vehicula condimentum quis non metus. Nunc congue metus quis egestas pretium. Sed in risus eget risus blandit rutrum.';
-const searchResultsCount = 30;
-const featuredResultsCount = 12;
-let wordsArr = [];
+const mainStr =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+  'Maecenas quam nunc, egestas ac porta ac, posuere eu metus. ' +
+  'Etiam sollicitudin augue eget mauris vehicula, et congue purus pulvinar. ' +
+  'Nullam vulputate metus sit amet odio mattis ultricies non sit amet nulla. ' +
+  'Nulla facilisi. Nullam facilisis congue sollicitudin. ' +
+  'In pharetra vehicula venenatis. Morbi eget tempor nisl, ut facilisis erat. ' +
+  'Vivamus scelerisque, velit in faucibus maximus, turpis ipsum pulvinar ex, ac ultrices nunc quam commodo lacus. ' +
+  'Vestibulum sed lacus volutpat, molestie erat nec, finibus massa. ' +
+  'Phasellus laoreet malesuada tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
+  'Vivamus at luctus turpis, id fermentum ex. Proin at felis sit amet risus sodales porttitor et ut elit. ' +
+  'In elementum arcu ut turpis gravida, finibus pulvinar urna lobortis. ' +
+  'Praesent congue, felis ut fringilla aliquam, ex risus consectetur sem, vitae ornare lorem nunc a nulla. ' +
+  'Curabitur aliquam neque purus, eget malesuada tortor ultricies id. ' +
+  'Phasellus pellentesque tempus nibh vel vestibulum. ' +
+  'Suspendisse consectetur maximus mattis. In eget nibh neque. ';
 
-const nameGenerator = (count) => {
-  let resultName = '';
-  count = count || 2;
-  for(let name = 0; name < count; name++) {
-    resultName += wordsArr[Math.floor(Math.random() * wordsArr.length)] + ' ';
+const categories = [
+  'Accessories',
+  'Components',
+  'Desktops',
+  'External Devices & Data Storage',
+  'Keyboards, Mice & Input Devices',
+  'Laptops',
+  'Monitors',
+  'Networking Devices',
+  'PC Speakers',
+  'Printers',
+  'Scanners',
+  'Webcams & VoIP Equipment'
+];
+
+const domainList = ['com', 'net', 'co.in', 'co.uk', 'com.au', 'co', 'org', 'edu', 'io'];
+
+const palette = require('./palette.json');
+const firstnames = require('./firstnames.json');
+const middlenames = require('./middlennames.json');
+const lastnames = require('./lastnames.json');
+const randomidchars = '0123456789abcdefghijklmnopqrstuvwxyz';
+
+const emailalpha = 'abcdefghijklmnopqrstuvwxyz';
+const emailnum = '0123456789';
+
+const randomDate = (start, end) => {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).toUTCString();
+}
+
+const randomNum = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+const randomColor = () => {
+  return (Math.floor(Math.random() * 16777215).toString(16) + '000000').substr(0, 6);
+};
+
+const randomID = (length) => {
+  let result = '';
+  for (var i = length; i > 0; --i) result += randomidchars[Math.floor(Math.random() * randomidchars.length)];
+  return result;
+}
+
+function randomEmail() {
+  let part1 = '';
+  let part1len = randomNum(4, 8);
+  let part2 = '';
+  let part2len = randomNum(0, 4);
+  let part3 = '';
+  let part3len = randomNum(2, 4);
+  let domain1 = '';
+  let domain1len = randomNum(4, 8);
+  let domain2 = '';
+  let domain2len = randomNum(0, 4);
+
+  for (let l = part1len; l > 0; --l) {
+    part1 += emailalpha[Math.floor(Math.random() * emailalpha.length)];
+  };
+  for (let l = part2len; l > 0; --l) {
+    part2 += emailnum[Math.floor(Math.random() * emailnum.length)];
+  };
+  for (let l = part3len; l > 0; --l) {
+    part3 += emailalpha[Math.floor(Math.random() * emailalpha.length)];
+  };
+  for (let l = domain1len; l > 0; --l) {
+    domain1 += emailalpha[Math.floor(Math.random() * emailalpha.length)];
+  };
+  for (let l = domain2len; l > 0; --l) {
+    domain2 += emailnum[Math.floor(Math.random() * emailnum.length)];
+  };
+
+  return part1 + part2 + part3 + '@' + domain1 + domain2 + '.' + domainList[Math.floor(Math.random() * domainList.length)];
+}
+
+const genCap = (str) => {
+  let arr = (str || '').split(' ');
+  let returnArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if ((i + 1) === 1) {
+      returnArr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+    } else if ((i + 1) === 2 || (i + 1) === 3) {
+      returnArr.push(arr[i]);
+    } else {
+      let isprime = true;
+      for (let x = 2; x < i; x++) {
+        if (i % x === 0) {
+          isprime = false;
+          break;
+        }
+      }
+      returnArr.push(isprime ? arr[i].charAt(0).toUpperCase() + arr[i].slice(1) : arr[i]);
+    }
   }
-  return resultName.replace(/^\s+|\s+$/g, '').split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');;
-}
+  return returnArr.join(' ');
+};
 
-const imgGenerator = (w, h, bg, fg) => {
-  return `https://via.placeholder.com/${w}x${h}/${bg}/${fg}`;
-}
+let mainArr = [];
+mainArr = mainStr.replace(/^\s+|\s+$/g, '').toLowerCase().split('. ').join(' ').split(', ').join(' ').split(' ');
 
-const ratingsGenerator = () => {
-  return (Math.floor(Math.random() * 51) / 10).toFixed(1);
-}
+const generateUsersData = () => {
+  let arr = [];
+  let userlen = randomNum(10, 40);
+  for (let i=0; i< userlen; i++) {
+    let obj = {};
+    obj._id = randomID(24);
+    obj.__FIRSTNAME = firstnames[Math.floor(Math.random() * firstnames.length)];
+    let middlenum = randomNum(1, 5);
+    obj.__MIDDLENAME = middlenum < 3 ? middlenames[Math.floor(Math.random() * middlenames.length)] : '';
+    obj.__LASTNAME = lastnames[Math.floor(Math.random() * lastnames.length)];
+    obj.__DATEOFBIRTH = randomDate(new Date(1940, 0, 1), new Date(2000, 11, 31));
+    let statusnum = randomNum(1, 5);
 
-const minorGenerator = () => {
-  return Math.floor(Math.random() * 100).toFixed();
-}
+    obj.__EMAIL = [];
 
-const majorGenerator = () => {
-  return Math.floor(1000 + Math.random() * 9000).toFixed();
-}
+    let emaillen = randomNum(1, 3);
+    for (let j=0; j<emaillen; j++) {
+      let obj1 = {};
+      obj1.__ISPRIMARY = j===0 ? true : false;
+      obj1.__ADDRESS = randomEmail();
+      obj.__EMAIL.push(obj1);
+    }
+
+    obj.__STATUS = statusnum < 3 ? 'active' : 'inactive';
+    arr.push(obj);
+  };
+  return arr;
+};
 
 const generateFiles = () => {
 
-  wordsArr = str.toLowerCase().replace(/^\s+|\s+$/g, '').split(', ').join(' ').split('. ').join(' ').split('.').join(' ').split(' ');
+  let usersData = generateUsersData();
 
-  let searchResultsArr = [];
-  let featuredResultsArr = [];
-  for (let i=0; i<searchResultsCount; i++) {
-
-    let nameCount = Math.floor(Math.random() * 20) + 1;
-
-    let bg = Math.floor(Math.random()*16777215).toString(16);
-    let fg = Math.floor(Math.random()*16777215).toString(16);
-
-    let sampleResult = {
-      "title": nameGenerator(nameCount),
-      "img": {
-        "xs": imgGenerator(320, 320, bg, fg),
-        "xs2": imgGenerator(640, 640, bg, fg),
-        "md": imgGenerator(360, 360, bg, fg),
-        "md2": imgGenerator(720, 720, bg, fg),
-        "xl": imgGenerator(400, 400, bg, fg),
-        "xl2": imgGenerator(800, 800, bg, fg)
-      },
-      "link": "#",
-      "ratings": ratingsGenerator(),
-      "price": {
-        "currency": "inr",
-        "major": majorGenerator(),
-        "minor": minorGenerator()
-      },
-      "oldprice": {
-        "currency": "inr",
-        "major": majorGenerator(),
-        "minor": minorGenerator()
-      }
-    };
-    searchResultsArr.push(sampleResult);
-  }
-  for (let i=0; i<featuredResultsCount; i++) {
-
-    let nameCount = Math.floor(Math.random() * 16) + 1;
-
-    let bg = Math.floor(Math.random()*16777215).toString(16);
-    let fg = Math.floor(Math.random()*16777215).toString(16);
-
-    let sampleResult = {
-      "title": nameGenerator(nameCount),
-      "img": {
-        "xs": imgGenerator(320, 320, bg, fg),
-        "xs2": imgGenerator(640, 640, bg, fg),
-        "md": imgGenerator(360, 360, bg, fg),
-        "md2": imgGenerator(720, 720, bg, fg),
-        "xl": imgGenerator(400, 400, bg, fg),
-        "xl2": imgGenerator(800, 800, bg, fg)
-      },
-      "link": "#",
-      "ratings": ratingsGenerator(),
-      "price": {
-        "currency": "inr",
-        "major": majorGenerator(),
-        "minor": minorGenerator()
-      },
-      "oldprice": {
-        "currency": "inr",
-        "major": majorGenerator(),
-        "minor": minorGenerator()
-      }
-    };
-    featuredResultsArr.push(sampleResult);
-  }
-  // console.log('============searchResultsArr', searchResultsArr);
-  fs.writeFile('./src/app/data/search-results.json', JSON.stringify(searchResultsArr), function (err) {
+  fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
     if (err) throw err;
-    console.log('Search Results Replaced');
-  });
-  fs.writeFile('./src/app/data/featured-results.json', JSON.stringify(featuredResultsArr), function (err) {
-    if (err) throw err;
-    console.log('Featured Results Replaced');
+    console.log('Users Data Replaced');
   });
 };
 

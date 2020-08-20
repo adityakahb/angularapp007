@@ -1,10 +1,8 @@
-@import './../../../../../../../node_modules/ag-grid-community/src/styles/ag-grid.scss';
-@import './../../../../../../../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss';
-
-.ag-theme-alpine {
-    @include ag-theme-alpine();
-}
 .main-content {
   padding-left: 48px;
   background-color: $white;
+}
+.ag-grid-wrap {
+  height: rem(400px);
+  display: flex; flex-direction: column;
 }
