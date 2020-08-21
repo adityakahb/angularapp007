@@ -135,7 +135,7 @@ mainArr = mainStr.replace(/^\s+|\s+$/g, '').toLowerCase().split('. ').join(' ').
 const generateUsersData = () => {
   let arr = [];
   let userlen = totalUsersLength;
-  for (let i=0; i< userlen; i++) {
+  for (let i = 0; i < userlen; i++) {
     let obj = {};
     obj._id = _userids[Math.floor(Math.random() * _userids.length)];
     obj.__FIRSTNAME = firstnames[Math.floor(Math.random() * firstnames.length)];
@@ -147,9 +147,9 @@ const generateUsersData = () => {
     obj.__EMAIL = [];
 
     let emaillen = randomNum(1, 3);
-    for (let j=0; j<emaillen; j++) {
+    for (let j = 0; j < emaillen; j++) {
       let obj1 = {};
-      obj1.__ISPRIMARY = j===0 ? true : false;
+      obj1.__ISPRIMARY = j === 0 ? true : false;
       obj1.__ADDRESS = randomEmail();
       obj.__EMAIL.push(obj1);
     }
@@ -160,12 +160,12 @@ const generateUsersData = () => {
     let color2 = randomColor();
 
     let thisnum = randomNum(1, 5);
-  
+
     obj.__PROFILEPIC = thisnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
-    
+
     let statusnum = randomNum(1, 5);
     obj.__STATUS = statusnum < 3 ? 'active' : 'inactive';
-    
+
     arr.push(obj);
   };
   return arr;
@@ -175,8 +175,8 @@ const generateSellersData = () => {
   let arr = [];
   // let sellerlen = totalSellersLength;
   let sellerlen = 8;
-  
-  for (let i=0; i<sellerlen; i++) {
+
+  for (let i = 0; i < sellerlen; i++) {
     let obj = {};
     let nameLength = randomNum(2, 8);
     let nameStr = [];
@@ -195,7 +195,7 @@ const generateSellersData = () => {
       let obj1 = {};
       let pnamelen = randomNum(4, 24);
       let pnameStr = [];
-      for (let j=0; j<pnamelen; j++) {
+      for (let j = 0; j < pnamelen; j++) {
         pnameStr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
       }
       obj1._id = _productids[Math.floor(Math.random() * mainArr.length)];
@@ -221,12 +221,13 @@ const genCat = (level, localarr, fullarr) => {
   var foundobj; 
 
   var foundArr = thisarr.filter((arritem, arrindex) => {
-    return (arritem.level === thislevel && arritem.category === fullarr[level]);
+    return (arritem.__L === thislevel && arritem.__C === fullarr[level]);
   });
 
   if (foundArr.length === 0 && fullarr[level] !== '') {
     isfresh = true;
     foundobj = {
+      _id: randomID(24),
       __L: thislevel,
       __C: fullarr[thislevel]
     };
@@ -235,7 +236,9 @@ const genCat = (level, localarr, fullarr) => {
   }
 
   if ((fullarr[level + 1] || '').length > 0) {
-    foundobj.__S = [];
+    if (!foundobj.__S) {
+      foundobj.__S = [];
+    }
     genCat(level + 1, foundobj.__S, fullarr);
   }
 
@@ -259,6 +262,14 @@ const generateCategoriessData = () => {
     }
   }
   return arr;
+};
+
+const createStatement = (sl, type) => {
+  let strArr = [];
+  for (let j = 0; j < sl; j++) {
+    strArr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+  }
+  return type === 'li' ? '<li>' + genCap(strArr.join(' ') + '.') + '</li>' : genCap(strArr.join(' ') + '.');
 };
 
 const generateProductsData = () => {
@@ -293,6 +304,50 @@ const generateProductsData = () => {
           __ISPRIMARY: true
         }];
       }
+      obj.__IMAGES = [];
+
+      let imglen = randomNum(1, 8);
+      for (let k = 0; k < imglen; k++) {
+        let imgObj = {};
+        let width = randomNum(240, 560);
+        let height = randomNum(240, 560);
+
+        let zoomw = width * 3;
+        let zoomh = height * 3;
+
+        let color1 = randomColor();
+        let color2 = randomColor();
+
+        let thisnum = randomNum(0, 4);
+
+        imgObj.__URL = `https://via.placeholder.com/${width}x${height}/${color1}/${color2}`;
+        if (thisnum > 1) {
+          imgObj.__ZOOMURL = `https://via.placeholder.com/${zoomw}x${zoomh}/${color1}/${color2}`;
+        }
+        obj.__IMAGES.push(imgObj);
+      }
+
+      let paralen = randomNum(1, 5);
+      let bulletlen = randomNum(0, 16);
+      let bulletArr = [];
+      let parastr = '';
+
+      for (let j = 0; j < paralen; j++) {
+        let totalstatements = randomNum(1, 5);
+        let statementsArr = [];
+        for (let k = 0; k < totalstatements; k++) {
+          statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+        }
+        parastr += '<p>' + statementsArr.join(' ') + '</p>';
+      }
+
+      for (let j = 0; j < bulletlen; j++) {
+        bulletArr.push(createStatement(randomNum(16, 48), 'li'));
+      }
+
+      parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
+      obj.__SPECS = parastr;
+      
       obj.__SELLER = {
         _id: seller._id,
         __NAME: seller.__NAME,
@@ -304,131 +359,6 @@ const generateProductsData = () => {
   return arr;
 };
 
-const generateProductsDataOld = () => {
-  let arr = [];
-  // const prodLen = totalProductsLength;
-  const prodLen = 8;
-  const createStatement = (sl, type) => {
-    let strArr = [];
-    for (let j = 0; j < sl; j++) {
-      strArr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
-    }
-    return type === 'li' ? '<li>' + genCap(strArr.join(' ') + '.') + '</li>' : genCap(strArr.join(' ') + '.');
-  };
-  for (let i=0; i<prodLen; i++) {
-    let obj = {};
-    obj._id = _productids[Math.floor(Math.random() * _productids.length)]
-    let nameLength = randomNum(4, 24);
-    let nameStr = [];
-    for (let k = 0; k < nameLength; k++) {
-      nameStr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
-    }
-    obj.__NAME = genCap(nameStr.join(' '));
-
-    obj.__SELLERS = [];
-    let allSellersLen = randomNum(1, 10);
-
-    for (let m=0; m<allSellersLen;m++) {
-      let sellerLength = randomNum(2, 8);
-      let sellerStr = [];
-      for (let k = 0; k < sellerLength; k++) {
-        sellerStr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
-      }
-      let obj1 = {
-        __NAME: genCap(sellerStr.join(' ')),
-        __URL: '#',
-        __SELLERID: _sellerids[Math.floor(Math.random() * _sellerids.length)]
-      };
-      let pricenum = randomNum(1, 2);
-      if (pricenum === 1) {
-        obj1.__PRICE = [{
-          __MAJOR: '' + randomNum(4999, 99999),
-          __MINOR: '' + randomNum(0, 99),
-          __CURRENCY: 'INR',
-          __ISPRIMARY: true
-        }];
-      } else {
-        obj1.__PRICE = [{
-          __MAJOR: '' + randomNum(60000, 99999),
-          __MINOR: '' + randomNum(0, 99),
-          __CURRENCY: 'INR',
-          __ISPRIMARY: false
-        }, {
-          __MAJOR: '' + randomNum(4999, 59999),
-          __MINOR: '' + randomNum(0, 99),
-          __CURRENCY: 'INR',
-          __ISPRIMARY: true
-        }];
-      }
-      obj1.__ISPRIMARY = m === 0 ? true : false;
-      obj.__SELLERS.push(obj1);
-    }
-
-    obj.__CATEGORY = {
-      __TYPE: categories[Math.floor(Math.random() * categories.length)],
-      __URL: '#'
-    };
-    obj.__COLOR = palette[Math.floor(Math.random() * palette.length)];
-    obj.__URL = '#';
-    obj.__IMAGES = [];
-    
-    let imglen = randomNum(1, 8);
-    for (let k = 0; k < imglen; k++) {
-      let imgObj = {};
-      let width = randomNum(240, 560);
-      let height = randomNum(240, 560);
-
-      let zoomw = width * 3;
-      let zoomh = height * 3;
-
-      let color1 = randomColor();
-      let color2 = randomColor();
-
-      let thisnum = randomNum(0, 4);
-    
-      imgObj.__URL = `https://via.placeholder.com/${width}x${height}/${color1}/${color2}`;
-      if (thisnum > 1) {
-        imgObj.__ZOOMURL = `https://via.placeholder.com/${zoomw}x${zoomh}/${color1}/${color2}`;
-      }
-      obj.__IMAGES.push(imgObj);
-    }
-
-    let paralen = randomNum(1, 5);
-    let bulletlen = randomNum(0, 16);
-    let bulletArr = [];
-    let parastr = '';
-
-    for (let j = 0; j < paralen; j++) {
-      let totalstatements = randomNum(1, 5);
-      let statementsArr = [];
-      for (let k = 0; k < totalstatements; k++) {
-        statementsArr.push(createStatement(randomNum(16, 48), 'p'));
-      }
-      parastr += '<p>' + statementsArr.join(' ') + '</p>';
-    }
-
-    for (let j = 0; j < bulletlen; j++) {
-      bulletArr.push(createStatement(randomNum(16, 48), 'li'));
-    }
-
-    parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
-
-    obj.__SPECS = parastr;
-    let outofstocknum = randomNum(1, 5);
-    obj.__ISOUTOFSTOCK = outofstocknum < 3 ? false : true;
-
-    let reviewsLen = randomNum(0, 15);
-    let reviewsArr = [];
-    for (let j = 0; j < reviewsLen; j++) {
-      reviewsArr.push(_reviewids[Math.floor(Math.random() * _reviewids.length)]);
-    };
-    obj.__REVIEWS = reviewsArr;
-
-    arr.push(obj);
-  }
-  return arr;
-};
-
 const generateFiles = () => {
 
   let productids = [];
@@ -436,16 +366,16 @@ const generateFiles = () => {
   let reviewids = [];
   let sellerids = [];
 
-  for (let i=0; i<totalProductsLength; i++) {
+  for (let i = 0; i < totalProductsLength; i++) {
     productids.push(randomID(24));
   }
-  for (let i=0; i<totalUsersLength; i++) {
+  for (let i = 0; i < totalUsersLength; i++) {
     userids.push(randomID(24));
   }
-  for (let i=0; i<totalSellersLength; i++) {
+  for (let i = 0; i < totalSellersLength; i++) {
     sellerids.push(randomID(24));
   }
-  for (let i=0; i<totalReviewsLength; i++) {
+  for (let i = 0; i < totalReviewsLength; i++) {
     reviewids.push(randomID(24));
   }
 
@@ -487,6 +417,7 @@ const generateFiles = () => {
   });
 
   // let productsData = generateProductsData();
+
   // fs.writeFile('./projects/admin/src/app/data/manage-products.json', JSON.stringify(productsData), function (err) {
   //   if (err) throw err;
   //   console.log('Products Data Replaced');
