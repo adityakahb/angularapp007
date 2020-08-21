@@ -144,6 +144,7 @@ const generateUsersData = () => {
     obj.__MIDDLENAME = middlenum < 3 ? middlenames[Math.floor(Math.random() * middlenames.length)] : '';
     obj.__LASTNAME = lastnames[Math.floor(Math.random() * lastnames.length)];
     obj.__DATEOFBIRTH = randomDate(new Date(1940, 0, 1), new Date(2000, 11, 31));
+    obj.__JOINED = randomDate(new Date(2018, 0, 1), new Date());
 
     obj.__EMAIL = [];
 
@@ -476,12 +477,12 @@ const generateFiles = () => {
   //   console.log('User Ids Replaced');
   // });
 
-  // let usersData = generateUsersData();
+  let usersData = generateUsersData();
 
-  // fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
-  //   if (err) throw err;
-  //   console.log('Users Data Replaced');
-  // });
+  fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
+    if (err) throw err;
+    console.log('Users Data Replaced');
+  });
 
   // let sellersData = generateSellersData();
 
