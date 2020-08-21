@@ -10,8 +10,6 @@ import { PLATFORM_ID, Inject } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { BehaviorSubject } from 'rxjs';
 
-import { generateBulkProductsData } from './data-generator'; 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -85,9 +83,7 @@ export class AdminService {
       );
   }
 
-  addBulkProducts(): Observable<any> {
-    let products: IProduct[] = generateBulkProductsData();
-
+  addBulkProducts(products): Observable<any> {
     return this.http.post(`${this.endpoint}/addbulkproducts`, products)
       .pipe(
         catchError(this.handleError)

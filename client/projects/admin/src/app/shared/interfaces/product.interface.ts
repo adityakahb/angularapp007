@@ -9,6 +9,7 @@ export interface IVideo {
 export interface ISeller {
   __NAME: string;
   __URL: string;
+  __SELLERID: string;
 };
 export interface IColor {
   __COLORHEX: string;
