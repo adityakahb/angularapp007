@@ -51,6 +51,7 @@ const _sellerids = require('./../projects/admin/src/app/data/_sellersids.json');
 const _userids = require('./../projects/admin/src/app/data/_usersids.json');
 
 const _generatedSellers = require('./../projects/admin/src/app/data/manage-sellers.json');
+const _generatedCategories = require('./../projects/admin/src/app/data/manage-categories.json');
 
 
 const randomidchars = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -218,7 +219,7 @@ const genCat = (level, localarr, fullarr) => {
   var thislevel = level;
   var thisarr = localarr;
   var isfresh = false;
-  var foundobj; 
+  var foundobj;
 
   var foundArr = thisarr.filter((arritem, arrindex) => {
     return (arritem.__L === thislevel && arritem.__C === fullarr[level]);
@@ -245,7 +246,7 @@ const genCat = (level, localarr, fullarr) => {
   if (isfresh) {
     thisarr.push(foundobj);
   }
-  
+
   return thisarr;
 };
 
@@ -272,89 +273,112 @@ const createStatement = (sl, type) => {
   return type === 'li' ? '<li>' + genCap(strArr.join(' ') + '.') + '</li>' : genCap(strArr.join(' ') + '.');
 };
 
+const findRightCategory = (cat, level) => {
+  let obj = {};
+  if ((cat.__S || []).length > 1) {
+    let catindex = randomNum(0, cat.__S.length - 1);
+    obj = findRightCategory(cat.__S[catindex], level++);
+  } else if ((cat.__S || []).length === 1){
+    obj = cat.__S[0];
+  } else {
+    obj = cat;
+  }
+
+  if (level === 0) {
+    obj._parentid = cat._id;
+  }
+
+  return obj;
+}
+
 const generateProductsData = () => {
   let arr = [];
   let sellersArr = _generatedSellers || [];
-  sellersArr.forEach(seller => {
-    (seller.__PRODUCTS || []).forEach(prod => {
-      let obj = {};
-      obj._id = prod._id;
-      obj.__NAME = prod.__NAME;
-      obj.__URL = prod.__URL;
-      obj.__ISACTIVE = prod.__ISACTIVE;
-      obj.__ISOUTOFSTOCK = prod.__ISOUTOFSTOCK;
-      let pricenum = randomNum(1, 2);
-      if (pricenum === 1) {
-        obj.__PRICE = [{
-          __MAJOR: '' + randomNum(4999, 99999),
-          __MINOR: '' + randomNum(0, 99),
-          __CURRENCY: 'INR',
-          __ISPRIMARY: true
-        }];
-      } else {
-        obj.__PRICE = [{
-          __MAJOR: '' + randomNum(60000, 99999),
-          __MINOR: '' + randomNum(0, 99),
-          __CURRENCY: 'INR',
-          __ISPRIMARY: false
-        }, {
-          __MAJOR: '' + randomNum(4999, 59999),
-          __MINOR: '' + randomNum(0, 99),
-          __CURRENCY: 'INR',
-          __ISPRIMARY: true
-        }];
-      }
-      obj.__IMAGES = [];
-
-      let imglen = randomNum(1, 8);
-      for (let k = 0; k < imglen; k++) {
-        let imgObj = {};
-        let width = randomNum(240, 560);
-        let height = randomNum(240, 560);
-
-        let zoomw = width * 3;
-        let zoomh = height * 3;
-
-        let color1 = randomColor();
-        let color2 = randomColor();
-
-        let thisnum = randomNum(0, 4);
-
-        imgObj.__URL = `https://via.placeholder.com/${width}x${height}/${color1}/${color2}`;
-        if (thisnum > 1) {
-          imgObj.__ZOOMURL = `https://via.placeholder.com/${zoomw}x${zoomh}/${color1}/${color2}`;
+  sellersArr.forEach((seller, sellerindex) => {
+    if (sellerindex < sellersArr.length) {
+      (seller.__PRODUCTS || []).forEach((prod, prodindex) => {
+        let obj = {};
+        obj._id = prod._id;
+        obj.__NAME = prod.__NAME;
+        obj.__URL = prod.__URL;
+        obj.__ISACTIVE = prod.__ISACTIVE;
+        obj.__ISOUTOFSTOCK = prod.__ISOUTOFSTOCK;
+        let pricenum = randomNum(1, 2);
+        if (pricenum === 1) {
+          obj.__PRICE = [{
+            __MAJOR: '' + randomNum(4999, 99999),
+            __MINOR: '' + randomNum(0, 99),
+            __CURRENCY: 'INR',
+            __ISPRIMARY: true
+          }];
+        } else {
+          obj.__PRICE = [{
+            __MAJOR: '' + randomNum(60000, 99999),
+            __MINOR: '' + randomNum(0, 99),
+            __CURRENCY: 'INR',
+            __ISPRIMARY: false
+          }, {
+            __MAJOR: '' + randomNum(4999, 59999),
+            __MINOR: '' + randomNum(0, 99),
+            __CURRENCY: 'INR',
+            __ISPRIMARY: true
+          }];
         }
-        obj.__IMAGES.push(imgObj);
-      }
+        obj.__IMAGES = [];
 
-      let paralen = randomNum(1, 5);
-      let bulletlen = randomNum(0, 16);
-      let bulletArr = [];
-      let parastr = '';
+        let imglen = randomNum(1, 8);
+        for (let k = 0; k < imglen; k++) {
+          let imgObj = {};
+          let width = randomNum(240, 560);
+          let height = randomNum(240, 560);
 
-      for (let j = 0; j < paralen; j++) {
-        let totalstatements = randomNum(1, 5);
-        let statementsArr = [];
-        for (let k = 0; k < totalstatements; k++) {
-          statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+          let zoomw = width * 3;
+          let zoomh = height * 3;
+
+          let color1 = randomColor();
+          let color2 = randomColor();
+
+          let thisnum = randomNum(0, 4);
+
+          imgObj.__URL = `https://via.placeholder.com/${width}x${height}/${color1}/${color2}`;
+          if (thisnum > 1) {
+            imgObj.__ZOOMURL = `https://via.placeholder.com/${zoomw}x${zoomh}/${color1}/${color2}`;
+          }
+          obj.__IMAGES.push(imgObj);
         }
-        parastr += '<p>' + statementsArr.join(' ') + '</p>';
-      }
 
-      for (let j = 0; j < bulletlen; j++) {
-        bulletArr.push(createStatement(randomNum(16, 48), 'li'));
-      }
+        let paralen = randomNum(1, 5);
+        let bulletlen = randomNum(0, 16);
+        let bulletArr = [];
+        let parastr = '';
 
-      parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
-      obj.__SPECS = parastr;
-      
-      obj.__SELLER = {
-        _id: seller._id,
-        __NAME: seller.__NAME,
-        __URL: seller.__URL
-      };
-      arr.push(obj);
-    });
+        for (let j = 0; j < paralen; j++) {
+          let totalstatements = randomNum(1, 5);
+          let statementsArr = [];
+          for (let k = 0; k < totalstatements; k++) {
+            statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+          }
+          parastr += '<p>' + statementsArr.join(' ') + '</p>';
+        }
+
+        for (let j = 0; j < bulletlen; j++) {
+          bulletArr.push(createStatement(randomNum(16, 48), 'li'));
+        }
+
+        parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
+        let category_s = _generatedCategories[Math.floor(Math.random() * _generatedCategories.length)]
+        obj.__CATEGORY = findRightCategory(category_s, 0);
+        
+        obj.__SPECS = parastr;
+
+        obj.__SELLER = {
+          _id: seller._id,
+          __NAME: seller.__NAME,
+          __URL: seller.__URL
+        };
+        arr.push(obj);
+      });
+    }
   });
   return arr;
 };
@@ -409,19 +433,19 @@ const generateFiles = () => {
   //   console.log('Sellers Data Replaced');
   // });
 
-  let categoriessData = generateCategoriessData();
+  // let categoriessData = generateCategoriessData();
 
-  fs.writeFile('./projects/admin/src/app/data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
-    if (err) throw err;
-    console.log('Categories Data Replaced');
-  });
-
-  // let productsData = generateProductsData();
-
-  // fs.writeFile('./projects/admin/src/app/data/manage-products.json', JSON.stringify(productsData), function (err) {
+  // fs.writeFile('./projects/admin/src/app/data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
   //   if (err) throw err;
-  //   console.log('Products Data Replaced');
+  //   console.log('Categories Data Replaced');
   // });
+
+  let productsData = generateProductsData();
+
+  fs.writeFile('./projects/admin/src/app/data/manage-products.json', JSON.stringify(productsData), function (err) {
+    if (err) throw err;
+    console.log('Products Data Replaced');
+  });
 };
 
 generateFiles();
