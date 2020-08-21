@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "7ubp63rkmfjm2zn24i0al14b",
+    "__TYPE": "active"
+  },
+  {
+    "_id": "pmz73w8qsreslhff0aow09cs",
+    "__TYPE": "inactive"
+  },
+  {
+    "_id": "5w4cfydt86pzj4pcwskjmy9j",
+    "__TYPE": "inreview"
+  },
+  {
+    "_id": "v66oanwcfv2h5gim7j042scp",
+    "__TYPE": "reported"
+  },
+  {
+    "_id": "lxvm995v2x3ta1uic3mhbb56",
+    "__TYPE": "onhold"
+  },
+  {
+    "_id": "4bmdt3hbxlkcpskmfyvycdsf",
+    "__TYPE": "cancelled"
+  },
+  {
+    "_id": "c6xvbwewiwrl9xq13o38a9q6",
+    "__TYPE": "deleted"
+  }
+]

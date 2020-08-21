@@ -46,13 +46,13 @@ const middlenames = require('./middlennames.json');
 const lastnames = require('./lastnames.json');
 
 const _productids = require('./../projects/admin/src/app/data/_productsids.json');
-const _reviewids = require('./../projects/admin/src/app/data/_reviewsids.json');
 const _sellerids = require('./../projects/admin/src/app/data/_sellersids.json');
 const _userids = require('./../projects/admin/src/app/data/_usersids.json');
 
 const _generatedSellers = require('./../projects/admin/src/app/data/manage-sellers.json');
 const _generatedCategories = require('./../projects/admin/src/app/data/manage-categories.json');
-
+const _generatedProducts = require('./../projects/admin/src/app/data/manage-products.json');
+const _generatedStatuses = require('./../projects/admin/src/app/data/manage-statuses.json');
 
 const randomidchars = '0123456789abcdefghijklmnopqrstuvwxyz';
 
@@ -164,8 +164,7 @@ const generateUsersData = () => {
 
     obj.__PROFILEPIC = thisnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
 
-    let statusnum = randomNum(1, 5);
-    obj.__STATUS = statusnum < 3 ? 'active' : 'inactive';
+    obj.__STATUS = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)];
 
     arr.push(obj);
   };
@@ -187,6 +186,7 @@ const generateSellersData = () => {
     obj.__NAME = genCap(nameStr.join(' '));
     obj.__URL = '#';
     obj.__SELLERID = _sellerids[Math.floor(Math.random() * _sellerids.length)];
+    obj.__STATUS = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)];
 
     obj.__PRODUCTS = [];
 
@@ -199,11 +199,12 @@ const generateSellersData = () => {
       for (let j = 0; j < pnamelen; j++) {
         pnameStr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
       }
-      obj1._id = _productids[Math.floor(Math.random() * mainArr.length)];
+      obj1._id = _productids[Math.floor(Math.random() * _productids.length)];
       obj1.__NAME = genCap(pnameStr.join(' '));
       obj1.__URL = '#';
-      let activenum = randomNum(1, 5);
-      obj1.__ISACTIVE = activenum < 3 ? true : false;
+
+      obj1.__STATUS = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)];
+      
       let outofstocknum = randomNum(1, 5);
       obj1.__ISOUTOFSTOCK = outofstocknum < 3 ? true : false;
       obj.__PRODUCTS.push(obj1);
@@ -298,10 +299,11 @@ const generateProductsData = () => {
     if (sellerindex < sellersArr.length) {
       (seller.__PRODUCTS || []).forEach((prod, prodindex) => {
         let obj = {};
+        // console.log('===========prod._id', prod._id);
         obj._id = prod._id;
         obj.__NAME = prod.__NAME;
         obj.__URL = prod.__URL;
-        obj.__ISACTIVE = prod.__ISACTIVE;
+        obj.__STATUS = prod.__STATUS;
         obj.__ISOUTOFSTOCK = prod.__ISOUTOFSTOCK;
         let pricenum = randomNum(1, 2);
         if (pricenum === 1) {
@@ -366,7 +368,7 @@ const generateProductsData = () => {
         }
 
         parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
-        let category_s = _generatedCategories[Math.floor(Math.random() * _generatedCategories.length)]
+        let category_s = _generatedCategories[Math.floor(Math.random() * _generatedCategories.length)];
         obj.__CATEGORY = findRightCategory(category_s, 0);
         
         obj.__SPECS = parastr;
@@ -380,6 +382,60 @@ const generateProductsData = () => {
       });
     }
   });
+  return arr;
+};
+
+const generateReviewssData = () => {
+  let arr = [];
+  (_generatedProducts || []).forEach((prod, pindex) => {
+    let reviewsLen = randomNum(0, 20);
+    let hasreview = randomNum(1, 5);
+    for (let i=0; i < reviewsLen && hasreview < 3; i++) {
+      let obj = {};
+      obj._id = randomID(24);
+      obj.__PRODUCTID = prod._id;
+
+      let paralen = randomNum(1, 5);
+      let bulletlen = randomNum(0, 16);
+      let bulletArr = [];
+      let parastr = '';
+
+      for (let j = 0; j < paralen; j++) {
+        let totalstatements = randomNum(1, 5);
+        let statementsArr = [];
+        for (let k = 0; k < totalstatements; k++) {
+          statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+        }
+        parastr += '<p>' + statementsArr.join(' ') + '</p>';
+      }
+
+      for (let j = 0; j < bulletlen; j++) {
+        bulletArr.push(createStatement(randomNum(16, 48), 'li'));
+      }
+
+      parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
+      obj.__REVIEW = parastr;
+      obj.__RATING = Math.floor((Math.random() * 5) + 1);
+      obj.__STATUS = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)];
+      arr.push(obj);
+    }
+  });
+  return arr;
+};
+
+const generateStatusData = () => {
+  const statuses = [
+    'active', 'inactive', 'inreview', 'reported', 'onhold', 'cancelled', 'deleted'
+  ];
+  let arr = [];
+
+  for (let i=0; i < statuses.length; i++) {
+    let obj = {};
+    obj._id = randomID(24);
+    obj.__TYPE = statuses[i];
+    arr.push(obj);
+  }
+
   return arr;
 };
 
@@ -420,13 +476,14 @@ const generateFiles = () => {
   //   console.log('User Ids Replaced');
   // });
 
-  let usersData = generateUsersData();
-  let sellersData = generateSellersData();
+  // let usersData = generateUsersData();
 
   // fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
   //   if (err) throw err;
   //   console.log('Users Data Replaced');
   // });
+
+  // let sellersData = generateSellersData();
 
   // fs.writeFile('./projects/admin/src/app/data/manage-sellers.json', JSON.stringify(sellersData), function (err) {
   //   if (err) throw err;
@@ -440,12 +497,26 @@ const generateFiles = () => {
   //   console.log('Categories Data Replaced');
   // });
 
-  let productsData = generateProductsData();
+  // let productsData = generateProductsData();
 
-  fs.writeFile('./projects/admin/src/app/data/manage-products.json', JSON.stringify(productsData), function (err) {
-    if (err) throw err;
-    console.log('Products Data Replaced');
-  });
+  // fs.writeFile('./projects/admin/src/app/data/manage-products.json', JSON.stringify(productsData), function (err) {
+  //   if (err) throw err;
+  //   console.log('Products Data Replaced');
+  // });
+
+  // let reviewsData = generateReviewssData();
+
+  // fs.writeFile('./projects/admin/src/app/data/manage-reviews.json', JSON.stringify(reviewsData), function (err) {
+  //   if (err) throw err;
+  //   console.log('Reviews Data Replaced');
+  // });
+  
+  // let statusdata = generateStatusData();
+  // fs.writeFile('./projects/admin/src/app/data/manage-statuses.json', JSON.stringify(statusdata), function (err) {
+  //   if (err) throw err;
+  //   console.log('Reviews Data Replaced');
+  // });
+
 };
 
 generateFiles();
