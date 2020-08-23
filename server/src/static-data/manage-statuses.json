@@ -1,0 +1,37 @@
+[
+  {
+    "__NAME": "ACTIVE",
+    "__TYPE": "active",
+    "__STATUS": "active"
+  },
+  {
+    "__NAME": "INACTIVE",
+    "__TYPE": "inactive",
+    "__STATUS": "active"
+  },
+  {
+    "__NAME": "IN REVIEW",
+    "__TYPE": "inreview",
+    "__STATUS": "active"
+  },
+  {
+    "__NAME": "REPORTED",
+    "__TYPE": "reported",
+    "__STATUS": "active"
+  },
+  {
+    "__NAME": "ON HOLD",
+    "__TYPE": "onhold",
+    "__STATUS": "active"
+  },
+  {
+    "__NAME": "CANCELLED",
+    "__TYPE": "cancelled",
+    "__STATUS": "active"
+  },
+  {
+    "__NAME": "DELETED",
+    "__TYPE": "deleted",
+    "__STATUS": "inactive"
+  }
+]

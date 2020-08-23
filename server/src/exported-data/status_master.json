@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "5f40cf6afa1cc71544c49c1c"
+  },
+  "__NAME": "ACTIVE",
+  "__TYPE": "active",
+  "__STATUS": "active"
+},{
+  "_id": {
+    "$oid": "5f40cf6afa1cc71544c49c1d"
+  },
+  "__NAME": "INACTIVE",
+  "__TYPE": "inactive",
+  "__STATUS": "active"
+},{
+  "_id": {
+    "$oid": "5f40cf6afa1cc71544c49c1e"
+  },
+  "__NAME": "IN REVIEW",
+  "__TYPE": "inreview",
+  "__STATUS": "active"
+},{
+  "_id": {
+    "$oid": "5f40cf6afa1cc71544c49c1f"
+  },
+  "__NAME": "REPORTED",
+  "__TYPE": "reported",
+  "__STATUS": "active"
+},{
+  "_id": {
+    "$oid": "5f40cf6afa1cc71544c49c20"
+  },
+  "__NAME": "ON HOLD",
+  "__TYPE": "onhold",
+  "__STATUS": "active"
+},{
+  "_id": {
+    "$oid": "5f40cf6afa1cc71544c49c21"
+  },
+  "__NAME": "CANCELLED",
+  "__TYPE": "cancelled",
+  "__STATUS": "active"
+}]
