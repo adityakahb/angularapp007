@@ -1,64 +1,31 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let StatusSchema = new Schema({
-  __STATUS: {
+let categorySchema = new Schema({
+  __REFERENCEID: {
+    type: Schema.Types.ObjectId
+  },
+  __L: {
+    type: Number
+  },
+  __C: {
     type: String
   },
-  __DATE: {
-    type: Date
+  __PARENTID: {
+    type: Schema.Types.ObjectId
   }
-});
+}, { _id : false });
 
-let ImageSchema = new Schema({
+let imageSchema = new Schema({
   __URL: {
     type: String
   },
   __ZOOMURL: {
     type: String
   }
-});
+}, { _id : false });
 
-let VideoSchema = new Schema({
-  __TYPE: {
-    type: String
-  },
-  __URL: {
-    type: String
-  }
-});
-
-let SellerSchema = new Schema({
-  __NAME: {
-    type: String
-  },
-  __URL: {
-    type: String
-  }
-});
-
-let ColorSchema = new Schema({
-  __COLORHEX: {
-    type: String
-  },
-  __NAME: {
-    type: String
-  },
-  __URL: {
-    type: String
-  }
-});
-
-let CategorySchema = new Schema({
-  __TYPE: {
-    type: String
-  },
-  __URL: {
-    type: String
-  }
-});
-
-let PriceSchema = new Schema({
+let priceSchema = new Schema({
   __MAJOR: {
     type: String
   },
@@ -68,47 +35,50 @@ let PriceSchema = new Schema({
   __CURRENCY: {
     type: String
   },
-  __TYPE: {
-    type: String
+  __ISPRIMARY: {
+    type: Boolean
+  },
+  __UPDATED: {
+    type: Date
   }
-});
+}, { _id : false });
 
 let productSchema = new Schema({
-  __CATEGORY: {
-    type: CategorySchema
-  },
-  __COLOR: {
-    type: ColorSchema
-  },
-  __IMAGES: {
-    type: [ImageSchema]
+  __REFERENCEID: {
+    type: Schema.Types.ObjectId
   },
   __NAME: {
-    type: String
-  },
-  __PRICE: {
-    type: [PriceSchema]
-  },
-  __SELLER: {
-    type: SellerSchema
-  },
-  __SPECS: {
     type: String
   },
   __URL: {
     type: String
   },
-  __VIDEO: {
-    type: VideoSchema
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   },
-  __QUANTITY: {
-    type: Number
+  __ISOUTOFSTOCK: {
+    type: Boolean
   },
-  __STATUS: {
-    type: [StatusSchema]
+  __PRICE: {
+    type: [priceSchema]
   },
-  __REVIEWS: {
-    type: [String]
+  __IMAGES: {
+    type: [imageSchema]
+  },
+  __SPECS: {
+    type: String
+  },
+  __CATEGORIES: {
+    type: [categorySchema]
+  },
+  __SELLERID: {
+    type: Schema.Types.ObjectId
+  },
+  __CREATEDON: {
+    type: Date
+  },
+  __UPDATEDON: {
+    type: Date
   }
 }, {
   collection: 'product_master'

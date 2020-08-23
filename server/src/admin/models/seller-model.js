@@ -22,7 +22,7 @@ let emailSchema = new Schema({
   __ISPRIMARY: {
     type: Boolean
   }
-});
+},{ _id : false });
 
 let productSchema = new Schema({
   __NAME: {
@@ -36,6 +36,12 @@ let productSchema = new Schema({
   },
   __ISOUTOFSTOCK: {
     type: Boolean
+  },
+  __CREATEDON: {
+    type: Date
+  },
+  __UPDATEDON: {
+    type: Date
   }
 });
 
@@ -47,6 +53,9 @@ let sellerSchema = new Schema({
     type: String
   },
   __JOINED: {
+    type: Date
+  },
+  __UPDATEDON: {
     type: Date
   },
   __EMAIL: {

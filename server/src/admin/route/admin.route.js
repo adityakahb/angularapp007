@@ -45,6 +45,7 @@ router.post('/signin', [
 
 
 router.post('/addbulksellers', SellersController.addbulksellers);
+router.post('/addbulkproducts', ProductsController.addbulkproducts);
 router.post('/addbulkcategories', CategoriesController.addbulkcategories);
 // router.post('/addbulkproducts', AdminController.addbulkproducts);
 

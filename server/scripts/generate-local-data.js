@@ -2,9 +2,9 @@ const fs = require('fs');
 const XLSX = require('xlsx');
 
 const totalProductsLength = 128;
-const totalUsersLength = 16;
+const totalUsersLength = 64;
 const totalSellersLength = 64;
-const totalReviewsLength = 480;
+const totalReviewsLength = 960;
 
 const mainStr =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
@@ -49,8 +49,8 @@ const lastnames = require('./lastnames.json');
 // const _sellerids = require('./../projects/admin/src/app/data/_sellersids.json');
 // const _userids = require('./../projects/admin/src/app/data/_usersids.json');
 
-const _generatedSellers = require('./../src/static-data/manage-sellers.json');
-const _generatedCategories = require('./../src/static-data/manage-categories.json');
+const _generatedSellers = require('./../src/exported-data/seller_master.json');
+const _generatedCategories = require('./../src/exported-data/category_master.json');
 const _generatedProducts = require('./../src/static-data/manage-products.json');
 const _generatedStatuses = require('./../src/exported-data/status_master.json');
 
@@ -224,7 +224,7 @@ const generateSellersData = () => {
       // obj1._id = _productids[Math.floor(Math.random() * _productids.length)];
       obj1.__NAME = genCap(pnameStr.join(' '));
       obj1.__URL = '#';
-      obj.__ADDED = randomDate(new Date(2019, 0, 1), new Date());
+      obj1.__CREATEDON = randomDate(new Date(2019, 0, 1), new Date());
       obj1.__STATUSID = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)]._id['$oid'];
       
       let outofstocknum = randomNum(1, 5);
@@ -297,21 +297,23 @@ const createStatement = (sl, type) => {
 };
 
 const findRightCategory = (cat, level) => {
-  let obj = {};
-  if ((cat.__S || []).length > 1) {
-    let catindex = randomNum(0, cat.__S.length - 1);
-    obj = findRightCategory(cat.__S[catindex], level++);
-  } else if ((cat.__S || []).length === 1){
-    obj = cat.__S[0];
-  } else {
-    obj = cat;
+  let cobj = {};
+  switch ((cat.__S || []).length) {
+    case 0:
+      cobj = cat;
+      break;
+    case 1:
+      cobj = findRightCategory(cat.__S[0], level++);;
+      break;
+    default:
+      let catindex = randomNum(0, cat.__S.length - 1);
+      cobj = findRightCategory(cat.__S[catindex], level++);
+      break;
   }
-
   if (level === 0) {
-    obj._parentid = cat._id;
+    cobj.__PARENTID = cat._id['$oid'];
   }
-
-  return obj;
+  return cobj;
 }
 
 const generateProductsData = () => {
@@ -322,10 +324,10 @@ const generateProductsData = () => {
       (seller.__PRODUCTS || []).forEach((prod, prodindex) => {
         let obj = {};
         // console.log('===========prod._id', prod._id);
-        obj._id = prod._id;
+        obj.__REFERENCEID = prod._id['$oid'];
         obj.__NAME = prod.__NAME;
         obj.__URL = prod.__URL;
-        obj.__STATUS = prod.__STATUS;
+        obj.__STATUSID = prod.__STATUSID['$oid'];
         obj.__ISOUTOFSTOCK = prod.__ISOUTOFSTOCK;
         let pricenum = randomNum(1, 2);
         if (pricenum === 1) {
@@ -390,16 +392,23 @@ const generateProductsData = () => {
         }
 
         parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
-        let category_s = _generatedCategories[Math.floor(Math.random() * _generatedCategories.length)];
-        obj.__CATEGORY = findRightCategory(category_s, 0);
-        
+        obj.__CATEGORIES = [];
+
+        let catelen = 1;
+        for (let j = 0; j < catelen; j++) {
+          let category_s = _generatedCategories[Math.floor(Math.random() * _generatedCategories.length)];
+          let foundCat = findRightCategory(category_s, 0);
+          obj.__CATEGORIES.push({
+            __REFERENCEID: foundCat._id['$oid'],
+            __L: foundCat.__L,
+            __C: foundCat.__C,
+            __PARENTID: foundCat.__PARENTID
+          });
+        } 
+        obj.__CREATEDON = prod.__CREATEDON['$date'];
         obj.__SPECS = parastr;
 
-        obj.__SELLER = {
-          _id: seller._id,
-          __NAME: seller.__NAME,
-          __URL: seller.__URL
-        };
+        obj.__SELLERID = seller._id['$oid'];
         arr.push(obj);
       });
     }
@@ -523,11 +532,11 @@ const generateFiles = () => {
   //   console.log('User Ids Replaced');
   // });
 
-  // let usersData = generateUsersData();
-  // fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
-  //   if (err) throw err;
-  //   console.log('Users Data Replaced in Server');
-  // });
+  let usersData = generateUsersData();
+  fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
+    if (err) throw err;
+    console.log('Users Data Replaced in Server');
+  });
 
   // let sellersData = generateSellersData();
 
@@ -536,16 +545,16 @@ const generateFiles = () => {
   //   console.log('Sellers Data Replaced in Server');
   // });
 
-  let categoriessData = generateCategoriessData();
+  // let categoriessData = generateCategoriessData();
 
-  fs.writeFile('./src/static-data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
-    if (err) throw err;
-    console.log('Categories Data Replaced in Server');
-  });
+  // fs.writeFile('./src/static-data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
+  //   if (err) throw err;
+  //   console.log('Categories Data Replaced in Server');
+  // });
 
   // let productsData = generateProductsData();
 
-  // fs.writeFile('./projects/admin/src/app/data/manage-products.json', JSON.stringify(productsData), function (err) {
+  // fs.writeFile('./src/static-data/manage-products.json', JSON.stringify(productsData), function (err) {
   //   if (err) throw err;
   //   console.log('Products Data Replaced in Server');
   // });
