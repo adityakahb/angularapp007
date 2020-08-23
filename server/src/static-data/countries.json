@@ -1,0 +1,1212 @@
+[
+  {
+    "__NAME": "Israel",
+    "__DIALCODE": "+972",
+    "__CODE": "IL"
+  },
+  {
+    "__NAME": "Afghanistan",
+    "__DIALCODE": "+93",
+    "__CODE": "AF"
+  },
+  {
+    "__NAME": "Albania",
+    "__DIALCODE": "+355",
+    "__CODE": "AL"
+  },
+  {
+    "__NAME": "Algeria",
+    "__DIALCODE": "+213",
+    "__CODE": "DZ"
+  },
+  {
+    "__NAME": "AmericanSamoa",
+    "__DIALCODE": "+1 684",
+    "__CODE": "AS"
+  },
+  {
+    "__NAME": "Andorra",
+    "__DIALCODE": "+376",
+    "__CODE": "AD"
+  },
+  {
+    "__NAME": "Angola",
+    "__DIALCODE": "+244",
+    "__CODE": "AO"
+  },
+  {
+    "__NAME": "Anguilla",
+    "__DIALCODE": "+1 264",
+    "__CODE": "AI"
+  },
+  {
+    "__NAME": "Antigua and Barbuda",
+    "__DIALCODE": "+1268",
+    "__CODE": "AG"
+  },
+  {
+    "__NAME": "Argentina",
+    "__DIALCODE": "+54",
+    "__CODE": "AR"
+  },
+  {
+    "__NAME": "Armenia",
+    "__DIALCODE": "+374",
+    "__CODE": "AM"
+  },
+  {
+    "__NAME": "Aruba",
+    "__DIALCODE": "+297",
+    "__CODE": "AW"
+  },
+  {
+    "__NAME": "Australia",
+    "__DIALCODE": "+61",
+    "__CODE": "AU"
+  },
+  {
+    "__NAME": "Austria",
+    "__DIALCODE": "+43",
+    "__CODE": "AT"
+  },
+  {
+    "__NAME": "Azerbaijan",
+    "__DIALCODE": "+994",
+    "__CODE": "AZ"
+  },
+  {
+    "__NAME": "Bahamas",
+    "__DIALCODE": "+1 242",
+    "__CODE": "BS"
+  },
+  {
+    "__NAME": "Bahrain",
+    "__DIALCODE": "+973",
+    "__CODE": "BH"
+  },
+  {
+    "__NAME": "Bangladesh",
+    "__DIALCODE": "+880",
+    "__CODE": "BD"
+  },
+  {
+    "__NAME": "Barbados",
+    "__DIALCODE": "+1 246",
+    "__CODE": "BB"
+  },
+  {
+    "__NAME": "Belarus",
+    "__DIALCODE": "+375",
+    "__CODE": "BY"
+  },
+  {
+    "__NAME": "Belgium",
+    "__DIALCODE": "+32",
+    "__CODE": "BE"
+  },
+  {
+    "__NAME": "Belize",
+    "__DIALCODE": "+501",
+    "__CODE": "BZ"
+  },
+  {
+    "__NAME": "Benin",
+    "__DIALCODE": "+229",
+    "__CODE": "BJ"
+  },
+  {
+    "__NAME": "Bermuda",
+    "__DIALCODE": "+1 441",
+    "__CODE": "BM"
+  },
+  {
+    "__NAME": "Bhutan",
+    "__DIALCODE": "+975",
+    "__CODE": "BT"
+  },
+  {
+    "__NAME": "Bosnia and Herzegovina",
+    "__DIALCODE": "+387",
+    "__CODE": "BA"
+  },
+  {
+    "__NAME": "Botswana",
+    "__DIALCODE": "+267",
+    "__CODE": "BW"
+  },
+  {
+    "__NAME": "Brazil",
+    "__DIALCODE": "+55",
+    "__CODE": "BR"
+  },
+  {
+    "__NAME": "British Indian Ocean Territory",
+    "__DIALCODE": "+246",
+    "__CODE": "IO"
+  },
+  {
+    "__NAME": "Bulgaria",
+    "__DIALCODE": "+359",
+    "__CODE": "BG"
+  },
+  {
+    "__NAME": "Burkina Faso",
+    "__DIALCODE": "+226",
+    "__CODE": "BF"
+  },
+  {
+    "__NAME": "Burundi",
+    "__DIALCODE": "+257",
+    "__CODE": "BI"
+  },
+  {
+    "__NAME": "Cambodia",
+    "__DIALCODE": "+855",
+    "__CODE": "KH"
+  },
+  {
+    "__NAME": "Cameroon",
+    "__DIALCODE": "+237",
+    "__CODE": "CM"
+  },
+  {
+    "__NAME": "Canada",
+    "__DIALCODE": "+1",
+    "__CODE": "CA"
+  },
+  {
+    "__NAME": "Cape Verde",
+    "__DIALCODE": "+238",
+    "__CODE": "CV"
+  },
+  {
+    "__NAME": "Cayman Islands",
+    "__DIALCODE": "+ 345",
+    "__CODE": "KY"
+  },
+  {
+    "__NAME": "Central African Republic",
+    "__DIALCODE": "+236",
+    "__CODE": "CF"
+  },
+  {
+    "__NAME": "Chad",
+    "__DIALCODE": "+235",
+    "__CODE": "TD"
+  },
+  {
+    "__NAME": "Chile",
+    "__DIALCODE": "+56",
+    "__CODE": "CL"
+  },
+  {
+    "__NAME": "China",
+    "__DIALCODE": "+86",
+    "__CODE": "CN"
+  },
+  {
+    "__NAME": "Christmas Island",
+    "__DIALCODE": "+61",
+    "__CODE": "CX"
+  },
+  {
+    "__NAME": "Colombia",
+    "__DIALCODE": "+57",
+    "__CODE": "CO"
+  },
+  {
+    "__NAME": "Comoros",
+    "__DIALCODE": "+269",
+    "__CODE": "KM"
+  },
+  {
+    "__NAME": "Congo",
+    "__DIALCODE": "+242",
+    "__CODE": "CG"
+  },
+  {
+    "__NAME": "Cook Islands",
+    "__DIALCODE": "+682",
+    "__CODE": "CK"
+  },
+  {
+    "__NAME": "Costa Rica",
+    "__DIALCODE": "+506",
+    "__CODE": "CR"
+  },
+  {
+    "__NAME": "Croatia",
+    "__DIALCODE": "+385",
+    "__CODE": "HR"
+  },
+  {
+    "__NAME": "Cuba",
+    "__DIALCODE": "+53",
+    "__CODE": "CU"
+  },
+  {
+    "__NAME": "Cyprus",
+    "__DIALCODE": "+537",
+    "__CODE": "CY"
+  },
+  {
+    "__NAME": "Czech Republic",
+    "__DIALCODE": "+420",
+    "__CODE": "CZ"
+  },
+  {
+    "__NAME": "Denmark",
+    "__DIALCODE": "+45",
+    "__CODE": "DK"
+  },
+  {
+    "__NAME": "Djibouti",
+    "__DIALCODE": "+253",
+    "__CODE": "DJ"
+  },
+  {
+    "__NAME": "Dominica",
+    "__DIALCODE": "+1 767",
+    "__CODE": "DM"
+  },
+  {
+    "__NAME": "Dominican Republic",
+    "__DIALCODE": "+1 849",
+    "__CODE": "DO"
+  },
+  {
+    "__NAME": "Ecuador",
+    "__DIALCODE": "+593",
+    "__CODE": "EC"
+  },
+  {
+    "__NAME": "Egypt",
+    "__DIALCODE": "+20",
+    "__CODE": "EG"
+  },
+  {
+    "__NAME": "El Salvador",
+    "__DIALCODE": "+503",
+    "__CODE": "SV"
+  },
+  {
+    "__NAME": "Equatorial Guinea",
+    "__DIALCODE": "+240",
+    "__CODE": "GQ"
+  },
+  {
+    "__NAME": "Eritrea",
+    "__DIALCODE": "+291",
+    "__CODE": "ER"
+  },
+  {
+    "__NAME": "Estonia",
+    "__DIALCODE": "+372",
+    "__CODE": "EE"
+  },
+  {
+    "__NAME": "Ethiopia",
+    "__DIALCODE": "+251",
+    "__CODE": "ET"
+  },
+  {
+    "__NAME": "Faroe Islands",
+    "__DIALCODE": "+298",
+    "__CODE": "FO"
+  },
+  {
+    "__NAME": "Fiji",
+    "__DIALCODE": "+679",
+    "__CODE": "FJ"
+  },
+  {
+    "__NAME": "Finland",
+    "__DIALCODE": "+358",
+    "__CODE": "FI"
+  },
+  {
+    "__NAME": "France",
+    "__DIALCODE": "+33",
+    "__CODE": "FR"
+  },
+  {
+    "__NAME": "French Guiana",
+    "__DIALCODE": "+594",
+    "__CODE": "GF"
+  },
+  {
+    "__NAME": "French Polynesia",
+    "__DIALCODE": "+689",
+    "__CODE": "PF"
+  },
+  {
+    "__NAME": "Gabon",
+    "__DIALCODE": "+241",
+    "__CODE": "GA"
+  },
+  {
+    "__NAME": "Gambia",
+    "__DIALCODE": "+220",
+    "__CODE": "GM"
+  },
+  {
+    "__NAME": "Georgia",
+    "__DIALCODE": "+995",
+    "__CODE": "GE"
+  },
+  {
+    "__NAME": "Germany",
+    "__DIALCODE": "+49",
+    "__CODE": "DE"
+  },
+  {
+    "__NAME": "Ghana",
+    "__DIALCODE": "+233",
+    "__CODE": "GH"
+  },
+  {
+    "__NAME": "Gibraltar",
+    "__DIALCODE": "+350",
+    "__CODE": "GI"
+  },
+  {
+    "__NAME": "Greece",
+    "__DIALCODE": "+30",
+    "__CODE": "GR"
+  },
+  {
+    "__NAME": "Greenland",
+    "__DIALCODE": "+299",
+    "__CODE": "GL"
+  },
+  {
+    "__NAME": "Grenada",
+    "__DIALCODE": "+1 473",
+    "__CODE": "GD"
+  },
+  {
+    "__NAME": "Guadeloupe",
+    "__DIALCODE": "+590",
+    "__CODE": "GP"
+  },
+  {
+    "__NAME": "Guam",
+    "__DIALCODE": "+1 671",
+    "__CODE": "GU"
+  },
+  {
+    "__NAME": "Guatemala",
+    "__DIALCODE": "+502",
+    "__CODE": "GT"
+  },
+  {
+    "__NAME": "Guinea",
+    "__DIALCODE": "+224",
+    "__CODE": "GN"
+  },
+  {
+    "__NAME": "Guinea-Bissau",
+    "__DIALCODE": "+245",
+    "__CODE": "GW"
+  },
+  {
+    "__NAME": "Guyana",
+    "__DIALCODE": "+595",
+    "__CODE": "GY"
+  },
+  {
+    "__NAME": "Haiti",
+    "__DIALCODE": "+509",
+    "__CODE": "HT"
+  },
+  {
+    "__NAME": "Honduras",
+    "__DIALCODE": "+504",
+    "__CODE": "HN"
+  },
+  {
+    "__NAME": "Hungary",
+    "__DIALCODE": "+36",
+    "__CODE": "HU"
+  },
+  {
+    "__NAME": "Iceland",
+    "__DIALCODE": "+354",
+    "__CODE": "IS"
+  },
+  {
+    "__NAME": "India",
+    "__DIALCODE": "+91",
+    "__CODE": "IN"
+  },
+  {
+    "__NAME": "Indonesia",
+    "__DIALCODE": "+62",
+    "__CODE": "ID"
+  },
+  {
+    "__NAME": "Iraq",
+    "__DIALCODE": "+964",
+    "__CODE": "IQ"
+  },
+  {
+    "__NAME": "Ireland",
+    "__DIALCODE": "+353",
+    "__CODE": "IE"
+  },
+  {
+    "__NAME": "Israel",
+    "__DIALCODE": "+972",
+    "__CODE": "IL"
+  },
+  {
+    "__NAME": "Italy",
+    "__DIALCODE": "+39",
+    "__CODE": "IT"
+  },
+  {
+    "__NAME": "Jamaica",
+    "__DIALCODE": "+1 876",
+    "__CODE": "JM"
+  },
+  {
+    "__NAME": "Japan",
+    "__DIALCODE": "+81",
+    "__CODE": "JP"
+  },
+  {
+    "__NAME": "Jordan",
+    "__DIALCODE": "+962",
+    "__CODE": "JO"
+  },
+  {
+    "__NAME": "Kazakhstan",
+    "__DIALCODE": "+7 7",
+    "__CODE": "KZ"
+  },
+  {
+    "__NAME": "Kenya",
+    "__DIALCODE": "+254",
+    "__CODE": "KE"
+  },
+  {
+    "__NAME": "Kiribati",
+    "__DIALCODE": "+686",
+    "__CODE": "KI"
+  },
+  {
+    "__NAME": "Kuwait",
+    "__DIALCODE": "+965",
+    "__CODE": "KW"
+  },
+  {
+    "__NAME": "Kyrgyzstan",
+    "__DIALCODE": "+996",
+    "__CODE": "KG"
+  },
+  {
+    "__NAME": "Latvia",
+    "__DIALCODE": "+371",
+    "__CODE": "LV"
+  },
+  {
+    "__NAME": "Lebanon",
+    "__DIALCODE": "+961",
+    "__CODE": "LB"
+  },
+  {
+    "__NAME": "Lesotho",
+    "__DIALCODE": "+266",
+    "__CODE": "LS"
+  },
+  {
+    "__NAME": "Liberia",
+    "__DIALCODE": "+231",
+    "__CODE": "LR"
+  },
+  {
+    "__NAME": "Liechtenstein",
+    "__DIALCODE": "+423",
+    "__CODE": "LI"
+  },
+  {
+    "__NAME": "Lithuania",
+    "__DIALCODE": "+370",
+    "__CODE": "LT"
+  },
+  {
+    "__NAME": "Luxembourg",
+    "__DIALCODE": "+352",
+    "__CODE": "LU"
+  },
+  {
+    "__NAME": "Madagascar",
+    "__DIALCODE": "+261",
+    "__CODE": "MG"
+  },
+  {
+    "__NAME": "Malawi",
+    "__DIALCODE": "+265",
+    "__CODE": "MW"
+  },
+  {
+    "__NAME": "Malaysia",
+    "__DIALCODE": "+60",
+    "__CODE": "MY"
+  },
+  {
+    "__NAME": "Maldives",
+    "__DIALCODE": "+960",
+    "__CODE": "MV"
+  },
+  {
+    "__NAME": "Mali",
+    "__DIALCODE": "+223",
+    "__CODE": "ML"
+  },
+  {
+    "__NAME": "Malta",
+    "__DIALCODE": "+356",
+    "__CODE": "MT"
+  },
+  {
+    "__NAME": "Marshall Islands",
+    "__DIALCODE": "+692",
+    "__CODE": "MH"
+  },
+  {
+    "__NAME": "Martinique",
+    "__DIALCODE": "+596",
+    "__CODE": "MQ"
+  },
+  {
+    "__NAME": "Mauritania",
+    "__DIALCODE": "+222",
+    "__CODE": "MR"
+  },
+  {
+    "__NAME": "Mauritius",
+    "__DIALCODE": "+230",
+    "__CODE": "MU"
+  },
+  {
+    "__NAME": "Mayotte",
+    "__DIALCODE": "+262",
+    "__CODE": "YT"
+  },
+  {
+    "__NAME": "Mexico",
+    "__DIALCODE": "+52",
+    "__CODE": "MX"
+  },
+  {
+    "__NAME": "Monaco",
+    "__DIALCODE": "+377",
+    "__CODE": "MC"
+  },
+  {
+    "__NAME": "Mongolia",
+    "__DIALCODE": "+976",
+    "__CODE": "MN"
+  },
+  {
+    "__NAME": "Montenegro",
+    "__DIALCODE": "+382",
+    "__CODE": "ME"
+  },
+  {
+    "__NAME": "Montserrat",
+    "__DIALCODE": "+1664",
+    "__CODE": "MS"
+  },
+  {
+    "__NAME": "Morocco",
+    "__DIALCODE": "+212",
+    "__CODE": "MA"
+  },
+  {
+    "__NAME": "Myanmar",
+    "__DIALCODE": "+95",
+    "__CODE": "MM"
+  },
+  {
+    "__NAME": "Namibia",
+    "__DIALCODE": "+264",
+    "__CODE": "NA"
+  },
+  {
+    "__NAME": "Nauru",
+    "__DIALCODE": "+674",
+    "__CODE": "NR"
+  },
+  {
+    "__NAME": "Nepal",
+    "__DIALCODE": "+977",
+    "__CODE": "NP"
+  },
+  {
+    "__NAME": "Netherlands",
+    "__DIALCODE": "+31",
+    "__CODE": "NL"
+  },
+  {
+    "__NAME": "Netherlands Antilles",
+    "__DIALCODE": "+599",
+    "__CODE": "AN"
+  },
+  {
+    "__NAME": "New Caledonia",
+    "__DIALCODE": "+687",
+    "__CODE": "NC"
+  },
+  {
+    "__NAME": "New Zealand",
+    "__DIALCODE": "+64",
+    "__CODE": "NZ"
+  },
+  {
+    "__NAME": "Nicaragua",
+    "__DIALCODE": "+505",
+    "__CODE": "NI"
+  },
+  {
+    "__NAME": "Niger",
+    "__DIALCODE": "+227",
+    "__CODE": "NE"
+  },
+  {
+    "__NAME": "Nigeria",
+    "__DIALCODE": "+234",
+    "__CODE": "NG"
+  },
+  {
+    "__NAME": "Niue",
+    "__DIALCODE": "+683",
+    "__CODE": "NU"
+  },
+  {
+    "__NAME": "Norfolk Island",
+    "__DIALCODE": "+672",
+    "__CODE": "NF"
+  },
+  {
+    "__NAME": "Northern Mariana Islands",
+    "__DIALCODE": "+1 670",
+    "__CODE": "MP"
+  },
+  {
+    "__NAME": "Norway",
+    "__DIALCODE": "+47",
+    "__CODE": "NO"
+  },
+  {
+    "__NAME": "Oman",
+    "__DIALCODE": "+968",
+    "__CODE": "OM"
+  },
+  {
+    "__NAME": "Pakistan",
+    "__DIALCODE": "+92",
+    "__CODE": "PK"
+  },
+  {
+    "__NAME": "Palau",
+    "__DIALCODE": "+680",
+    "__CODE": "PW"
+  },
+  {
+    "__NAME": "Panama",
+    "__DIALCODE": "+507",
+    "__CODE": "PA"
+  },
+  {
+    "__NAME": "Papua New Guinea",
+    "__DIALCODE": "+675",
+    "__CODE": "PG"
+  },
+  {
+    "__NAME": "Paraguay",
+    "__DIALCODE": "+595",
+    "__CODE": "PY"
+  },
+  {
+    "__NAME": "Peru",
+    "__DIALCODE": "+51",
+    "__CODE": "PE"
+  },
+  {
+    "__NAME": "Philippines",
+    "__DIALCODE": "+63",
+    "__CODE": "PH"
+  },
+  {
+    "__NAME": "Poland",
+    "__DIALCODE": "+48",
+    "__CODE": "PL"
+  },
+  {
+    "__NAME": "Portugal",
+    "__DIALCODE": "+351",
+    "__CODE": "PT"
+  },
+  {
+    "__NAME": "Puerto Rico",
+    "__DIALCODE": "+1 939",
+    "__CODE": "PR"
+  },
+  {
+    "__NAME": "Qatar",
+    "__DIALCODE": "+974",
+    "__CODE": "QA"
+  },
+  {
+    "__NAME": "Romania",
+    "__DIALCODE": "+40",
+    "__CODE": "RO"
+  },
+  {
+    "__NAME": "Rwanda",
+    "__DIALCODE": "+250",
+    "__CODE": "RW"
+  },
+  {
+    "__NAME": "Samoa",
+    "__DIALCODE": "+685",
+    "__CODE": "WS"
+  },
+  {
+    "__NAME": "San Marino",
+    "__DIALCODE": "+378",
+    "__CODE": "SM"
+  },
+  {
+    "__NAME": "Saudi Arabia",
+    "__DIALCODE": "+966",
+    "__CODE": "SA"
+  },
+  {
+    "__NAME": "Senegal",
+    "__DIALCODE": "+221",
+    "__CODE": "SN"
+  },
+  {
+    "__NAME": "Serbia",
+    "__DIALCODE": "+381",
+    "__CODE": "RS"
+  },
+  {
+    "__NAME": "Seychelles",
+    "__DIALCODE": "+248",
+    "__CODE": "SC"
+  },
+  {
+    "__NAME": "Sierra Leone",
+    "__DIALCODE": "+232",
+    "__CODE": "SL"
+  },
+  {
+    "__NAME": "Singapore",
+    "__DIALCODE": "+65",
+    "__CODE": "SG"
+  },
+  {
+    "__NAME": "Slovakia",
+    "__DIALCODE": "+421",
+    "__CODE": "SK"
+  },
+  {
+    "__NAME": "Slovenia",
+    "__DIALCODE": "+386",
+    "__CODE": "SI"
+  },
+  {
+    "__NAME": "Solomon Islands",
+    "__DIALCODE": "+677",
+    "__CODE": "SB"
+  },
+  {
+    "__NAME": "South Africa",
+    "__DIALCODE": "+27",
+    "__CODE": "ZA"
+  },
+  {
+    "__NAME": "South Georgia and the South Sandwich Islands",
+    "__DIALCODE": "+500",
+    "__CODE": "GS"
+  },
+  {
+    "__NAME": "Spain",
+    "__DIALCODE": "+34",
+    "__CODE": "ES"
+  },
+  {
+    "__NAME": "Sri Lanka",
+    "__DIALCODE": "+94",
+    "__CODE": "LK"
+  },
+  {
+    "__NAME": "Sudan",
+    "__DIALCODE": "+249",
+    "__CODE": "SD"
+  },
+  {
+    "__NAME": "Suriname",
+    "__DIALCODE": "+597",
+    "__CODE": "SR"
+  },
+  {
+    "__NAME": "Swaziland",
+    "__DIALCODE": "+268",
+    "__CODE": "SZ"
+  },
+  {
+    "__NAME": "Sweden",
+    "__DIALCODE": "+46",
+    "__CODE": "SE"
+  },
+  {
+    "__NAME": "Switzerland",
+    "__DIALCODE": "+41",
+    "__CODE": "CH"
+  },
+  {
+    "__NAME": "Tajikistan",
+    "__DIALCODE": "+992",
+    "__CODE": "TJ"
+  },
+  {
+    "__NAME": "Thailand",
+    "__DIALCODE": "+66",
+    "__CODE": "TH"
+  },
+  {
+    "__NAME": "Togo",
+    "__DIALCODE": "+228",
+    "__CODE": "TG"
+  },
+  {
+    "__NAME": "Tokelau",
+    "__DIALCODE": "+690",
+    "__CODE": "TK"
+  },
+  {
+    "__NAME": "Tonga",
+    "__DIALCODE": "+676",
+    "__CODE": "TO"
+  },
+  {
+    "__NAME": "Trinidad and Tobago",
+    "__DIALCODE": "+1 868",
+    "__CODE": "TT"
+  },
+  {
+    "__NAME": "Tunisia",
+    "__DIALCODE": "+216",
+    "__CODE": "TN"
+  },
+  {
+    "__NAME": "Turkey",
+    "__DIALCODE": "+90",
+    "__CODE": "TR"
+  },
+  {
+    "__NAME": "Turkmenistan",
+    "__DIALCODE": "+993",
+    "__CODE": "TM"
+  },
+  {
+    "__NAME": "Turks and Caicos Islands",
+    "__DIALCODE": "+1 649",
+    "__CODE": "TC"
+  },
+  {
+    "__NAME": "Tuvalu",
+    "__DIALCODE": "+688",
+    "__CODE": "TV"
+  },
+  {
+    "__NAME": "Uganda",
+    "__DIALCODE": "+256",
+    "__CODE": "UG"
+  },
+  {
+    "__NAME": "Ukraine",
+    "__DIALCODE": "+380",
+    "__CODE": "UA"
+  },
+  {
+    "__NAME": "United Arab Emirates",
+    "__DIALCODE": "+971",
+    "__CODE": "AE"
+  },
+  {
+    "__NAME": "United Kingdom",
+    "__DIALCODE": "+44",
+    "__CODE": "GB"
+  },
+  {
+    "__NAME": "United States",
+    "__DIALCODE": "+1",
+    "__CODE": "US"
+  },
+  {
+    "__NAME": "Uruguay",
+    "__DIALCODE": "+598",
+    "__CODE": "UY"
+  },
+  {
+    "__NAME": "Uzbekistan",
+    "__DIALCODE": "+998",
+    "__CODE": "UZ"
+  },
+  {
+    "__NAME": "Vanuatu",
+    "__DIALCODE": "+678",
+    "__CODE": "VU"
+  },
+  {
+    "__NAME": "Wallis and Futuna",
+    "__DIALCODE": "+681",
+    "__CODE": "WF"
+  },
+  {
+    "__NAME": "Yemen",
+    "__DIALCODE": "+967",
+    "__CODE": "YE"
+  },
+  {
+    "__NAME": "Zambia",
+    "__DIALCODE": "+260",
+    "__CODE": "ZM"
+  },
+  {
+    "__NAME": "Zimbabwe",
+    "__DIALCODE": "+263",
+    "__CODE": "ZW"
+  },
+  {
+    "__NAME": "land Islands",
+    "__DIALCODE": "",
+    "__CODE": "AX"
+  },
+  {
+    "__NAME": "Antarctica",
+    "__DIALCODE": null,
+    "__CODE": "AQ"
+  },
+  {
+    "__NAME": "Bolivia, Plurinational State of",
+    "__DIALCODE": "+591",
+    "__CODE": "BO"
+  },
+  {
+    "__NAME": "Brunei Darussalam",
+    "__DIALCODE": "+673",
+    "__CODE": "BN"
+  },
+  {
+    "__NAME": "Cocos (Keeling) Islands",
+    "__DIALCODE": "+61",
+    "__CODE": "CC"
+  },
+  {
+    "__NAME": "Congo, The Democratic Republic of the",
+    "__DIALCODE": "+243",
+    "__CODE": "CD"
+  },
+  {
+    "__NAME": "Cote d'Ivoire",
+    "__DIALCODE": "+225",
+    "__CODE": "CI"
+  },
+  {
+    "__NAME": "Falkland Islands (Malvinas)",
+    "__DIALCODE": "+500",
+    "__CODE": "FK"
+  },
+  {
+    "__NAME": "Guernsey",
+    "__DIALCODE": "+44",
+    "__CODE": "GG"
+  },
+  {
+    "__NAME": "Holy See (Vatican City State)",
+    "__DIALCODE": "+379",
+    "__CODE": "VA"
+  },
+  {
+    "__NAME": "Hong Kong",
+    "__DIALCODE": "+852",
+    "__CODE": "HK"
+  },
+  {
+    "__NAME": "Iran, Islamic Republic of",
+    "__DIALCODE": "+98",
+    "__CODE": "IR"
+  },
+  {
+    "__NAME": "Isle of Man",
+    "__DIALCODE": "+44",
+    "__CODE": "IM"
+  },
+  {
+    "__NAME": "Jersey",
+    "__DIALCODE": "+44",
+    "__CODE": "JE"
+  },
+  {
+    "__NAME": "Korea, Democratic People's Republic of",
+    "__DIALCODE": "+850",
+    "__CODE": "KP"
+  },
+  {
+    "__NAME": "Korea, Republic of",
+    "__DIALCODE": "+82",
+    "__CODE": "KR"
+  },
+  {
+    "__NAME": "Lao People's Democratic Republic",
+    "__DIALCODE": "+856",
+    "__CODE": "LA"
+  },
+  {
+    "__NAME": "Libyan Arab Jamahiriya",
+    "__DIALCODE": "+218",
+    "__CODE": "LY"
+  },
+  {
+    "__NAME": "Macao",
+    "__DIALCODE": "+853",
+    "__CODE": "MO"
+  },
+  {
+    "__NAME": "Macedonia, The Former Yugoslav Republic of",
+    "__DIALCODE": "+389",
+    "__CODE": "MK"
+  },
+  {
+    "__NAME": "Micronesia, Federated States of",
+    "__DIALCODE": "+691",
+    "__CODE": "FM"
+  },
+  {
+    "__NAME": "Moldova, Republic of",
+    "__DIALCODE": "+373",
+    "__CODE": "MD"
+  },
+  {
+    "__NAME": "Mozambique",
+    "__DIALCODE": "+258",
+    "__CODE": "MZ"
+  },
+  {
+    "__NAME": "Palestinian Territory, Occupied",
+    "__DIALCODE": "+970",
+    "__CODE": "PS"
+  },
+  {
+    "__NAME": "Pitcairn",
+    "__DIALCODE": "+872",
+    "__CODE": "PN"
+  },
+  {
+    "__NAME": "Réunion",
+    "__DIALCODE": "+262",
+    "__CODE": "RE"
+  },
+  {
+    "__NAME": "Russia",
+    "__DIALCODE": "+7",
+    "__CODE": "RU"
+  },
+  {
+    "__NAME": "Saint Barthélemy",
+    "__DIALCODE": "+590",
+    "__CODE": "BL"
+  },
+  {
+    "__NAME": "Saint Helena, Ascension and Tristan Da Cunha",
+    "__DIALCODE": "+290",
+    "__CODE": "SH"
+  },
+  {
+    "__NAME": "Saint Kitts and Nevis",
+    "__DIALCODE": "+1 869",
+    "__CODE": "KN"
+  },
+  {
+    "__NAME": "Saint Lucia",
+    "__DIALCODE": "+1 758",
+    "__CODE": "LC"
+  },
+  {
+    "__NAME": "Saint Martin",
+    "__DIALCODE": "+590",
+    "__CODE": "MF"
+  },
+  {
+    "__NAME": "Saint Pierre and Miquelon",
+    "__DIALCODE": "+508",
+    "__CODE": "PM"
+  },
+  {
+    "__NAME": "Saint Vincent and the Grenadines",
+    "__DIALCODE": "+1 784",
+    "__CODE": "VC"
+  },
+  {
+    "__NAME": "Sao Tome and Principe",
+    "__DIALCODE": "+239",
+    "__CODE": "ST"
+  },
+  {
+    "__NAME": "Somalia",
+    "__DIALCODE": "+252",
+    "__CODE": "SO"
+  },
+  {
+    "__NAME": "Svalbard and Jan Mayen",
+    "__DIALCODE": "+47",
+    "__CODE": "SJ"
+  },
+  {
+    "__NAME": "Syrian Arab Republic",
+    "__DIALCODE": "+963",
+    "__CODE": "SY"
+  },
+  {
+    "__NAME": "Taiwan, Province of China",
+    "__DIALCODE": "+886",
+    "__CODE": "TW"
+  },
+  {
+    "__NAME": "Tanzania, United Republic of",
+    "__DIALCODE": "+255",
+    "__CODE": "TZ"
+  },
+  {
+    "__NAME": "Timor-Leste",
+    "__DIALCODE": "+670",
+    "__CODE": "TL"
+  },
+  {
+    "__NAME": "Venezuela, Bolivarian Republic of",
+    "__DIALCODE": "+58",
+    "__CODE": "VE"
+  },
+  {
+    "__NAME": "Viet Nam",
+    "__DIALCODE": "+84",
+    "__CODE": "VN"
+  },
+  {
+    "__NAME": "Virgin Islands, British",
+    "__DIALCODE": "+1 284",
+    "__CODE": "VG"
+  },
+  {
+    "__NAME": "Virgin Islands, U.S.",
+    "__DIALCODE": "+1 340",
+    "__CODE": "VI"
+  }
+]

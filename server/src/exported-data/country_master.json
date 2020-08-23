@@ -1,0 +1,1695 @@
+[{
+  "_id": {
+    "$oid": "5f42808812502923649dae86"
+  },
+  "__NAME": "Israel",
+  "__DIALCODE": "+972",
+  "__CODE": "IL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae87"
+  },
+  "__NAME": "Afghanistan",
+  "__DIALCODE": "+93",
+  "__CODE": "AF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae88"
+  },
+  "__NAME": "Albania",
+  "__DIALCODE": "+355",
+  "__CODE": "AL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae89"
+  },
+  "__NAME": "Algeria",
+  "__DIALCODE": "+213",
+  "__CODE": "DZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae8a"
+  },
+  "__NAME": "AmericanSamoa",
+  "__DIALCODE": "+1 684",
+  "__CODE": "AS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae8b"
+  },
+  "__NAME": "Andorra",
+  "__DIALCODE": "+376",
+  "__CODE": "AD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae8c"
+  },
+  "__NAME": "Angola",
+  "__DIALCODE": "+244",
+  "__CODE": "AO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae8d"
+  },
+  "__NAME": "Anguilla",
+  "__DIALCODE": "+1 264",
+  "__CODE": "AI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae8e"
+  },
+  "__NAME": "Antigua and Barbuda",
+  "__DIALCODE": "+1268",
+  "__CODE": "AG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae8f"
+  },
+  "__NAME": "Argentina",
+  "__DIALCODE": "+54",
+  "__CODE": "AR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae90"
+  },
+  "__NAME": "Armenia",
+  "__DIALCODE": "+374",
+  "__CODE": "AM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae91"
+  },
+  "__NAME": "Aruba",
+  "__DIALCODE": "+297",
+  "__CODE": "AW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae92"
+  },
+  "__NAME": "Australia",
+  "__DIALCODE": "+61",
+  "__CODE": "AU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae93"
+  },
+  "__NAME": "Austria",
+  "__DIALCODE": "+43",
+  "__CODE": "AT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae94"
+  },
+  "__NAME": "Azerbaijan",
+  "__DIALCODE": "+994",
+  "__CODE": "AZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae95"
+  },
+  "__NAME": "Bahamas",
+  "__DIALCODE": "+1 242",
+  "__CODE": "BS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae96"
+  },
+  "__NAME": "Bahrain",
+  "__DIALCODE": "+973",
+  "__CODE": "BH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae97"
+  },
+  "__NAME": "Bangladesh",
+  "__DIALCODE": "+880",
+  "__CODE": "BD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae98"
+  },
+  "__NAME": "Barbados",
+  "__DIALCODE": "+1 246",
+  "__CODE": "BB"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae99"
+  },
+  "__NAME": "Belarus",
+  "__DIALCODE": "+375",
+  "__CODE": "BY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae9a"
+  },
+  "__NAME": "Belgium",
+  "__DIALCODE": "+32",
+  "__CODE": "BE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae9b"
+  },
+  "__NAME": "Belize",
+  "__DIALCODE": "+501",
+  "__CODE": "BZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae9c"
+  },
+  "__NAME": "Benin",
+  "__DIALCODE": "+229",
+  "__CODE": "BJ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae9d"
+  },
+  "__NAME": "Bermuda",
+  "__DIALCODE": "+1 441",
+  "__CODE": "BM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae9e"
+  },
+  "__NAME": "Bhutan",
+  "__DIALCODE": "+975",
+  "__CODE": "BT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649dae9f"
+  },
+  "__NAME": "Bosnia and Herzegovina",
+  "__DIALCODE": "+387",
+  "__CODE": "BA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea0"
+  },
+  "__NAME": "Botswana",
+  "__DIALCODE": "+267",
+  "__CODE": "BW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea1"
+  },
+  "__NAME": "Brazil",
+  "__DIALCODE": "+55",
+  "__CODE": "BR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea2"
+  },
+  "__NAME": "British Indian Ocean Territory",
+  "__DIALCODE": "+246",
+  "__CODE": "IO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea3"
+  },
+  "__NAME": "Bulgaria",
+  "__DIALCODE": "+359",
+  "__CODE": "BG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea4"
+  },
+  "__NAME": "Burkina Faso",
+  "__DIALCODE": "+226",
+  "__CODE": "BF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea5"
+  },
+  "__NAME": "Burundi",
+  "__DIALCODE": "+257",
+  "__CODE": "BI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea6"
+  },
+  "__NAME": "Cambodia",
+  "__DIALCODE": "+855",
+  "__CODE": "KH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea7"
+  },
+  "__NAME": "Cameroon",
+  "__DIALCODE": "+237",
+  "__CODE": "CM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea8"
+  },
+  "__NAME": "Canada",
+  "__DIALCODE": "+1",
+  "__CODE": "CA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daea9"
+  },
+  "__NAME": "Cape Verde",
+  "__DIALCODE": "+238",
+  "__CODE": "CV"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeaa"
+  },
+  "__NAME": "Cayman Islands",
+  "__DIALCODE": "+ 345",
+  "__CODE": "KY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeab"
+  },
+  "__NAME": "Central African Republic",
+  "__DIALCODE": "+236",
+  "__CODE": "CF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeac"
+  },
+  "__NAME": "Chad",
+  "__DIALCODE": "+235",
+  "__CODE": "TD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daead"
+  },
+  "__NAME": "Chile",
+  "__DIALCODE": "+56",
+  "__CODE": "CL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeae"
+  },
+  "__NAME": "China",
+  "__DIALCODE": "+86",
+  "__CODE": "CN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeaf"
+  },
+  "__NAME": "Christmas Island",
+  "__DIALCODE": "+61",
+  "__CODE": "CX"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb0"
+  },
+  "__NAME": "Colombia",
+  "__DIALCODE": "+57",
+  "__CODE": "CO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb1"
+  },
+  "__NAME": "Comoros",
+  "__DIALCODE": "+269",
+  "__CODE": "KM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb2"
+  },
+  "__NAME": "Congo",
+  "__DIALCODE": "+242",
+  "__CODE": "CG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb3"
+  },
+  "__NAME": "Cook Islands",
+  "__DIALCODE": "+682",
+  "__CODE": "CK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb4"
+  },
+  "__NAME": "Costa Rica",
+  "__DIALCODE": "+506",
+  "__CODE": "CR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb5"
+  },
+  "__NAME": "Croatia",
+  "__DIALCODE": "+385",
+  "__CODE": "HR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb6"
+  },
+  "__NAME": "Cuba",
+  "__DIALCODE": "+53",
+  "__CODE": "CU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb7"
+  },
+  "__NAME": "Cyprus",
+  "__DIALCODE": "+537",
+  "__CODE": "CY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb8"
+  },
+  "__NAME": "Czech Republic",
+  "__DIALCODE": "+420",
+  "__CODE": "CZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeb9"
+  },
+  "__NAME": "Denmark",
+  "__DIALCODE": "+45",
+  "__CODE": "DK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeba"
+  },
+  "__NAME": "Djibouti",
+  "__DIALCODE": "+253",
+  "__CODE": "DJ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daebb"
+  },
+  "__NAME": "Dominica",
+  "__DIALCODE": "+1 767",
+  "__CODE": "DM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daebc"
+  },
+  "__NAME": "Dominican Republic",
+  "__DIALCODE": "+1 849",
+  "__CODE": "DO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daebd"
+  },
+  "__NAME": "Ecuador",
+  "__DIALCODE": "+593",
+  "__CODE": "EC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daebe"
+  },
+  "__NAME": "Egypt",
+  "__DIALCODE": "+20",
+  "__CODE": "EG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daebf"
+  },
+  "__NAME": "El Salvador",
+  "__DIALCODE": "+503",
+  "__CODE": "SV"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec0"
+  },
+  "__NAME": "Equatorial Guinea",
+  "__DIALCODE": "+240",
+  "__CODE": "GQ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec1"
+  },
+  "__NAME": "Eritrea",
+  "__DIALCODE": "+291",
+  "__CODE": "ER"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec2"
+  },
+  "__NAME": "Estonia",
+  "__DIALCODE": "+372",
+  "__CODE": "EE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec3"
+  },
+  "__NAME": "Ethiopia",
+  "__DIALCODE": "+251",
+  "__CODE": "ET"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec4"
+  },
+  "__NAME": "Faroe Islands",
+  "__DIALCODE": "+298",
+  "__CODE": "FO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec5"
+  },
+  "__NAME": "Fiji",
+  "__DIALCODE": "+679",
+  "__CODE": "FJ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec6"
+  },
+  "__NAME": "Finland",
+  "__DIALCODE": "+358",
+  "__CODE": "FI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec7"
+  },
+  "__NAME": "France",
+  "__DIALCODE": "+33",
+  "__CODE": "FR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec8"
+  },
+  "__NAME": "French Guiana",
+  "__DIALCODE": "+594",
+  "__CODE": "GF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daec9"
+  },
+  "__NAME": "French Polynesia",
+  "__DIALCODE": "+689",
+  "__CODE": "PF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeca"
+  },
+  "__NAME": "Gabon",
+  "__DIALCODE": "+241",
+  "__CODE": "GA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daecb"
+  },
+  "__NAME": "Gambia",
+  "__DIALCODE": "+220",
+  "__CODE": "GM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daecc"
+  },
+  "__NAME": "Georgia",
+  "__DIALCODE": "+995",
+  "__CODE": "GE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daecd"
+  },
+  "__NAME": "Germany",
+  "__DIALCODE": "+49",
+  "__CODE": "DE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daece"
+  },
+  "__NAME": "Ghana",
+  "__DIALCODE": "+233",
+  "__CODE": "GH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daecf"
+  },
+  "__NAME": "Gibraltar",
+  "__DIALCODE": "+350",
+  "__CODE": "GI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed0"
+  },
+  "__NAME": "Greece",
+  "__DIALCODE": "+30",
+  "__CODE": "GR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed1"
+  },
+  "__NAME": "Greenland",
+  "__DIALCODE": "+299",
+  "__CODE": "GL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed2"
+  },
+  "__NAME": "Grenada",
+  "__DIALCODE": "+1 473",
+  "__CODE": "GD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed3"
+  },
+  "__NAME": "Guadeloupe",
+  "__DIALCODE": "+590",
+  "__CODE": "GP"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed4"
+  },
+  "__NAME": "Guam",
+  "__DIALCODE": "+1 671",
+  "__CODE": "GU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed5"
+  },
+  "__NAME": "Guatemala",
+  "__DIALCODE": "+502",
+  "__CODE": "GT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed6"
+  },
+  "__NAME": "Guinea",
+  "__DIALCODE": "+224",
+  "__CODE": "GN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed7"
+  },
+  "__NAME": "Guinea-Bissau",
+  "__DIALCODE": "+245",
+  "__CODE": "GW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed8"
+  },
+  "__NAME": "Guyana",
+  "__DIALCODE": "+595",
+  "__CODE": "GY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daed9"
+  },
+  "__NAME": "Haiti",
+  "__DIALCODE": "+509",
+  "__CODE": "HT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeda"
+  },
+  "__NAME": "Honduras",
+  "__DIALCODE": "+504",
+  "__CODE": "HN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daedb"
+  },
+  "__NAME": "Hungary",
+  "__DIALCODE": "+36",
+  "__CODE": "HU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daedc"
+  },
+  "__NAME": "Iceland",
+  "__DIALCODE": "+354",
+  "__CODE": "IS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daedd"
+  },
+  "__NAME": "India",
+  "__DIALCODE": "+91",
+  "__CODE": "IN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daede"
+  },
+  "__NAME": "Indonesia",
+  "__DIALCODE": "+62",
+  "__CODE": "ID"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daedf"
+  },
+  "__NAME": "Iraq",
+  "__DIALCODE": "+964",
+  "__CODE": "IQ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee0"
+  },
+  "__NAME": "Ireland",
+  "__DIALCODE": "+353",
+  "__CODE": "IE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee1"
+  },
+  "__NAME": "Israel",
+  "__DIALCODE": "+972",
+  "__CODE": "IL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee2"
+  },
+  "__NAME": "Italy",
+  "__DIALCODE": "+39",
+  "__CODE": "IT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee3"
+  },
+  "__NAME": "Jamaica",
+  "__DIALCODE": "+1 876",
+  "__CODE": "JM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee4"
+  },
+  "__NAME": "Japan",
+  "__DIALCODE": "+81",
+  "__CODE": "JP"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee5"
+  },
+  "__NAME": "Jordan",
+  "__DIALCODE": "+962",
+  "__CODE": "JO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee6"
+  },
+  "__NAME": "Kazakhstan",
+  "__DIALCODE": "+7 7",
+  "__CODE": "KZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee7"
+  },
+  "__NAME": "Kenya",
+  "__DIALCODE": "+254",
+  "__CODE": "KE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee8"
+  },
+  "__NAME": "Kiribati",
+  "__DIALCODE": "+686",
+  "__CODE": "KI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daee9"
+  },
+  "__NAME": "Kuwait",
+  "__DIALCODE": "+965",
+  "__CODE": "KW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeea"
+  },
+  "__NAME": "Kyrgyzstan",
+  "__DIALCODE": "+996",
+  "__CODE": "KG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeeb"
+  },
+  "__NAME": "Latvia",
+  "__DIALCODE": "+371",
+  "__CODE": "LV"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeec"
+  },
+  "__NAME": "Lebanon",
+  "__DIALCODE": "+961",
+  "__CODE": "LB"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeed"
+  },
+  "__NAME": "Lesotho",
+  "__DIALCODE": "+266",
+  "__CODE": "LS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeee"
+  },
+  "__NAME": "Liberia",
+  "__DIALCODE": "+231",
+  "__CODE": "LR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeef"
+  },
+  "__NAME": "Liechtenstein",
+  "__DIALCODE": "+423",
+  "__CODE": "LI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef0"
+  },
+  "__NAME": "Lithuania",
+  "__DIALCODE": "+370",
+  "__CODE": "LT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef1"
+  },
+  "__NAME": "Luxembourg",
+  "__DIALCODE": "+352",
+  "__CODE": "LU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef2"
+  },
+  "__NAME": "Madagascar",
+  "__DIALCODE": "+261",
+  "__CODE": "MG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef3"
+  },
+  "__NAME": "Malawi",
+  "__DIALCODE": "+265",
+  "__CODE": "MW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef4"
+  },
+  "__NAME": "Malaysia",
+  "__DIALCODE": "+60",
+  "__CODE": "MY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef5"
+  },
+  "__NAME": "Maldives",
+  "__DIALCODE": "+960",
+  "__CODE": "MV"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef6"
+  },
+  "__NAME": "Mali",
+  "__DIALCODE": "+223",
+  "__CODE": "ML"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef7"
+  },
+  "__NAME": "Malta",
+  "__DIALCODE": "+356",
+  "__CODE": "MT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef8"
+  },
+  "__NAME": "Marshall Islands",
+  "__DIALCODE": "+692",
+  "__CODE": "MH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daef9"
+  },
+  "__NAME": "Martinique",
+  "__DIALCODE": "+596",
+  "__CODE": "MQ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daefa"
+  },
+  "__NAME": "Mauritania",
+  "__DIALCODE": "+222",
+  "__CODE": "MR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daefb"
+  },
+  "__NAME": "Mauritius",
+  "__DIALCODE": "+230",
+  "__CODE": "MU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daefc"
+  },
+  "__NAME": "Mayotte",
+  "__DIALCODE": "+262",
+  "__CODE": "YT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daefd"
+  },
+  "__NAME": "Mexico",
+  "__DIALCODE": "+52",
+  "__CODE": "MX"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daefe"
+  },
+  "__NAME": "Monaco",
+  "__DIALCODE": "+377",
+  "__CODE": "MC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daeff"
+  },
+  "__NAME": "Mongolia",
+  "__DIALCODE": "+976",
+  "__CODE": "MN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf00"
+  },
+  "__NAME": "Montenegro",
+  "__DIALCODE": "+382",
+  "__CODE": "ME"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf01"
+  },
+  "__NAME": "Montserrat",
+  "__DIALCODE": "+1664",
+  "__CODE": "MS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf02"
+  },
+  "__NAME": "Morocco",
+  "__DIALCODE": "+212",
+  "__CODE": "MA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf03"
+  },
+  "__NAME": "Myanmar",
+  "__DIALCODE": "+95",
+  "__CODE": "MM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf04"
+  },
+  "__NAME": "Namibia",
+  "__DIALCODE": "+264",
+  "__CODE": "NA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf05"
+  },
+  "__NAME": "Nauru",
+  "__DIALCODE": "+674",
+  "__CODE": "NR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf06"
+  },
+  "__NAME": "Nepal",
+  "__DIALCODE": "+977",
+  "__CODE": "NP"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf07"
+  },
+  "__NAME": "Netherlands",
+  "__DIALCODE": "+31",
+  "__CODE": "NL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf08"
+  },
+  "__NAME": "Netherlands Antilles",
+  "__DIALCODE": "+599",
+  "__CODE": "AN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf09"
+  },
+  "__NAME": "New Caledonia",
+  "__DIALCODE": "+687",
+  "__CODE": "NC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf0a"
+  },
+  "__NAME": "New Zealand",
+  "__DIALCODE": "+64",
+  "__CODE": "NZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf0b"
+  },
+  "__NAME": "Nicaragua",
+  "__DIALCODE": "+505",
+  "__CODE": "NI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf0c"
+  },
+  "__NAME": "Niger",
+  "__DIALCODE": "+227",
+  "__CODE": "NE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf0d"
+  },
+  "__NAME": "Nigeria",
+  "__DIALCODE": "+234",
+  "__CODE": "NG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf0e"
+  },
+  "__NAME": "Niue",
+  "__DIALCODE": "+683",
+  "__CODE": "NU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf0f"
+  },
+  "__NAME": "Norfolk Island",
+  "__DIALCODE": "+672",
+  "__CODE": "NF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf10"
+  },
+  "__NAME": "Northern Mariana Islands",
+  "__DIALCODE": "+1 670",
+  "__CODE": "MP"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf11"
+  },
+  "__NAME": "Norway",
+  "__DIALCODE": "+47",
+  "__CODE": "NO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf12"
+  },
+  "__NAME": "Oman",
+  "__DIALCODE": "+968",
+  "__CODE": "OM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf13"
+  },
+  "__NAME": "Pakistan",
+  "__DIALCODE": "+92",
+  "__CODE": "PK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf14"
+  },
+  "__NAME": "Palau",
+  "__DIALCODE": "+680",
+  "__CODE": "PW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf15"
+  },
+  "__NAME": "Panama",
+  "__DIALCODE": "+507",
+  "__CODE": "PA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf16"
+  },
+  "__NAME": "Papua New Guinea",
+  "__DIALCODE": "+675",
+  "__CODE": "PG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf17"
+  },
+  "__NAME": "Paraguay",
+  "__DIALCODE": "+595",
+  "__CODE": "PY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf18"
+  },
+  "__NAME": "Peru",
+  "__DIALCODE": "+51",
+  "__CODE": "PE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf19"
+  },
+  "__NAME": "Philippines",
+  "__DIALCODE": "+63",
+  "__CODE": "PH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf1a"
+  },
+  "__NAME": "Poland",
+  "__DIALCODE": "+48",
+  "__CODE": "PL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf1b"
+  },
+  "__NAME": "Portugal",
+  "__DIALCODE": "+351",
+  "__CODE": "PT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf1c"
+  },
+  "__NAME": "Puerto Rico",
+  "__DIALCODE": "+1 939",
+  "__CODE": "PR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf1d"
+  },
+  "__NAME": "Qatar",
+  "__DIALCODE": "+974",
+  "__CODE": "QA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf1e"
+  },
+  "__NAME": "Romania",
+  "__DIALCODE": "+40",
+  "__CODE": "RO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf1f"
+  },
+  "__NAME": "Rwanda",
+  "__DIALCODE": "+250",
+  "__CODE": "RW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf20"
+  },
+  "__NAME": "Samoa",
+  "__DIALCODE": "+685",
+  "__CODE": "WS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf21"
+  },
+  "__NAME": "San Marino",
+  "__DIALCODE": "+378",
+  "__CODE": "SM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf22"
+  },
+  "__NAME": "Saudi Arabia",
+  "__DIALCODE": "+966",
+  "__CODE": "SA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf23"
+  },
+  "__NAME": "Senegal",
+  "__DIALCODE": "+221",
+  "__CODE": "SN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf24"
+  },
+  "__NAME": "Serbia",
+  "__DIALCODE": "+381",
+  "__CODE": "RS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf25"
+  },
+  "__NAME": "Seychelles",
+  "__DIALCODE": "+248",
+  "__CODE": "SC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf26"
+  },
+  "__NAME": "Sierra Leone",
+  "__DIALCODE": "+232",
+  "__CODE": "SL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf27"
+  },
+  "__NAME": "Singapore",
+  "__DIALCODE": "+65",
+  "__CODE": "SG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf28"
+  },
+  "__NAME": "Slovakia",
+  "__DIALCODE": "+421",
+  "__CODE": "SK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf29"
+  },
+  "__NAME": "Slovenia",
+  "__DIALCODE": "+386",
+  "__CODE": "SI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf2a"
+  },
+  "__NAME": "Solomon Islands",
+  "__DIALCODE": "+677",
+  "__CODE": "SB"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf2b"
+  },
+  "__NAME": "South Africa",
+  "__DIALCODE": "+27",
+  "__CODE": "ZA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf2c"
+  },
+  "__NAME": "South Georgia and the South Sandwich Islands",
+  "__DIALCODE": "+500",
+  "__CODE": "GS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf2d"
+  },
+  "__NAME": "Spain",
+  "__DIALCODE": "+34",
+  "__CODE": "ES"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf2e"
+  },
+  "__NAME": "Sri Lanka",
+  "__DIALCODE": "+94",
+  "__CODE": "LK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf2f"
+  },
+  "__NAME": "Sudan",
+  "__DIALCODE": "+249",
+  "__CODE": "SD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf30"
+  },
+  "__NAME": "Suriname",
+  "__DIALCODE": "+597",
+  "__CODE": "SR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf31"
+  },
+  "__NAME": "Swaziland",
+  "__DIALCODE": "+268",
+  "__CODE": "SZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf32"
+  },
+  "__NAME": "Sweden",
+  "__DIALCODE": "+46",
+  "__CODE": "SE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf33"
+  },
+  "__NAME": "Switzerland",
+  "__DIALCODE": "+41",
+  "__CODE": "CH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf34"
+  },
+  "__NAME": "Tajikistan",
+  "__DIALCODE": "+992",
+  "__CODE": "TJ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf35"
+  },
+  "__NAME": "Thailand",
+  "__DIALCODE": "+66",
+  "__CODE": "TH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf36"
+  },
+  "__NAME": "Togo",
+  "__DIALCODE": "+228",
+  "__CODE": "TG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf37"
+  },
+  "__NAME": "Tokelau",
+  "__DIALCODE": "+690",
+  "__CODE": "TK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf38"
+  },
+  "__NAME": "Tonga",
+  "__DIALCODE": "+676",
+  "__CODE": "TO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf39"
+  },
+  "__NAME": "Trinidad and Tobago",
+  "__DIALCODE": "+1 868",
+  "__CODE": "TT"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf3a"
+  },
+  "__NAME": "Tunisia",
+  "__DIALCODE": "+216",
+  "__CODE": "TN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf3b"
+  },
+  "__NAME": "Turkey",
+  "__DIALCODE": "+90",
+  "__CODE": "TR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf3c"
+  },
+  "__NAME": "Turkmenistan",
+  "__DIALCODE": "+993",
+  "__CODE": "TM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf3d"
+  },
+  "__NAME": "Turks and Caicos Islands",
+  "__DIALCODE": "+1 649",
+  "__CODE": "TC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf3e"
+  },
+  "__NAME": "Tuvalu",
+  "__DIALCODE": "+688",
+  "__CODE": "TV"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf3f"
+  },
+  "__NAME": "Uganda",
+  "__DIALCODE": "+256",
+  "__CODE": "UG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf40"
+  },
+  "__NAME": "Ukraine",
+  "__DIALCODE": "+380",
+  "__CODE": "UA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf41"
+  },
+  "__NAME": "United Arab Emirates",
+  "__DIALCODE": "+971",
+  "__CODE": "AE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf42"
+  },
+  "__NAME": "United Kingdom",
+  "__DIALCODE": "+44",
+  "__CODE": "GB"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf43"
+  },
+  "__NAME": "United States",
+  "__DIALCODE": "+1",
+  "__CODE": "US"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf44"
+  },
+  "__NAME": "Uruguay",
+  "__DIALCODE": "+598",
+  "__CODE": "UY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf45"
+  },
+  "__NAME": "Uzbekistan",
+  "__DIALCODE": "+998",
+  "__CODE": "UZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf46"
+  },
+  "__NAME": "Vanuatu",
+  "__DIALCODE": "+678",
+  "__CODE": "VU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf47"
+  },
+  "__NAME": "Wallis and Futuna",
+  "__DIALCODE": "+681",
+  "__CODE": "WF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf48"
+  },
+  "__NAME": "Yemen",
+  "__DIALCODE": "+967",
+  "__CODE": "YE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf49"
+  },
+  "__NAME": "Zambia",
+  "__DIALCODE": "+260",
+  "__CODE": "ZM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf4a"
+  },
+  "__NAME": "Zimbabwe",
+  "__DIALCODE": "+263",
+  "__CODE": "ZW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf4b"
+  },
+  "__NAME": "land Islands",
+  "__DIALCODE": "",
+  "__CODE": "AX"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf4c"
+  },
+  "__NAME": "Antarctica",
+  "__DIALCODE": "null",
+  "__CODE": "AQ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf4d"
+  },
+  "__NAME": "Bolivia, Plurinational State of",
+  "__DIALCODE": "+591",
+  "__CODE": "BO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf4e"
+  },
+  "__NAME": "Brunei Darussalam",
+  "__DIALCODE": "+673",
+  "__CODE": "BN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf4f"
+  },
+  "__NAME": "Cocos (Keeling) Islands",
+  "__DIALCODE": "+61",
+  "__CODE": "CC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf50"
+  },
+  "__NAME": "Congo, The Democratic Republic of the",
+  "__DIALCODE": "+243",
+  "__CODE": "CD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf51"
+  },
+  "__NAME": "Cote d'Ivoire",
+  "__DIALCODE": "+225",
+  "__CODE": "CI"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf52"
+  },
+  "__NAME": "Falkland Islands (Malvinas)",
+  "__DIALCODE": "+500",
+  "__CODE": "FK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf53"
+  },
+  "__NAME": "Guernsey",
+  "__DIALCODE": "+44",
+  "__CODE": "GG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf54"
+  },
+  "__NAME": "Holy See (Vatican City State)",
+  "__DIALCODE": "+379",
+  "__CODE": "VA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf55"
+  },
+  "__NAME": "Hong Kong",
+  "__DIALCODE": "+852",
+  "__CODE": "HK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf56"
+  },
+  "__NAME": "Iran, Islamic Republic of",
+  "__DIALCODE": "+98",
+  "__CODE": "IR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf57"
+  },
+  "__NAME": "Isle of Man",
+  "__DIALCODE": "+44",
+  "__CODE": "IM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf58"
+  },
+  "__NAME": "Jersey",
+  "__DIALCODE": "+44",
+  "__CODE": "JE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf59"
+  },
+  "__NAME": "Korea, Democratic People's Republic of",
+  "__DIALCODE": "+850",
+  "__CODE": "KP"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf5a"
+  },
+  "__NAME": "Korea, Republic of",
+  "__DIALCODE": "+82",
+  "__CODE": "KR"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf5b"
+  },
+  "__NAME": "Lao People's Democratic Republic",
+  "__DIALCODE": "+856",
+  "__CODE": "LA"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf5c"
+  },
+  "__NAME": "Libyan Arab Jamahiriya",
+  "__DIALCODE": "+218",
+  "__CODE": "LY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf5d"
+  },
+  "__NAME": "Macao",
+  "__DIALCODE": "+853",
+  "__CODE": "MO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf5e"
+  },
+  "__NAME": "Macedonia, The Former Yugoslav Republic of",
+  "__DIALCODE": "+389",
+  "__CODE": "MK"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf5f"
+  },
+  "__NAME": "Micronesia, Federated States of",
+  "__DIALCODE": "+691",
+  "__CODE": "FM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf60"
+  },
+  "__NAME": "Moldova, Republic of",
+  "__DIALCODE": "+373",
+  "__CODE": "MD"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf61"
+  },
+  "__NAME": "Mozambique",
+  "__DIALCODE": "+258",
+  "__CODE": "MZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf62"
+  },
+  "__NAME": "Palestinian Territory, Occupied",
+  "__DIALCODE": "+970",
+  "__CODE": "PS"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf63"
+  },
+  "__NAME": "Pitcairn",
+  "__DIALCODE": "+872",
+  "__CODE": "PN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf64"
+  },
+  "__NAME": "Réunion",
+  "__DIALCODE": "+262",
+  "__CODE": "RE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf65"
+  },
+  "__NAME": "Russia",
+  "__DIALCODE": "+7",
+  "__CODE": "RU"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf66"
+  },
+  "__NAME": "Saint Barthélemy",
+  "__DIALCODE": "+590",
+  "__CODE": "BL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf67"
+  },
+  "__NAME": "Saint Helena, Ascension and Tristan Da Cunha",
+  "__DIALCODE": "+290",
+  "__CODE": "SH"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf68"
+  },
+  "__NAME": "Saint Kitts and Nevis",
+  "__DIALCODE": "+1 869",
+  "__CODE": "KN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf69"
+  },
+  "__NAME": "Saint Lucia",
+  "__DIALCODE": "+1 758",
+  "__CODE": "LC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf6a"
+  },
+  "__NAME": "Saint Martin",
+  "__DIALCODE": "+590",
+  "__CODE": "MF"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf6b"
+  },
+  "__NAME": "Saint Pierre and Miquelon",
+  "__DIALCODE": "+508",
+  "__CODE": "PM"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf6c"
+  },
+  "__NAME": "Saint Vincent and the Grenadines",
+  "__DIALCODE": "+1 784",
+  "__CODE": "VC"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf6d"
+  },
+  "__NAME": "Sao Tome and Principe",
+  "__DIALCODE": "+239",
+  "__CODE": "ST"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf6e"
+  },
+  "__NAME": "Somalia",
+  "__DIALCODE": "+252",
+  "__CODE": "SO"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf6f"
+  },
+  "__NAME": "Svalbard and Jan Mayen",
+  "__DIALCODE": "+47",
+  "__CODE": "SJ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf70"
+  },
+  "__NAME": "Syrian Arab Republic",
+  "__DIALCODE": "+963",
+  "__CODE": "SY"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf71"
+  },
+  "__NAME": "Taiwan, Province of China",
+  "__DIALCODE": "+886",
+  "__CODE": "TW"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf72"
+  },
+  "__NAME": "Tanzania, United Republic of",
+  "__DIALCODE": "+255",
+  "__CODE": "TZ"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf73"
+  },
+  "__NAME": "Timor-Leste",
+  "__DIALCODE": "+670",
+  "__CODE": "TL"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf74"
+  },
+  "__NAME": "Venezuela, Bolivarian Republic of",
+  "__DIALCODE": "+58",
+  "__CODE": "VE"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf75"
+  },
+  "__NAME": "Viet Nam",
+  "__DIALCODE": "+84",
+  "__CODE": "VN"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf76"
+  },
+  "__NAME": "Virgin Islands, British",
+  "__DIALCODE": "+1 284",
+  "__CODE": "VG"
+},{
+  "_id": {
+    "$oid": "5f42808812502923649daf77"
+  },
+  "__NAME": "Virgin Islands, U.S.",
+  "__DIALCODE": "+1 340",
+  "__CODE": "VI"
+}]

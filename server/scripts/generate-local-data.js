@@ -23,21 +23,6 @@ const mainStr =
   'Phasellus pellentesque tempus nibh vel vestibulum. ' +
   'Suspendisse consectetur maximus mattis. In eget nibh neque. ';
 
-const categories = [
-  'Accessories',
-  'Components',
-  'Desktops',
-  'External Devices & Data Storage',
-  'Keyboards, Mice & Input Devices',
-  'Laptops',
-  'Monitors',
-  'Networking Devices',
-  'PC Speakers',
-  'Printers',
-  'Scanners',
-  'Webcams & VoIP Equipment'
-];
-
 const domainList = ['com', 'net', 'co.in', 'co.uk', 'com.au', 'co', 'org', 'edu', 'io'];
 
 const palette = require('./palette.json');
@@ -53,6 +38,7 @@ const _generatedSellers = require('./../src/exported-data/seller_master.json');
 const _generatedCategories = require('./../src/exported-data/category_master.json');
 const _generatedProducts = require('./../src/static-data/manage-products.json');
 const _generatedStatuses = require('./../src/exported-data/status_master.json');
+const _generatedCountries = require('./../src/exported-data/country_master.json');
 
 const randomidchars = '0123456789abcdefghijklmnopqrstuvwxyz';
 
@@ -135,7 +121,8 @@ mainArr = mainStr.replace(/^\s+|\s+$/g, '').toLowerCase().split('. ').join(' ').
 
 const generateUsersData = () => {
   let arr = [];
-  let userlen = totalUsersLength;
+  // let userlen = totalUsersLength;
+  let userlen = 5;
   for (let i = 0; i < userlen; i++) {
     let obj = {};
     // obj._id = _userids[Math.floor(Math.random() * _userids.length)];
@@ -143,12 +130,31 @@ const generateUsersData = () => {
     let middlenum = randomNum(1, 5);
     obj.__MIDDLENAME = middlenum < 3 ? middlenames[Math.floor(Math.random() * middlenames.length)] : '';
     obj.__LASTNAME = lastnames[Math.floor(Math.random() * lastnames.length)];
-    obj.__DATEOFBIRTH = randomDate(new Date(1940, 0, 1), new Date(2000, 11, 31));
-    obj.__JOINED = randomDate(new Date(2018, 0, 1), new Date());
+
+    obj.__PUBLICNAME = `${obj.__FIRSTNAME}${(obj.__MIDDLENAME || '').length > 0 ? ' ' + obj.__MIDDLENAME.charAt(0) + '.' : ''} ${obj.__LASTNAME}`;
+
+    let picnum = randomNum(1, 5);
+    let width = randomNum(240, 560);
+    let height = randomNum(240, 560);
+    let color1 = randomColor();
+    let color2 = randomColor();
+
+    obj.__PROFILEPIC = picnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
+
+    let biolen = randomNum(0, 4);
+    let parastr = '';
+    for (let j = 0; j < biolen; j++) {
+      let totalstatements = randomNum(1, 5);
+      let statementsArr = [];
+      for (let k = 0; k < totalstatements; k++) {
+        statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+      }
+      parastr += '<p>' + statementsArr.join(' ') + '</p>';
+    }
+    obj.__BIO = parastr;
 
     obj.__EMAIL = [];
-
-    let emaillen = randomNum(1, 3);
+    let emaillen = randomNum(1, 5);
     for (let j = 0; j < emaillen; j++) {
       let obj1 = {};
       obj1.__ISPRIMARY = j === 0 ? true : false;
@@ -156,16 +162,53 @@ const generateUsersData = () => {
       obj.__EMAIL.push(obj1);
     }
 
-    let width = randomNum(240, 560);
-    let height = randomNum(240, 560);
-    let color1 = randomColor();
-    let color2 = randomColor();
+    let addresslen = randomNum(0, 4);
+    obj.__ADDRESSES = [];
+    for (let j = 0; j < addresslen; j++) {
+      let obj1 = {};
+      obj1.__ISBILLINGADDRESS = j === 0 ? true : false;
+      obj1.__NAME = 'Address ' + (j + 1);
+      obj1.__COUNTRYID = (_generatedCountries[Math.floor(Math.random() * _generatedCountries.length)])._id['$oid'];
+      let fname = firstnames[Math.floor(Math.random() * firstnames.length)];
+      let middlenum = randomNum(1, 5);
+      let mname = middlenum < 3 ? middlenames[Math.floor(Math.random() * middlenames.length)] : '';
+      let lname = lastnames[Math.floor(Math.random() * lastnames.length)];
+      obj1.__FULLNAME = `${fname}${mname.length > 0 ? ' ' + mname : ''} ${lname}`;
+      obj1.__MOBILENUMBER = randomNum(1000000000, 9999999999);
+      obj1.__PINCODE = randomNum(100000, 999999);
+      // __MOBILENUMBER: {
+      //   type: Number
+      // },
+      // __PINCODE: {
+      //   type: String
+      // },
+      // __APARTMENT: {
+      //   type: String
+      // },
+      // __AREA: {
+      //   type: String
+      // },
+      // __LANDMARK: {
+      //   type: String
+      // },
+      // __CITY: {
+      //   type: String
+      // },
+      // __STATE: {
+      //   type: String
+      // },
+      // __ADDITIONALINFO: {
+      //   type: String
+      // },
 
-    let thisnum = randomNum(1, 5);
 
-    obj.__PROFILEPIC = thisnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
+      obj.__ADDRESSES.push(obj1);
+    }
 
-    obj.__STATUS = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)];
+    obj.__DATEOFBIRTH = randomDate(new Date(1940, 0, 1), new Date(2000, 11, 31));
+    obj.__JOINED = randomDate(new Date(2018, 0, 1), new Date());
+
+    obj.__STATUSID = (_generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)])._id['$oid'];
 
     arr.push(obj);
   };
@@ -203,9 +246,8 @@ const generateSellersData = () => {
     let color1 = randomColor();
     let color2 = randomColor();
 
-    let thisnum = randomNum(1, 5);
-
-    obj.__PROFILEPIC = thisnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
+    let picnum = randomNum(1, 5);
+    obj.__PROFILEPIC = picnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
 
     // obj.__SELLERID = _sellerids[Math.floor(Math.random() * _sellerids.length)];
     obj.__STATUSID = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)]._id['$oid'];
@@ -533,7 +575,7 @@ const generateFiles = () => {
   // });
 
   let usersData = generateUsersData();
-  fs.writeFile('./projects/admin/src/app/data/manage-users.json', JSON.stringify(usersData), function (err) {
+  fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
     if (err) throw err;
     console.log('Users Data Replaced in Server');
   });
