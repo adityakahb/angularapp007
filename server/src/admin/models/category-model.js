@@ -3,12 +3,48 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+let c21 = new Schema({
+  __L: {
+    type: Number
+  },
+  __C: {
+    type: String
+  }
+});
+
+let c20 = new Schema({
+  __L: {
+    type: Number
+  },
+  __C: {
+    type: String
+  },
+  __S: {
+    type: [c21]
+  }
+});
+
+let c19 = new Schema({
+  __L: {
+    type: Number
+  },
+  __C: {
+    type: String
+  },
+  __S: {
+    type: [c20]
+  }
+});
+
 let c18 = new Schema({
   __L: {
     type: Number
   },
   __C: {
     type: String
+  },
+  __S: {
+    type: [c19]
   }
 });
 
