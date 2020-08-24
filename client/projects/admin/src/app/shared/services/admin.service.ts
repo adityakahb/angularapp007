@@ -75,20 +75,26 @@ export class AdminService {
     }
   }
 
-  // User profile
-  getUserProfile(id): Observable<any> {
-    return this.http.get(`${this.endpoint}/userprofile/${id}`, { headers: this.headers })
+  getAllUsers(pageindex, pagelength): Observable<any> {
+    return this.http.get(`${this.endpoint}/getall-users?page=${pageindex}&limit=${pagelength}`, { headers: this.headers })
       .pipe(
         catchError(this.handleError)
       );
   }
+  // // User profile
+  // getUserProfile(id): Observable<any> {
+  //   return this.http.get(`${this.endpoint}/userprofile/${id}`, { headers: this.headers })
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 
-  addBulkProducts(products): Observable<any> {
-    return this.http.post(`${this.endpoint}/addbulkproducts`, products)
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
+  // addBulkProducts(products): Observable<any> {
+  //   return this.http.post(`${this.endpoint}/addbulkproducts`, products)
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
 
   // Error 
   handleError(error: HttpErrorResponse) {

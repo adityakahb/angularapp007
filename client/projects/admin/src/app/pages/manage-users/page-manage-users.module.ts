@@ -1,4 +1,3 @@
-import { AgGridModule } from 'ag-grid-angular';
 import { CommonModule } from '@angular/common';
 import { CtaBtnModule } from './../../../../../../src/app/shared/components/cta-btn/cta-btn.module';
 import { DirectiveModule } from './../../../../../../src/app/shared/directives/directive.module';
@@ -9,7 +8,6 @@ import { SectionHeaderModule } from './../../../../../../src/app/shared/componen
 
 @NgModule({
   imports: [
-    AgGridModule.withComponents([]),
     CommonModule,
     CtaBtnModule,
     DirectiveModule,
