@@ -120,4 +120,4 @@ let userSchema = new Schema({
   collection: 'user_master'
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('UserModel', userSchema);

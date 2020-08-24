@@ -121,8 +121,8 @@ mainArr = mainStr.replace(/^\s+|\s+$/g, '').toLowerCase().split('. ').join(' ').
 
 const generateUsersData = () => {
   let arr = [];
-  // let userlen = totalUsersLength;
-  let userlen = 5;
+  let userlen = totalUsersLength;
+  // let userlen = 5;
   for (let i = 0; i < userlen; i++) {
     let obj = {};
     // obj._id = _userids[Math.floor(Math.random() * _userids.length)];
@@ -140,18 +140,22 @@ const generateUsersData = () => {
     let color2 = randomColor();
 
     obj.__PROFILEPIC = picnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
+    
+    let bionum = randomNum(1, 5);
 
-    let biolen = randomNum(0, 4);
-    let parastr = '';
-    for (let j = 0; j < biolen; j++) {
-      let totalstatements = randomNum(1, 5);
-      let statementsArr = [];
-      for (let k = 0; k < totalstatements; k++) {
-        statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+    if (bionum < 3) {
+      let biolen = randomNum(0, 4);
+      let parastr = '';
+      for (let j = 0; j < biolen; j++) {
+        let totalstatements = randomNum(1, 5);
+        let statementsArr = [];
+        for (let k = 0; k < totalstatements; k++) {
+          statementsArr.push(createStatement(randomNum(16, 48), 'p'));
+        }
+        parastr += '<p>' + statementsArr.join(' ') + '</p>';
       }
-      parastr += '<p>' + statementsArr.join(' ') + '</p>';
+      obj.__BIO = parastr;
     }
-    obj.__BIO = parastr;
 
     obj.__EMAIL = [];
     let emaillen = randomNum(1, 5);
@@ -176,32 +180,90 @@ const generateUsersData = () => {
       obj1.__FULLNAME = `${fname}${mname.length > 0 ? ' ' + mname : ''} ${lname}`;
       obj1.__MOBILENUMBER = randomNum(1000000000, 9999999999);
       obj1.__PINCODE = randomNum(100000, 999999);
-      // __MOBILENUMBER: {
-      //   type: Number
-      // },
-      // __PINCODE: {
-      //   type: String
-      // },
-      // __APARTMENT: {
-      //   type: String
-      // },
-      // __AREA: {
-      //   type: String
-      // },
-      // __LANDMARK: {
-      //   type: String
-      // },
-      // __CITY: {
-      //   type: String
-      // },
-      // __STATE: {
-      //   type: String
-      // },
-      // __ADDITIONALINFO: {
-      //   type: String
-      // },
+      
+      let aptstr = 'Flat # ' + randomNum(1000, 9999);
+      let apt1len = randomNum(1, 6);
+      let apt1arr = [];
+      let apt2len = randomNum(0, 6);
+      let apt2arr = [];
+      let apt3len = randomNum(0, 6);
+      let apt3arr = [];
 
+      for (let k = 0; k < apt1len; k++) {
+        apt1arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      for (let k = 0; k < apt2len; k++) {
+        apt2arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      for (let k = 0; k < apt3len; k++) {
+        apt3arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      obj1.__APARTMENT = aptstr + ', ' + genCap(apt1arr.join(' '));
+      obj1.__APARTMENT += apt2arr.length > 0 ? ', ' + genCap(apt2arr.join(' ')) : '';
+      obj1.__APARTMENT += apt3arr.length > 0 ? ', ' + genCap(apt3arr.join(' ')) : '';
 
+      apt1len = randomNum(1, 6);
+      apt1arr = [];
+      apt2len = randomNum(0, 6);
+      apt2arr = [];
+      apt3len = randomNum(0, 6);
+      apt3arr = [];
+
+      for (let k = 0; k < apt1len; k++) {
+        apt1arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      for (let k = 0; k < apt2len; k++) {
+        apt2arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      for (let k = 0; k < apt3len; k++) {
+        apt3arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      obj1.__AREA = genCap(apt1arr.join(' '));
+      obj1.__AREA += apt2arr.length > 0 ? ', ' + genCap(apt2arr.join(' ')) : '';
+      obj1.__AREA += apt3arr.length > 0 ? ', ' + genCap(apt3arr.join(' ')) : '';
+
+      let lmnum = randomNum(1, 5);
+
+      if (lmnum < 3) {
+        aptstr = 'Near ';
+        apt1len = randomNum(2, 7);
+        apt1arr = [];
+        for (let k = 0; k < apt1len; k++) {
+          apt1arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+        }
+        obj1.__LANDMARK = aptstr + genCap(apt1arr.join(' '));
+      }
+
+      apt1len = randomNum(1, 3);
+      apt1arr = [];
+      for (let k = 0; k < apt1len; k++) {
+        apt1arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      obj1.__CITY = genCap(apt1arr.join(' '));
+
+      apt1len = randomNum(1, 3);
+      apt1arr = [];
+      for (let k = 0; k < apt1len; k++) {
+        apt1arr.push(mainArr[Math.floor(Math.random() * mainArr.length)]);
+      }
+      obj1.__STATE = {};
+      obj1.__STATE.__NAME = genCap(apt1arr.join(' '));
+
+      let ainfo = randomNum(1, 5);
+
+      if (ainfo < 3) {
+        let biolen = randomNum(0, 4);
+        let parastr = '';
+        for (let j = 0; j < biolen; j++) {
+          let totalstatements = randomNum(1, 5);
+          let statementsArr = [];
+          for (let k = 0; k < totalstatements; k++) {
+            statementsArr.push(createStatement(randomNum(8, 32), 'p'));
+          }
+          parastr += '<p>' + statementsArr.join(' ') + '</p>';
+        }
+        obj.__ADDITIONALINFO = parastr;
+      }
       obj.__ADDRESSES.push(obj1);
     }
 
