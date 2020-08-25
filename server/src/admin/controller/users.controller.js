@@ -14,6 +14,20 @@ exports.getAllUsers = async (req, res) => {
           foreignField: "_id",
           as: "__STATUS"
         }
+      },
+      {$unwind:'$__STATUS'},
+      {
+        $project: {
+          _id: true,
+          __FIRSTNAME: true,
+          __MIDDLENAME: true,
+          __LASTNAME: true,
+          __EMAIL: true,
+          __PROFILEPIC: true,
+          __JOINED: true,
+          __STATUS: '$__STATUS.__NAME',
+          __STATUSID: '$__STATUS._id',
+        }
       }])
       .limit(limit * 1)
       .skip((page - 1) * limit)
@@ -25,19 +39,12 @@ exports.getAllUsers = async (req, res) => {
     // return response with posts, total pages, and current page
     res.json({
       users,
-      totalPages: Math.ceil(count / limit),
-      currentPage: page
+      totalpages: Math.ceil(count / limit),
+      currentpage: page
     });
   } catch (err) {
     console.error(err.message);
   }
-  // userSchema
-  //   .find(null, {__FIRSTNAME: true, __MIDDLENAME: true, __LASTNAME: true})
-  //   .limit(limit)
-  //   .skip((page - 1) * limit)
-  // .then((data) => {
-  //   console.log('============data', data.length);
-  // });
 };
 exports.addbulkusers = (req, res) => {
   userSchema.insertMany(userdata).then((response) => {

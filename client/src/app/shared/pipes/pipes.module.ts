@@ -1,16 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { TextTrimmerPipe } from './TextTrimmer/text-trimmer.pipe';
+import { TextTrimmerPipe } from './text-trimmer/text-trimmer.pipe';
+import { DateFormatterPipe } from './date-formatter/date-formatter.pipe';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    TextTrimmerPipe
+    TextTrimmerPipe,
+    DateFormatterPipe
   ],
   exports: [
-    TextTrimmerPipe
+    TextTrimmerPipe,
+    DateFormatterPipe
   ],
   providers: []
 })

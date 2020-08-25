@@ -15,16 +15,70 @@
               </thead>
               <tbody>
                 <tr *ngFor="let row of rows">
-                  <td [innerHTML]="row.__FIRSTNAME">
+                  <td>
+                    <div class="d-inline-block" style="width: 2rem; height: 2rem;">
+                      <app-user-avatar [cProps]="{
+                        firstname: row.__FIRSTNAME,
+                        lastname: row.__LASTNAME
+                      }"></app-user-avatar>
+                    </div>
                   </td>
-                  <td [innerHTML]="row.__MIDDLENAME">
+                  <td><small>{{row.__FIRSTNAME}}</small>
                   </td>
-                  <td [innerHTML]="row.__LASTNAME">
+                  <td><small>{{row.__MIDDLENAME}}</small>
+                  </td>
+                  <td><small>{{row.__LASTNAME}}</small>
+                  </td>
+                  <td>
+                    
+                  </td>
+                  <td [innerHTML]="row.__JOINED | dateFormatter: 'P'"></td>
+                  <td>
+                    <app-status-pill [cProps]="row.__STATUS"></app-status-pill>
+                    <!-- <div class="text-success" *ngIf="row.__STATUS === 'ACTIVE'; else dangerStatus"><small><strong>{{row.__STATUS}}</strong></small></div>
+                    <ng-template #dangerStatus>
+                      <div class="text-danger" *ngIf="['INACTIVE', 'CANCELLED'].includes(row.__STATUS); else otherStatus"><small><strong>{{row.__STATUS}}</strong></small></div>
+                    </ng-template>
+                    <ng-template #otherStatus>
+                      <div class="text-warning"><small><strong>{{row.__STATUS}}</strong></small></div>
+                    </ng-template> -->
+                  </td>
+                  <td>
+                    <app-cta-btn [cProps]="{
+                      tag: 'a',
+                      href: 'manage-users/' + row._id,
+                      text: 'Details',
+                      title: 'Details',
+                      primaryicon: '',
+                      ctaicon: 'chevron-forward',
+                      ctastyle: 'dark',
+                      isoutline: 'true',
+                      size: 'sm'
+                    }"></app-cta-btn>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        <div class="col-60 text-center border-top pt-3 mt-3">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <ion-icon name="arrow-back"></ion-icon>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

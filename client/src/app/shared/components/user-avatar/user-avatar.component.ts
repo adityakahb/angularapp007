@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-user-avatar',
   templateUrl: './user-avatar.component.html',

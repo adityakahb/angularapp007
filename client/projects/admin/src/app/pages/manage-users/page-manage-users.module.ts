@@ -4,7 +4,10 @@ import { DirectiveModule } from './../../../../../../src/app/shared/directives/d
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { PageManageUsersComponent } from './page-manage-users.component';
 import { PageManageUsersRoutingModule } from './page-manage-users-routing.module';
+import { PipesModule } from './../../../../../../src/app/shared/pipes/pipes.module';
 import { SectionHeaderModule } from './../../../../../../src/app/shared/components/section-header/section-header.module';
+import { StatusPillModule } from './../../../../../../src/app/shared/components/status-pill/status-pill.module';
+import { UserAvatarModule } from './../../../../../../src/app/shared/components/user-avatar/user-avatar.module';
 
 @NgModule({
   imports: [
@@ -12,7 +15,10 @@ import { SectionHeaderModule } from './../../../../../../src/app/shared/componen
     CtaBtnModule,
     DirectiveModule,
     PageManageUsersRoutingModule,
+    PipesModule,
     SectionHeaderModule,
+    StatusPillModule,
+    UserAvatarModule,
   ],
   declarations: [
     PageManageUsersComponent

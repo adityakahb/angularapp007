@@ -14,10 +14,13 @@ export class PageManageUsersComponent implements OnInit {
   getAllUsersRes;
   rows:any[] = [];
   cols = [
+    "",
     "First Name",
     "Middle Name",
     "Last Name",
     "Emails",
+    "Joined On",
+    "Status",
     "",
   ];
 

@@ -1,0 +1,10 @@
+.status-pill-comp {
+  span, small {
+    vertical-align: middle;
+    position: relative;
+  }
+  span {
+    position: relative;
+    top: rem(2px);
+  }
+}
