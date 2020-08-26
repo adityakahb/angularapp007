@@ -1,11 +1,13 @@
 const userdata = require('./../../static-data/manage-users.json');
 const userSchema = require('../models/user-model');
 exports.getAllUsers = async (req, res) => {
-  const {
+  let {
     page = 1, limit = 10
   } = req.query;
   try {
     // execute query with page and limit values
+    page = parseInt(page);
+    limit = parseInt(limit);
     const users = await userSchema.aggregate([
       {
         $lookup: {
@@ -29,8 +31,8 @@ exports.getAllUsers = async (req, res) => {
           __STATUSID: '$__STATUS._id',
         }
       }])
-      .limit(limit * 1)
       .skip((page - 1) * limit)
+      .limit(limit)
       .exec();
 
     // get total documents in the Posts collection 
@@ -46,12 +48,12 @@ exports.getAllUsers = async (req, res) => {
     console.error(err.message);
   }
 };
-exports.addbulkusers = (req, res) => {
-  userSchema.insertMany(userdata).then((response) => {
-    console.log('============User data pushed to DB');
-  });
-  res.status(201).json({
-    message: 'Sample 201',
-    result: res
-  });
-};
+// exports.addbulkusers = (req, res) => {
+//   userSchema.insertMany(userdata).then((response) => {
+//     console.log('============User data pushed to DB');
+//   });
+//   res.status(201).json({
+//     message: 'Sample 201',
+//     result: res
+//   });
+// };

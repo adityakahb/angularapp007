@@ -50,6 +50,7 @@ router.post('/signin', [
 // router.post('/addbulkusers', UsersController.addbulkusers);
 
 router.get('/getall-users', UsersController.getAllUsers);
+router.get('/getall-categories', CategoriesController.getallcategories);
 
 // router.post('/addbulkproducts', AdminController.addbulkproducts);
 

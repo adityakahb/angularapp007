@@ -1,7 +1,7 @@
 <div class="section-header" [ngClass]="[theme ? theme : '', align ? align : '']">
-  <span *ngIf="icon && getSectionClass(icon)" [ngClass]="'section-icon ' + icon"></span>
-  <span *ngIf="icon && !getSectionClass(icon)" class="section-icon">
-    <span class="mdi" [ngClass]="'mdi-' + icon"></span>
+  <span *ngIf="icon.length > 0" class="section-icon">
+    <i class="material-icons-round" *ngIf="icontype === 'material'; else ionicon">{{icon}}</i>
+    <ng-template #ionicon><ion-icon [name]="icon"></ion-icon></ng-template>
   </span>
   <h1 class="h-tag" *ngIf="tag === 'h1'" [innerHTML]="title"></h1>
   <h2 class="h-tag" *ngIf="tag === 'h2'" [innerHTML]="title"></h2>

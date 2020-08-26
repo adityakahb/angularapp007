@@ -9,35 +9,35 @@ export class StatusPillComponent implements OnInit {
   statusArr = [
     {
       type: 'ACTIVE',
-      icon: 'checkmark-circle',
+      icon: 'checkmark-circle-outline',
       theme: 'success'
     }, {
       type: 'INACTIVE',
-      icon: 'close',
+      icon: 'close-circle-outline',
       theme: 'danger'
     }, {
       type: 'IN REVIEW',
-      icon: 'eye',
+      icon: 'eye-outline',
       theme: 'secondary'
     }, {
       type: 'REPORTED',
-      icon: 'alert-circle',
+      icon: 'alert-circle-outline',
       theme: 'info'
     }, {
       type: 'ON HOLD',
-      icon: 'hand-right',
+      icon: 'hand-right-outline',
       theme: 'warning'
     }, {
       type: 'CANCELLED',
-      icon: 'trash-bin',
+      icon: 'trash-bin-outline',
       theme: 'danger'
     }, {
       type: 'MARKED FOR DELETION',
-      icon: 'trash',
+      icon: 'trash-outline',
       theme: 'info'
     }, {
       type: 'DELETED',
-      icon: 'trash',
+      icon: 'trash-outline',
       theme: 'danger'
     }
   ];

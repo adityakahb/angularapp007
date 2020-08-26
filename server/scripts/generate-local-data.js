@@ -357,7 +357,8 @@ const genCat = (level, localarr, fullarr) => {
     foundobj = {
       // _id: randomID(24),
       __L: thislevel,
-      __C: fullarr[thislevel]
+      __C: fullarr[thislevel],
+      __STATUSID: (_generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)])._id['$oid']
     };
   } else {
     foundobj = foundArr[0];
@@ -636,11 +637,11 @@ const generateFiles = () => {
   //   console.log('User Ids Replaced');
   // });
 
-  let usersData = generateUsersData();
-  fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
-    if (err) throw err;
-    console.log('Users Data Replaced in Server');
-  });
+  // let usersData = generateUsersData();
+  // fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
+  //   if (err) throw err;
+  //   console.log('Users Data Replaced in Server');
+  // });
 
   // let sellersData = generateSellersData();
 
@@ -649,12 +650,12 @@ const generateFiles = () => {
   //   console.log('Sellers Data Replaced in Server');
   // });
 
-  // let categoriessData = generateCategoriessData();
+  let categoriessData = generateCategoriessData();
 
-  // fs.writeFile('./src/static-data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
-  //   if (err) throw err;
-  //   console.log('Categories Data Replaced in Server');
-  // });
+  fs.writeFile('./src/static-data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
+    if (err) throw err;
+    console.log('Categories Data Replaced in Server');
+  });
 
   // let productsData = generateProductsData();
 

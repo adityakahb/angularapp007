@@ -3,7 +3,17 @@
     <div class="container-fluid pt-2 pb-5 pt-md-3 pt-xl-5">
       <div class="row justify-content-center">
         <div class="col-60">
-          <h1>Manage Users</h1>
+          <app-section-header [data]="{
+            align: 'center',
+            icon: 'groups',
+            icontype: 'material',
+            tag: 'h1',
+            theme: '',
+            title: 'Manage Users'
+          }">
+        </app-section-header>
+        </div>
+        <div class="col-60">
           <div>
             <table class="table w-100">
               <thead>
@@ -32,7 +42,9 @@
                   <td>
                     
                   </td>
-                  <td [innerHTML]="row.__JOINED | dateFormatter: 'P'"></td>
+                  <td>
+                    <small [innerHTML]="row.__JOINED | dateFormatter: 'P'"></small>
+                  </td>
                   <td>
                     <app-status-pill [cProps]="row.__STATUS"></app-status-pill>
                     <!-- <div class="text-success" *ngIf="row.__STATUS === 'ACTIVE'; else dangerStatus"><small><strong>{{row.__STATUS}}</strong></small></div>
@@ -64,18 +76,28 @@
         <div class="col-60 text-center border-top pt-3 mt-3">
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
+              <li class="page-item" [class]="currentpage === 1 ? 'disabled' : ''">
+                <button class="page-link" type="button" aria-label="First" (click)="getAllUsers(1, limit)" [disabled]="currentpage === 1 ? 'disabled' : ''">
                   <ion-icon name="arrow-back"></ion-icon>
-                </a>
+                </button>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
+              <li class="page-item" [class]="currentpage === 1 ? 'disabled' : ''">
+                <button class="page-link" type="button" aria-label="Previous" (click)="getAllUsers(currentpage - 1, limit)" [disabled]="currentpage === 1 ? 'disabled' : ''">
+                  <ion-icon name="chevron-back"></ion-icon>
+                </button>
+              </li>
+              <li class="page-item" [class]="li.isactive ? 'active' : ''" *ngFor="let li of pagination">
+                <button class="page-link" type="button" (click)="getAllUsers(li.pagenum, limit)">{{li.pagenum}}</button>
+              </li>
+              <li class="page-item" [class]="currentpage === totalpages ? 'disabled' : ''">
+                <button class="page-link" type="button" aria-label="Next" (click)="getAllUsers(currentpage + 1, limit)" [disabled]="currentpage === totalpages ? 'disabled' : ''">
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </button>
+              </li>
+              <li class="page-item" [class]="currentpage === totalpages ? 'disabled' : ''">
+                <button class="page-link" type="button" aria-label="Last" (click)="getAllUsers(totalpages, limit)" [disabled]="currentpage === totalpages ? 'disabled' : ''">
                   <ion-icon name="arrow-forward"></ion-icon>
-                </a>
+                </button>
               </li>
             </ul>
           </nav>

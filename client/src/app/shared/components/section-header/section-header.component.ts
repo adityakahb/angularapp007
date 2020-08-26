@@ -14,6 +14,7 @@ export class SectionHeaderComponent implements OnInit {
   icon;
   align;
   theme;
+  icontype;
 
   constructor() { }
 
@@ -22,6 +23,7 @@ export class SectionHeaderComponent implements OnInit {
     this.tag = data.tag || '';
     this.title = data.title || '';
     this.icon = data.icon || '';
+    this.icontype = data.icontype || '';
     this.align = data.align || 'center';
     this.theme = data.theme || 'light';
   }

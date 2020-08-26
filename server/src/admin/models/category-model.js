@@ -9,6 +9,9 @@ let c21 = new Schema({
   },
   __C: {
     type: String
+  },
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -19,8 +22,9 @@ let c20 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c21]
+  __S: [c21],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -31,8 +35,9 @@ let c19 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c20]
+  __S: [c20],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -43,8 +48,9 @@ let c18 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c19]
+  __S: [c19],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -55,8 +61,9 @@ let c17 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c18]
+  __S: [c18],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -67,8 +74,9 @@ let c16 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c17]
+  __S: [c17],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -79,8 +87,9 @@ let c15 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c16]
+  __S: [c16],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -91,8 +100,9 @@ let c14 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c15]
+  __S: [c15],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -103,8 +113,9 @@ let c13 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c14]
+  __S: [c14],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -115,8 +126,9 @@ let c12 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c13]
+  __S: [c13],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -127,8 +139,9 @@ let c11 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c12]
+  __S: [c12],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -139,8 +152,9 @@ let c10 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c11]
+  __S: [c11],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -151,8 +165,9 @@ let c9 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c10]
+  __S: [c10],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -163,8 +178,9 @@ let c8 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c9]
+  __S: [c9],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -175,8 +191,9 @@ let c7 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c8]
+  __S: [c8],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -187,8 +204,9 @@ let c6 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c7]
+  __S: [c7],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -199,8 +217,9 @@ let c5 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c6]
+  __S: [c6],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -211,8 +230,9 @@ let c4 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c5]
+  __S: [c5],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -223,8 +243,9 @@ let c3 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c4]
+  __S: [c4],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -235,8 +256,9 @@ let c2 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c3]
+  __S: [c3],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -247,8 +269,9 @@ let c1 = new Schema({
   __C: {
     type: String
   },
-  __S: {
-    type: [c2]
+  __S: [c2],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
   }
 });
 
@@ -260,6 +283,9 @@ let categorySchema = new Schema({
     type: String
   },
   __S: [c1],
+  __STATUSID: {
+    type: Schema.Types.ObjectId
+  }
 }, {
   collection: 'category_master'
 });
