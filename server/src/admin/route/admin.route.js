@@ -50,6 +50,10 @@ router.post('/signin', [
 // router.post('/addbulkusers', UsersController.addbulkusers);
 
 router.get('/getall-users', UsersController.getAllUsers);
-router.get('/update-user', UsersController.getAllUsers);
+router.get('/get-user/:id', UsersController.getuser);
+router.post('/add-user', UsersController.adduser);
+router.put('/update-user', UsersController.updateuser);
+router.delete('/delete-user/:id', UsersController.deleteuser);
 
+// getuser adduser updateuser deleteuser
 module.exports = router;

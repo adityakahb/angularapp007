@@ -45,16 +45,49 @@ exports.getAllUsers = async (req, res) => {
       currentpage: page
     });
   } catch (err) {
-    console.error(err.message);
+    res.send('error');
   }
 };
 
-exports.addbulkusers = (req, res) => {
-  userSchema.insertMany(userdata).then((response) => {
-    console.log('============User data pushed to DB');
-  });
-  res.status(201).json({
-    message: 'Sample 201',
-    result: res
+exports.getuser = async (req, res) => {
+  try {
+    const user = await userSchema.findById(req.params.id);
+    if (user) {
+      res.json({
+        user
+      });
+    } else {
+      res.send('not_found');
+    }
+  } catch (err) {
+    res.send('error');
+  }
+};
+
+exports.adduser = async (req, res) => {
+  res.json({
+
   });
 };
+
+exports.updateuser = async (req, res) => {
+  res.json({
+
+  });
+};
+
+exports.deleteuser = async (req, res) => {
+  res.json({
+
+  });
+};
+
+// exports.addbulkusers = (req, res) => {
+//   userSchema.insertMany(userdata).then((response) => {
+//     console.log('============User data pushed to DB');
+//   });
+//   res.status(201).json({
+//     message: 'Sample 201',
+//     result: res
+//   });
+// };
