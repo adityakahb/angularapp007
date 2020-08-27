@@ -48,12 +48,13 @@ exports.getAllUsers = async (req, res) => {
     console.error(err.message);
   }
 };
-// exports.addbulkusers = (req, res) => {
-//   userSchema.insertMany(userdata).then((response) => {
-//     console.log('============User data pushed to DB');
-//   });
-//   res.status(201).json({
-//     message: 'Sample 201',
-//     result: res
-//   });
-// };
+
+exports.addbulkusers = (req, res) => {
+  userSchema.insertMany(userdata).then((response) => {
+    console.log('============User data pushed to DB');
+  });
+  res.status(201).json({
+    message: 'Sample 201',
+    result: res
+  });
+};

@@ -168,6 +168,7 @@ const generateUsersData = () => {
 
     let addresslen = randomNum(0, 4);
     obj.__ADDRESSES = [];
+
     for (let j = 0; j < addresslen; j++) {
       let obj1 = {};
       obj1.__ISBILLINGADDRESS = j === 0 ? true : false;
@@ -270,7 +271,7 @@ const generateUsersData = () => {
     obj.__DATEOFBIRTH = randomDate(new Date(1940, 0, 1), new Date(2000, 11, 31));
     obj.__JOINED = randomDate(new Date(2018, 0, 1), new Date());
 
-    obj.__STATUSID = (_generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)])._id['$oid'];
+    obj.__STATUSID = _generatedStatuses.filter(item => item.__TYPE === 'active')[0]._id['$oid'];
 
     arr.push(obj);
   };
@@ -312,7 +313,7 @@ const generateSellersData = () => {
     obj.__PROFILEPIC = picnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
 
     // obj.__SELLERID = _sellerids[Math.floor(Math.random() * _sellerids.length)];
-    obj.__STATUSID = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)]._id['$oid'];
+    obj.__STATUSID = _generatedStatuses.filter(item => item.__TYPE === 'active')[0]._id['$oid'];
 
     obj.__PRODUCTS = [];
 
@@ -329,7 +330,7 @@ const generateSellersData = () => {
       obj1.__NAME = genCap(pnameStr.join(' '));
       obj1.__URL = '#';
       obj1.__CREATEDON = randomDate(new Date(2019, 0, 1), new Date());
-      obj1.__STATUSID = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)]._id['$oid'];
+      obj1.__STATUSID = _generatedStatuses.filter(item => item.__TYPE === 'active')[0]._id['$oid'];;
       
       let outofstocknum = randomNum(1, 5);
       obj1.__ISOUTOFSTOCK = outofstocknum < 3 ? true : false;
@@ -358,7 +359,7 @@ const genCat = (level, localarr, fullarr) => {
       // _id: randomID(24),
       __L: thislevel,
       __C: fullarr[thislevel],
-      __STATUSID: (_generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)])._id['$oid']
+      __STATUSID: _generatedStatuses.filter(item => item.__TYPE === 'active')[0]._id['$oid']
     };
   } else {
     foundobj = foundArr[0];
@@ -408,16 +409,16 @@ const findRightCategory = (cat, level) => {
       cobj = cat;
       break;
     case 1:
-      cobj = findRightCategory(cat.__S[0], level++);;
+      cobj = findRightCategory(cat.__S[0], level++);
       break;
     default:
       let catindex = randomNum(0, cat.__S.length - 1);
       cobj = findRightCategory(cat.__S[catindex], level++);
       break;
   }
-  if (level === 0) {
-    cobj.__PARENTID = cat._id['$oid'];
-  }
+  // if (level === 0) {
+  //   cobj.__PARENTID = cat._id['$oid'];
+  // }
   return cobj;
 }
 
@@ -507,7 +508,7 @@ const generateProductsData = () => {
             __REFERENCEID: foundCat._id['$oid'],
             __L: foundCat.__L,
             __C: foundCat.__C,
-            __PARENTID: foundCat.__PARENTID
+            __PARENTID: category_s._id['$oid']
           });
         } 
         obj.__CREATEDON = prod.__CREATEDON['$date'];
@@ -552,7 +553,7 @@ const generateReviewssData = () => {
       parastr += '<ul>' + bulletArr.join(' ') + '</ul>';
       obj.__REVIEW = parastr;
       obj.__RATING = Math.floor((Math.random() * 5) + 1);
-      obj.__STATUS = _generatedStatuses[Math.floor(Math.random() * _generatedStatuses.length)];
+      obj.__STATUSID = _generatedStatuses.filter(item => item.__TYPE === 'active')[0]._id['$oid'];
       arr.push(obj);
     }
   });
@@ -637,28 +638,25 @@ const generateFiles = () => {
   //   console.log('User Ids Replaced');
   // });
 
-  // let usersData = generateUsersData();
-  // fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
-  //   if (err) throw err;
-  //   console.log('Users Data Replaced in Server');
-  // });
+  let usersData = generateUsersData();
+  fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
+    if (err) throw err;
+    console.log('Users Data Replaced in Server');
+  });
 
   // let sellersData = generateSellersData();
-
   // fs.writeFile('./src/static-data/manage-sellers.json', JSON.stringify(sellersData), function (err) {
   //   if (err) throw err;
   //   console.log('Sellers Data Replaced in Server');
   // });
 
-  let categoriessData = generateCategoriessData();
-
-  fs.writeFile('./src/static-data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
-    if (err) throw err;
-    console.log('Categories Data Replaced in Server');
-  });
+  // let categoriessData = generateCategoriessData();
+  // fs.writeFile('./src/static-data/manage-categories.json', JSON.stringify(categoriessData), function (err) {
+  //   if (err) throw err;
+  //   console.log('Categories Data Replaced in Server');
+  // });
 
   // let productsData = generateProductsData();
-
   // fs.writeFile('./src/static-data/manage-products.json', JSON.stringify(productsData), function (err) {
   //   if (err) throw err;
   //   console.log('Products Data Replaced in Server');

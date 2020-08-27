@@ -13,7 +13,8 @@ const searchapi = require('./src/search/route/search.route');
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 }).then(() => {
     console.log('====Database connected====')
   },

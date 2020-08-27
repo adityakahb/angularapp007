@@ -48,7 +48,8 @@ let productSchema = new Schema({
     type: Schema.Types.ObjectId
   },
   __NAME: {
-    type: String
+    type: String,
+    index: true
   },
   __URL: {
     type: String
@@ -60,13 +61,15 @@ let productSchema = new Schema({
     type: Boolean
   },
   __PRICE: {
-    type: [priceSchema]
+    type: [priceSchema],
+    index: true
   },
   __IMAGES: {
     type: [imageSchema]
   },
   __SPECS: {
-    type: String
+    type: String,
+    index: true
   },
   __CATEGORIES: {
     type: [categorySchema]
@@ -84,4 +87,6 @@ let productSchema = new Schema({
   collection: 'product_master'
 });
 
-module.exports = mongoose.model('productmodel', productSchema);
+const ProductModel = mongoose.model('productmodel', productSchema);
+
+module.exports = ProductModel;
