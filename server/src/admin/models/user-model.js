@@ -75,24 +75,23 @@ let addressSchema = new Schema({
 let emailSchema = new Schema({
   __ADDRESS: {
     type: String
-  },
-  __ISPRIMARY: {
-    type: Boolean
   }
-},{ _id : false });
+}, { _id : false });
 
 let userSchema = new Schema({
   __PUBLICNAME: {
     type: String
   },
   __FIRSTNAME: {
-    type: String
+    type: String,
+    required: [true, 'First name is required.']
   },
   __MIDDLENAME: {
     type: String
   },
   __LASTNAME: {
-    type: String
+    type: String,
+    required: [true, 'Last name is required.']
   },
   __PROFILEPIC: {
     type: String
@@ -100,9 +99,14 @@ let userSchema = new Schema({
   __BIO: {
     type: String
   },
+  __PRIMARYEMAIL: {
+    type: String,
+    required: [true, 'Primary Email address is required.']
+  },
   __EMAIL: [emailSchema],
   __DATEOFBIRTH: {
-    type: Date
+    type: Date,
+    required: [true, 'Date of birth is required.']
   },
   __ADDRESSES: [addressSchema],
   __SETTINGS: settingsSchema,
@@ -114,7 +118,8 @@ let userSchema = new Schema({
   },
   __ORDERS: [orderSchema],
   __STATUSID: {
-    type: Schema.Types.ObjectId
+    type: Schema.Types.ObjectId,
+    required: [true, 'Status ID is required.']
   }
 }, {
   collection: 'user_master'
