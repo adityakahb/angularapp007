@@ -1,4 +1,6 @@
-const { validationResult } = require('express-validator');
+const {
+  validationResult
+} = require('express-validator');
 const userdata = require('./../../static-data/manage-users.json');
 const userSchema = require('../models/user-model');
 const statusSchema = require('../models/status-model')
@@ -10,29 +12,31 @@ exports.getAllUsers = async (req, res) => {
     // execute query with page and limit values
     page = parseInt(page);
     limit = parseInt(limit);
-    const users = await userSchema.aggregate([
-      {
-        $lookup: {
-          from: 'status_master',
-          localField: '__STATUSID',
-          foreignField: "_id",
-          as: "__STATUS"
+    const users = await userSchema.aggregate([{
+          $lookup: {
+            from: 'status_master',
+            localField: '__STATUSID',
+            foreignField: "_id",
+            as: "__STATUS"
+          }
+        },
+        {
+          $unwind: '$__STATUS'
+        },
+        {
+          $project: {
+            _id: true,
+            __FIRSTNAME: true,
+            __MIDDLENAME: true,
+            __LASTNAME: true,
+            __EMAIL: true,
+            __PROFILEPIC: true,
+            __JOINED: true,
+            __STATUS: '$__STATUS.__NAME',
+            __STATUSID: '$__STATUS._id',
+          }
         }
-      },
-      {$unwind:'$__STATUS'},
-      {
-        $project: {
-          _id: true,
-          __FIRSTNAME: true,
-          __MIDDLENAME: true,
-          __LASTNAME: true,
-          __EMAIL: true,
-          __PROFILEPIC: true,
-          __JOINED: true,
-          __STATUS: '$__STATUS.__NAME',
-          __STATUSID: '$__STATUS._id',
-        }
-      }])
+      ])
       .skip((page - 1) * limit)
       .limit(limit)
       .exec();
@@ -73,27 +77,37 @@ exports.adduser = async (req, res) => {
       return res.status(422).jsonp(errors.array());
     } else {
       let userdata = req.body;
-      const activestatus = await statusSchema.findOne({
-        __TYPE: 'active'
-      });
-      // console.log('=========activestatus', activestatus);
-      if (activestatus) {
-        userdata.__JOINED = new Date();
-        if ((userdata.__PUBLICNAME || '').length === 0) {
-          let mname = (userdata.__MIDDLENAME || '').length > 0 ? ' ' + userdata.__MIDDLENAME.charAt(0) + '.' : '';
-          userdata.__PUBLICNAME = `${userdata.__FIRSTNAME}${mname} ${userdata.__LASTNAME}`;
-        }
-        userdata.__STATUSID = activestatus._id;
-        const userObj = new userSchema(userdata);
-        const usercreated = await userObj.save();
+      const checkuser = await userSchema.findOne({
+        __PRIMARYEMAIL: userdata.__PRIMARYEMAIL
+      }).lean();
+      if (((checkuser || {})._id || '').length > 0) {
         res.json({
-          usercreated: usercreated
+          error: 'Email already in use.'
         });
       } else {
-        res.json({
-          activestatus: {}
+        const activestatus = await statusSchema.findOne({
+          __TYPE: 'active'
         });
+        // console.log('=========activestatus', activestatus);
+        if (activestatus) {
+          userdata.__JOINED = new Date();
+          if ((userdata.__PUBLICNAME || '').length === 0) {
+            let mname = (userdata.__MIDDLENAME || '').length > 0 ? ' ' + userdata.__MIDDLENAME.charAt(0) + '.' : '';
+            userdata.__PUBLICNAME = `${userdata.__FIRSTNAME}${mname} ${userdata.__LASTNAME}`;
+          }
+          userdata.__STATUSID = activestatus._id;
+          const userObj = new userSchema(userdata);
+          const usercreated = await userObj.save();
+          res.json({
+            usercreated: usercreated
+          });
+        } else {
+          res.json({
+            activestatus: {}
+          });
+        }
       }
+
       // userSchema.create()
       // bcrypt.hash(req.body.__PASSWORD, 10).then((hash) => {
       //   const admin = new adminSchema({.li76iln   nx

@@ -72,12 +72,6 @@ let addressSchema = new Schema({
   }
 }, { _id : false });
 
-let emailSchema = new Schema({
-  __ADDRESS: {
-    type: String
-  }
-}, { _id : false });
-
 let userSchema = new Schema({
   __PUBLICNAME: {
     type: String
@@ -103,7 +97,7 @@ let userSchema = new Schema({
     type: String,
     required: [true, 'Primary Email address is required.']
   },
-  __EMAIL: [emailSchema],
+  __EMAIL: [String],
   __DATEOFBIRTH: {
     type: Date,
     required: [true, 'Date of birth is required.']
