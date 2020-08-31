@@ -80,7 +80,7 @@ exports.adduser = async (req, res) => {
       const checkuser = await userSchema.findOne({
         __PRIMARYEMAIL: userdata.__PRIMARYEMAIL
       }).lean();
-      if (((checkuser || {})._id || '').length > 0) {
+      if ((checkuser || {})._id) {
         res.json({
           error: 'Email already in use.'
         });
