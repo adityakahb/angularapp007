@@ -1,5 +1,7 @@
 const fs = require('fs');
 const XLSX = require('xlsx');
+const xml2js = require('xml2js');
+const parser = new xml2js.Parser({attrkey: 'sms'});
 
 const totalProductsLength = 128;
 const totalUsersLength = 64;
@@ -140,7 +142,7 @@ const generateUsersData = () => {
     let color2 = randomColor();
 
     obj.__PROFILEPIC = picnum < 3 ? `https://via.placeholder.com/${width}x${height}/${color1}/${color2}` : '';
-    
+
     let bionum = randomNum(1, 5);
 
     if (bionum < 3) {
@@ -181,7 +183,7 @@ const generateUsersData = () => {
       obj1.__FULLNAME = `${fname}${mname.length > 0 ? ' ' + mname : ''} ${lname}`;
       obj1.__MOBILENUMBER = randomNum(1000000000, 9999999999);
       obj1.__PINCODE = randomNum(100000, 999999);
-      
+
       let aptstr = 'Flat # ' + randomNum(1000, 9999);
       let apt1len = randomNum(1, 6);
       let apt1arr = [];
@@ -331,7 +333,7 @@ const generateSellersData = () => {
       obj1.__URL = '#';
       obj1.__CREATEDON = randomDate(new Date(2019, 0, 1), new Date());
       obj1.__STATUSID = _generatedStatuses.filter(item => item.__TYPE === 'active')[0]._id['$oid'];;
-      
+
       let outofstocknum = randomNum(1, 5);
       obj1.__ISOUTOFSTOCK = outofstocknum < 3 ? true : false;
       obj.__PRODUCTS.push(obj1);
@@ -510,7 +512,7 @@ const generateProductsData = () => {
             __C: foundCat.__C,
             __PARENTID: category_s._id['$oid']
           });
-        } 
+        }
         obj.__CREATEDON = prod.__CREATEDON['$date'];
         obj.__SPECS = parastr;
 
@@ -527,7 +529,7 @@ const generateReviewssData = () => {
   (_generatedProducts || []).forEach((prod, pindex) => {
     let reviewsLen = randomNum(0, 20);
     let hasreview = randomNum(1, 5);
-    for (let i=0; i < reviewsLen && hasreview < 3; i++) {
+    for (let i = 0; i < reviewsLen && hasreview < 3; i++) {
       let obj = {};
       // obj._id = randomID(24);
       // obj.__PRODUCTID = prod._id;
@@ -561,40 +563,38 @@ const generateReviewssData = () => {
 };
 
 const generateStatusData = () => {
-  const statuses = [
-    {
-      __NAME: 'ACTIVE',
-      __TYPE: 'active',
-      __STATUS: 'active'
-    }, {
-      __NAME: 'INACTIVE',
-      __TYPE: 'inactive',
-      __STATUS: 'active'
-    }, {
-      __NAME: 'IN REVIEW',
-      __TYPE: 'inreview',
-      __STATUS: 'active'
-    }, {
-      __NAME: 'REPORTED',
-      __TYPE: 'reported',
-      __STATUS: 'active'
-    }, {
-      __NAME: 'ON HOLD',
-      __TYPE: 'onhold',
-      __STATUS: 'active'
-    }, {
-      __NAME: 'CANCELLED',
-      __TYPE: 'cancelled',
-      __STATUS: 'active'
-    }, {
-      __NAME: 'DELETED',
-      __TYPE: 'deleted',
-      __STATUS: 'inactive'
-    }
-  ];
+  const statuses = [{
+    __NAME: 'ACTIVE',
+    __TYPE: 'active',
+    __STATUS: 'active'
+  }, {
+    __NAME: 'INACTIVE',
+    __TYPE: 'inactive',
+    __STATUS: 'active'
+  }, {
+    __NAME: 'IN REVIEW',
+    __TYPE: 'inreview',
+    __STATUS: 'active'
+  }, {
+    __NAME: 'REPORTED',
+    __TYPE: 'reported',
+    __STATUS: 'active'
+  }, {
+    __NAME: 'ON HOLD',
+    __TYPE: 'onhold',
+    __STATUS: 'active'
+  }, {
+    __NAME: 'CANCELLED',
+    __TYPE: 'cancelled',
+    __STATUS: 'active'
+  }, {
+    __NAME: 'DELETED',
+    __TYPE: 'deleted',
+    __STATUS: 'inactive'
+  }];
   let arr = [];
 
-  for (let i=0; i < statuses.length; i++) {
+  for (let i = 0; i < statuses.length; i++) {
     arr.push(statuses[i]);
   }
 
@@ -638,11 +638,11 @@ const generateFiles = () => {
   //   console.log('User Ids Replaced');
   // });
 
-  let usersData = generateUsersData();
-  fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
-    if (err) throw err;
-    console.log('Users Data Replaced in Server');
-  });
+  // let usersData = generateUsersData();
+  // fs.writeFile('./src/static-data/manage-users.json', JSON.stringify(usersData), function (err) {
+  //   if (err) throw err;
+  //   console.log('Users Data Replaced in Server');
+  // });
 
   // let sellersData = generateSellersData();
   // fs.writeFile('./src/static-data/manage-sellers.json', JSON.stringify(sellersData), function (err) {
@@ -668,13 +668,115 @@ const generateFiles = () => {
   //   if (err) throw err;
   //   console.log('Reviews Data Replaced in Server');
   // });
-  
+
   // let statusdata = generateStatusData();
   // fs.writeFile('./src/static-data/manage-statuses.json', JSON.stringify(statusdata), function (err) {
   //   if (err) throw err;
   //   console.log('Reviews Data Replaced in Server');
   // });
 
+// ./scripts/sms-20200905084511.xml
+  let xml_string = fs.readFileSync('./scripts/sms-temp.xml', 'utf8');
+  let addressarr = (`QP-NCCARD VK-PARDIS QP-LOANPL AA-AIRTEL +917092008228 JX-620016 JM-620016 JM-620016 JA-JIOINF JA-JIOINF JK-620016 
+      BP-HXINSR VM-HOTSTR QP-APOLLO VK-PARDIS AA-ARWINF QP-ACTGRP QP-DHINSR BT-PLAYON TX-APOLLO QP-NCOFFR ADICICIL BZTAXSPN BHKOPPER JDJioPay JM620016 
+      JAJIOINF BAACTGRP AXDOTAPT JD620016 +917028028070 AXSBICGV QPWORKHM QPHOMEWK JK620016 AXOMHTUN AXARWINF VKPARDIS ADPARDIS ADHDFCBK AXBAJAJF  
+      BRHAPYGO MDMMMWOW BWHDLONS QPASHYNA BWHDLONS QPYOUMEE JX-JIONET TXMYTSKY BWluvlif AANTAROT BACLOUDS TXFLIGHT BVLWMONY BWFRNSIP QPACTGRP VMEASYTR 
+      ADPZAHUT QPPANTLS BPHOMLNS VXYOUMEE BWKRNEWS BAbankzs QPBNGPLO ADMMTRIP BRIPEQTY VXGROFRS ADICICIB QPHDFCPL TXMYTSKY QPKHTWFT VKREGALs 
+      ADWORKHM AXEASEMY QPINTHUB BZPLLALA AXAIRDAR AXiPaytm ADiPaytm JMJIOSVC QPPLOANS ADOLACAB VXOLACAB AXHDFCBK QP-EQGPRO JM-HOTSTR JX-HOTSTR VM-HOTSTR 
+      BP-BizSMS QP-ADIDAS 56767184 BA-ACTGRP QP-HOMCEN BPDXKUJD TXGROFRS ADSBICRD BWCAHSRJ AXHDFCLI ADIndiGo AXIndiGo TXOLACAB TXOLAMNY AXACTGRP 
+      JM-620038 JX-620038`).split(' ');
+  let bodyArr = ['one time password', 'personal loan', 'never calls', 'OTP is ', 'EMI due on ', ' is the OTP', 'Arriving early', 'Arriving today', 'Dispatched: ', 'is OTP to access',
+    'PRE-APPROVED', 'home loan', 'is due on', 'is pending', 'You are now eligible', 'You are eligible', 'OTP to approve ', '&lt;#&gt; ', '1114823543', 'XXXXX393425',
+    've spent Rs.', 'Dear Customer', 'Dear Cardholder', 'As per your preference'
+  ];
+  let smsbody = '';
+  let i = 0;
+  if ((xml_string || '').length > 0) {
+    parser.parseString(xml_string, function (error, result) {
+      if (error === null) {
+        const smsarr = ((result || {}).smses || {}).sms || [];
+        console.log('========default length: ', smsarr.length);
+        let newArr = [];
+        
+        smsarr.forEach(sms => {
+          console.log('===sms', (sms.sms || {}).address);
+          if (!addressarr.includes((sms.sms || {}).address)) {
+            newArr.push(sms);
+          }
+          smsbody = ((sms.sms || {}).body || '').toLowerCase();
+          for (i = 0; i< bodyArr.length; i++) {
+            if (smsbody.indexOf(bodyArr[i].toLowerCase()) === -1) {
+              newArr.push(sms);
+              break;
+            }
+          }
+          return true;
+        });
+        console.log('========new length: ', newArr);
+      } else {
+        console.log(error);
+      }
+    });
+  }
+
+  // fs.readFile('./scripts/sms-temp.xml', function(err, data) {
+  //   if (data) {
+  //     // const json = parser.toJson(data, {
+  //     //   object: true,
+  //     //   sanitize: false,
+  //     //   trim: false
+  //     // });
+  //     // (((json || {}).smses || {}).sms || []).forEach(j => {
+  //     //   console.log('===========j', j);
+  //     // })
+  //     // fs.writeFile('./scripts/smsjson.json', JSON.stringify(json), function (err) {
+  //     //   if (err) throw err;
+  //     //   console.log('SMS JSON 1');
+  //     // });
+  //     // console.log("to json ->", json);
+  //     const smsarr = ((json || {}).smses || {}).sms || [];
+  //     console.log('========default length: ', smsarr.length);
+  //     let addressarr = (`QP-NCCARD VK-PARDIS QP-LOANPL AA-AIRTEL +917092008228 JX-620016 JM-620016 JM-620016 JA-JIOINF JA-JIOINF JK-620016 
+  //     BP-HXINSR VM-HOTSTR QP-APOLLO VK-PARDIS AA-ARWINF QP-ACTGRP QP-DHINSR BT-PLAYON TX-APOLLO QP-NCOFFR ADICICIL BZTAXSPN BHKOPPER JDJioPay JM620016 
+  //     JAJIOINF BAACTGRP AXDOTAPT JD620016 +917028028070 AXSBICGV QPWORKHM QPHOMEWK JK620016 AXOMHTUN AXARWINF VKPARDIS ADPARDIS ADHDFCBK AXBAJAJF  
+  //     BRHAPYGO MDMMMWOW BWHDLONS QPASHYNA BWHDLONS QPYOUMEE JX-JIONET TXMYTSKY BWluvlif AANTAROT BACLOUDS TXFLIGHT BVLWMONY BWFRNSIP QPACTGRP VMEASYTR 
+  //     ADPZAHUT QPPANTLS BPHOMLNS VXYOUMEE BWKRNEWS BAbankzs QPBNGPLO ADMMTRIP BRIPEQTY VXGROFRS ADICICIB QPHDFCPL TXMYTSKY QPKHTWFT VKREGALs 
+  //     ADWORKHM AXEASEMY QPINTHUB BZPLLALA AXAIRDAR AXiPaytm ADiPaytm JMJIOSVC QPPLOANS ADOLACAB VXOLACAB AXHDFCBK QP-EQGPRO JM-HOTSTR JX-HOTSTR VM-HOTSTR 
+  //     BP-BizSMS QP-ADIDAS 56767184 BA-ACTGRP QP-HOMCEN BPDXKUJD TXGROFRS ADSBICRD BWCAHSRJ AXHDFCLI ADIndiGo AXIndiGo TXOLACAB TXOLAMNY AXACTGRP 
+  //     JM-620038 JX-620038`).split(' ');
+  //     let bodyArr = ['one time password', 'personal loan', 'never calls', 'OTP is ', 'EMI due on ', ' is the OTP', 'Arriving early', 'Arriving today' , 'Dispatched: ', 'is OTP to access',
+  //       'PRE-APPROVED', 'home loan', 'is due on', 'is pending', 'You are now eligible', 'You are eligible', 'OTP to approve ', '&lt;#&gt; ', '1114823543', 'XXXXX393425',
+  //       've spent Rs.', 'Dear Customer', 'Dear Cardholder', 'As per your preference'];
+
+  //     let smsbody = '';
+  //     let i = 0;
+
+  //     let newArr = smsarr.filter(sms => {
+  //       if (
+  //         addressarr.includes(sms.address)) {
+  //           return false;
+  //       }
+  //       smsbody = (sms.body || '').toLowerCase();
+  //       for (i = 0; i< bodyArr.length; i++) {
+  //         if (smsbody.indexOf(bodyArr[i].toLowerCase()) > -1) {
+  //           return false;
+  //         }
+  //       }
+  //       return true;
+  //     });
+  //     console.log('========new length: ', newArr.length);
+
+  //     // fs.writeFile('./scripts/smsjson.json', parser.toJson(data), function (err) {
+  //     //   if (err) throw err;
+  //     //   console.log('SMS JSON');
+  //     // });
+  //     // let xmlstr = '<smses count="'+ newArr.length + '" backup_set="928b744c-6514-4d2c-9633-27c31b387f79" backup_date="1599275767921" type="full">' + parser.toXml(JSON.stringify({sms: newArr}), {sanitize: true}) + '</smses>';
+  //     // fs.writeFile('./scripts/sms-new.xml', xmlstr, function (err) {
+  //     //   if (err) throw err;
+  //     //   console.log('SMS XML');
+  //     // });
+  //   }
+  // });
 };
 
 generateFiles();
